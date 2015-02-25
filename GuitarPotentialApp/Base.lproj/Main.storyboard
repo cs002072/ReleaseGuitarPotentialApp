@@ -200,7 +200,6 @@
                     <size key="freeformSize" width="400" height="1500"/>
                     <connections>
                         <outlet property="SongWordStr" destination="btt-5Z-3gl" id="Usf-hf-RoV"/>
-                        <segue destination="xAI-oQ-CDa" kind="showDetail" identifier="historySegue" id="gg8-LY-8W7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,7 +271,4 @@
             <point key="canvasLocation" x="423" y="1593"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Y14-NW-SNZ"/>
-    </inferredMetricsTieBreakers>
 </document>
