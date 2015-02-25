@@ -8,7 +8,9 @@
 
 #import "detailViewController.h"
 
-@interface detailViewController ()
+@interface detailViewController (){
+//    NSUserDefaults *_defaults;
+}
 
 @end
 
@@ -17,7 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"%d", self.selectNum);
+    // myTabBar = [[UITabBarController alloc] init];
+    
+    
+    NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
+    NSString *dStr = [_defaults stringForKey:@"saveFlag"];
     
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
@@ -46,19 +52,14 @@
 }
 */
 
-//- (IBAction)tapCancelButton:(id)sender {
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//    //    [self dismissViewControllerAnimated:YES completion:nil];
-//}
-//
-//- (IBAction)tapSaveButton:(id)sender {
-//    [self performSegueWithIdentifier:@"historySegue" sender:nil];
-//}
-
-
-
 - (IBAction)tapSaveButton:(id)sender {
-    [self performSegueWithIdentifier:@"historySegue" sender:nil];
+    NSUserDefaults *_defaults = [NSUserDefaults standardUserDefaults];
+    [_defaults setObject:@"NO" forKey:@"saveFlag"];
+    BOOL sdf = [_defaults stringForKey:@"saveFlag"];
+    
+    UITabBarController *tab = (UITabBarController *)[self presentingViewController];
+    [tab setSelectedIndex:2];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)tapCancelButton:(id)sender {

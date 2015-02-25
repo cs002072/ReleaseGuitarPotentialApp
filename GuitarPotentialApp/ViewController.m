@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "detailViewController.h"
 
-@interface ViewController ()
+@interface ViewController () 
 
 @end
 
