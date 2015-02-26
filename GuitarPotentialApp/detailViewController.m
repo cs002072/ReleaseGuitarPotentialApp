@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _songHistoryArray = [[NSMutableArray alloc] init];
     
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
