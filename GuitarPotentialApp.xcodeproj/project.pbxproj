@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A71918811A9B131000C5377E /* J-Total Music－涙のキッス（サザンオールスターズ）.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71918801A9B131000C5377E /* J-Total Music－涙のキッス（サザンオールスターズ）.txt */; };
+		A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71918801A9B131000C5377E /* 涙のキッス.txt */; };
 		A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78537241A9B0BB2008DF74F /* detailViewController.m */; };
 		A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */; };
 		A7EA746B1A9B0291009B46AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA746A1A9B0291009B46AB /* main.m */; };
@@ -17,6 +17,7 @@
 		A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7EA74751A9B0291009B46AB /* Images.xcassets */; };
 		A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EA74771A9B0291009B46AB /* LaunchScreen.xib */; };
 		A7EA74851A9B0291009B46AB /* GuitarPotentialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */; };
+		A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A71918801A9B131000C5377E /* J-Total Music－涙のキッス（サザンオールスターズ）.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "J-Total Music－涙のキッス（サザンオールスターズ）.txt"; sourceTree = "<group>"; usesTabs = 0; };
+		A71918801A9B131000C5377E /* 涙のキッス.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "涙のキッス.txt"; sourceTree = "<group>"; usesTabs = 0; };
 		A78537231A9B0BB2008DF74F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		A78537241A9B0BB2008DF74F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		A7D69F371A9CC2FE00A2AB87 /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		A7EA747E1A9B0291009B46AB /* GuitarPotentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarPotentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EA74831A9B0291009B46AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuitarPotentialAppTests.m; sourceTree = "<group>"; };
+		A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllSongsList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				A7EA74701A9B0291009B46AB /* ViewController.m */,
 				A7D69F371A9CC2FE00A2AB87 /* historyViewController.h */,
 				A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */,
+				A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */,
 				A78537231A9B0BB2008DF74F /* detailViewController.h */,
 				A78537241A9B0BB2008DF74F /* detailViewController.m */,
 				A7EA74721A9B0291009B46AB /* Main.storyboard */,
@@ -108,7 +111,7 @@
 		A7EA74681A9B0291009B46AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A71918801A9B131000C5377E /* J-Total Music－涙のキッス（サザンオールスターズ）.txt */,
+				A71918801A9B131000C5377E /* 涙のキッス.txt */,
 				A7EA74691A9B0291009B46AB /* Info.plist */,
 				A7EA746A1A9B0291009B46AB /* main.m */,
 			);
@@ -214,8 +217,9 @@
 			files = (
 				A7EA74741A9B0291009B46AB /* Main.storyboard in Resources */,
 				A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */,
-				A71918811A9B131000C5377E /* J-Total Music－涙のキッス（サザンオールスターズ）.txt in Resources */,
+				A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */,
 				A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */,
+				A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

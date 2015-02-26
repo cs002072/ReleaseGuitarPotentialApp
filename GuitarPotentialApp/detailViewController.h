@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface detailViewController : UIViewController
+
 @property (nonatomic, assign) int selectNum;
 @property (weak, nonatomic) IBOutlet UILabel *SongWordStr;
+@property (nonatomic, assign) int number;
+@property (nonatomic,strong)NSString *title;
+@property (nonatomic,strong)NSString *artist;
+
 
 - (IBAction)tapSaveButton:(id)sender;
 - (IBAction)tapCancelButton:(id)sender;

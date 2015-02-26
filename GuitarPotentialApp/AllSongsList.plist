@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllSongsList</key>
+	<array>
+		<dict>
+			<key>NO</key>
+			<integer>0</integer>
+			<key>TITLE</key>
+			<string>涙のキッス</string>
+			<key>ARTIST</key>
+			<string>サザンオールスターズ</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<integer>1</integer>
+			<key>TITLE</key>
+			<string>いとしのエリー</string>
+			<key>ARTIST</key>
+			<string>サザンオールスターズ</string>
+		</dict>
+	</array>
+</dict>
+</plist>

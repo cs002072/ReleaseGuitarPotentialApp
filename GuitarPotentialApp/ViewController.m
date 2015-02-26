@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "detailViewController.h"
 
-@interface ViewController () 
+@interface ViewController () {
+    NSArray *_AllSongsArray;
+}
 
 @end
 
@@ -18,14 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _songList = @[@"涙のキッス", @"いとしのエリー"];
+    
+    //プロジェクト内のファイルにアクセスできるオブジェクトを作成
+    NSBundle *bundle = [NSBundle mainBundle];
+    //読み込むプロパティリストのファイルパス（場所）を指定
+    NSString *path = [bundle pathForResource:@"AllSongsList" ofType:@"plist"];
+    //プロパティリストの中身のデータを取得
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    _AllSongsArray = [dic objectForKey:@"AllSongsList"];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
-    _songList = @[@"涙のキッス", @"いとしのエリー"];
 }
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _songList.count;
+    return _AllSongsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -36,17 +46,19 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_songList objectAtIndex:indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArray[indexPath.row][@"TITLE"], _AllSongsArray[indexPath.row][@"ARTIST"]];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_AllSongsArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
 //-- 行が押された時に発動するメソッド
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"行番号 = %ld", (long)indexPath.row);
-    
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
-    dvc.selectNum = (int)indexPath.row;
+    /*******なんでかわからんが３になるためコメントアウト*******/
+//    dvc.number = _AllSongsArray[indexPath.row][@"NO"];
+    /*******なんでかわからんが３になるためコメントアウト*******/
+    dvc.number = (int)indexPath.row;
 }
 
 - (void)didReceiveMemoryWarning {
