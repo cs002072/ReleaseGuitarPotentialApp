@@ -7,6 +7,7 @@
 //
 
 #import "historyViewController.h"
+#import "detailViewController.h"
 
 @interface historyViewController ()
 
@@ -17,7 +18,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //self.myTextView.text = []
+    self.historyTableView.delegate = self;
+    self.historyTableView.dataSource = self;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _historyList = [[NSMutableArray alloc] init];
+    //-- １曲の情報
+    NSMutableArray *songInfo = [[NSMutableArray alloc] init];
+    songInfo = [defaults arrayForKey:@"ALLSONGS"];
+
+    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    dictionary = [songInfo objectAtIndex:0];
+    [_historyList addObject:[dictionary objectForKey:@"TITLE"]];
+    [_historyList addObject:[dictionary objectForKey:@"ARTIST"]];
+    [_historyList addObject:[dictionary objectForKey:@"KEY"]];
+//    self.myTextView.text = [dictionary objectForKey:@"KEY"];
+}
+
+//-- 行数を返す
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1/*_historyList.count*/;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIndentifier = @"Cell";
+    //-- 再利用可能なCellオブジェクトを作成
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIndentifier];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@", [_historyList objectAtIndex:0], [_historyList objectAtIndex:1], [_historyList objectAtIndex:2]];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_historyList objectAtIndex:indexPath.row]];
+    return cell;
+}
+
+//-- 行が押された時に発動するメソッド
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"行番号 = %ld", (long)indexPath.row);
+
+    //-- 遷移画面のカプセル化（インスタンス化）
+    detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
+    dvc.selectNum = (int)indexPath.row;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface historyViewController : UIViewController
+@interface historyViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *_historyList;//-- 履歴の楽曲リスト
+}
+
 @property (weak, nonatomic) IBOutlet UITextField *myTextView;
+@property (weak, nonatomic) IBOutlet UITableView *historyTableView;
 
 @end
