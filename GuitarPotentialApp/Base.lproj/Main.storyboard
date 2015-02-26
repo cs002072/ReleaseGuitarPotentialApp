@@ -269,6 +269,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="f0e-nJ-rPE"/>
                     <connections>
                         <outlet property="historyTableView" destination="UkX-sn-DAq" id="dp3-rI-GYZ"/>
+                        <segue destination="SAR-jO-Tv0" kind="showDetail" id="R8I-zu-Adu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYz-19-GNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,4 +277,7 @@
             <point key="canvasLocation" x="435" y="1693"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R8I-zu-Adu"/>
+    </inferredMetricsTieBreakers>
 </document>
