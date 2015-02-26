@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface historyViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *myTextView;
 
 @end

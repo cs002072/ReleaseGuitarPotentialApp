@@ -36,7 +36,6 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-//    cell.textLabel.text = [NSString stringWithFormat:@"行 = %ld", (long)indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [_songList objectAtIndex:indexPath.row]];
     return cell;
 }
@@ -48,9 +47,6 @@
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
     dvc.selectNum = (int)indexPath.row;
-    
-//    //-- ナビゲーションコントローラーの機能で画面遷移
-//    [[self navigationController] pushViewController:dvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
