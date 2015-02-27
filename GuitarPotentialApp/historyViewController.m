@@ -9,7 +9,9 @@
 #import "historyViewController.h"
 #import "detailViewController.h"
 
-@interface historyViewController ()
+@interface historyViewController () {
+    NSMutableArray *_songInfo;
+}
 
 @end
 
@@ -23,30 +25,37 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _historyList = [[NSMutableArray alloc] init];
     //-- １曲の情報
-    NSMutableArray *songInfo = [[NSMutableArray alloc] init];
-    songInfo = [defaults arrayForKey:@"ALLSONGS"];
-
+    NSMutableArray *_songInfo = [[NSMutableArray alloc] init];
+    _songInfo = [defaults arrayForKey:@"ALLSONGS"];
+    
     NSDictionary *dictionary = [[NSDictionary alloc] init];
-    dictionary = [songInfo objectAtIndex:0];
+    dictionary = [_songInfo objectAtIndex:0];
     [_historyList addObject:[dictionary objectForKey:@"TITLE"]];
     [_historyList addObject:[dictionary objectForKey:@"ARTIST"]];
-    [_historyList addObject:[dictionary objectForKey:@"KEY"]];
+//    [_historyList addObject:[dictionary objectForKey:@"KEY"]];
 //    self.myTextView.text = [dictionary objectForKey:@"KEY"];
+    NSLog(@"title ===== %@", [dictionary objectForKey:@"TITLE"]);
 }
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1/*_historyList.count*/;
+    return /*_songInfo.count + */1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _songInfo = [defaults arrayForKey:@"ALLSONGS"];
+    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    dictionary = [_songInfo objectAtIndex:0];
+
     static NSString *CellIndentifier = @"Cell";
     //-- 再利用可能なCellオブジェクトを作成
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIndentifier];
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@", [_historyList objectAtIndex:0], [_historyList objectAtIndex:1], [_historyList objectAtIndex:2]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [dictionary objectForKey:@"TITLE"], [dictionary objectForKey:@"ARTIST"]/*, [_historyList objectAtIndex:2]*/];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [_historyList objectAtIndex:0], [_historyList objectAtIndex:1]/*, [_historyList objectAtIndex:2]*/];
 //    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_historyList objectAtIndex:indexPath.row]];
     return cell;
 }
@@ -58,6 +67,8 @@
     detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
     dvc.selectNum = (int)indexPath.row;
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
