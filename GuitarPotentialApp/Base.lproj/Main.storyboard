@@ -56,7 +56,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="SAR-jO-Tv0" kind="show" id="lgp-Xg-ECG"/>
+                                            <segue destination="SAR-jO-Tv0" kind="showDetail" id="5HZ-09-VXH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="166"/>
+            <point key="canvasLocation" x="309" y="154"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="uCa-P4-uHc">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJW-Se-bsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="909"/>
+            <point key="canvasLocation" x="309" y="885"/>
         </scene>
         <!--Item-->
         <scene sceneID="Tap-MB-qXE">
@@ -274,10 +274,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYz-19-GNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="435" y="1693"/>
+            <point key="canvasLocation" x="309" y="1633"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R8I-zu-Adu"/>
+        <segue reference="5HZ-09-VXH"/>
     </inferredMetricsTieBreakers>
 </document>

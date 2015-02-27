@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface detailViewController : UIViewController
+//{
+//    int number;
+//}
 
 @property (nonatomic, assign) int selectNum;
 @property (weak, nonatomic) IBOutlet UILabel *SongWordStr;
 @property (nonatomic, assign) int number;
+@property (nonatomic, assign) int numSelected;
 @property (nonatomic,strong)NSString *title;
 @property (nonatomic,strong)NSString *artist;
 

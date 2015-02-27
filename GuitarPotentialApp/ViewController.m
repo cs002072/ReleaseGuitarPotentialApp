@@ -47,7 +47,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArray[indexPath.row][@"TITLE"], _AllSongsArray[indexPath.row][@"ARTIST"]];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_AllSongsArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -55,10 +54,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
-    /*******なんでかわからんが３になるためコメントアウト*******/
-//    dvc.number = _AllSongsArray[indexPath.row][@"NO"];
-    /*******なんでかわからんが３になるためコメントアウト*******/
-    dvc.number = (int)indexPath.row;
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //-- 遷移画面のカプセル化（インスタンス化）
+    detailViewController *dvc = [segue destinationViewController];
+    dvc.number = [_AllSongsArray[(int)self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
 }
 
 - (void)didReceiveMemoryWarning {

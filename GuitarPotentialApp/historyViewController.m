@@ -53,7 +53,6 @@
 
 //-- 行が押された時に発動するメソッド
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"行番号 = %ld", (long)indexPath.row);
 
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];

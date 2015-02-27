@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71918801A9B131000C5377E /* 涙のキッス.txt */; };
 		A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78537241A9B0BB2008DF74F /* detailViewController.m */; };
+		A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7952C311A9F77140084DCE7 /* いとしのエリー.txt */; };
 		A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */; };
 		A7EA746B1A9B0291009B46AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA746A1A9B0291009B46AB /* main.m */; };
 		A7EA746E1A9B0291009B46AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA746D1A9B0291009B46AB /* AppDelegate.m */; };
@@ -34,6 +35,7 @@
 		A71918801A9B131000C5377E /* 涙のキッス.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "涙のキッス.txt"; sourceTree = "<group>"; usesTabs = 0; };
 		A78537231A9B0BB2008DF74F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		A78537241A9B0BB2008DF74F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
+		A7952C311A9F77140084DCE7 /* いとしのエリー.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "いとしのエリー.txt"; sourceTree = "<group>"; };
 		A7D69F371A9CC2FE00A2AB87 /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
 		A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = historyViewController.m; sourceTree = "<group>"; };
 		A7EA74651A9B0291009B46AB /* GuitarPotentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarPotentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 		A7EA74681A9B0291009B46AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7952C311A9F77140084DCE7 /* いとしのエリー.txt */,
 				A71918801A9B131000C5377E /* 涙のキッス.txt */,
 				A7EA74691A9B0291009B46AB /* Info.plist */,
 				A7EA746A1A9B0291009B46AB /* main.m */,
@@ -220,6 +223,7 @@
 				A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */,
 				A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */,
 				A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */,
+				A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

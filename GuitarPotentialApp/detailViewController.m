@@ -16,11 +16,14 @@
 @end
 
 @implementation detailViewController
+//@synthesize number;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     _songHistoryArray = [[NSMutableArray alloc] init];
+    
     
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
@@ -29,12 +32,11 @@
     NSError *error = nil;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:self.title ofType:@"txt"];
     //    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"J-Total Music－涙のキッス（サザンオールスターズ）" ofType:@"txt"];
-    NSLog(@"%@", self.title);
+    NSLog(@"number ===== %d", self.number);
     _title = @"涙のキッス";
     _artist = @"サザンオールスターズ";
     _key = @"+-0";_capo = 3;
     self.SongWordStr.text = [NSString stringWithContentsOfFile:filePath encoding:NSShiftJISStringEncoding error:&error];
-//    NSLog(@"%@", self.SongWordStr.text);
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
