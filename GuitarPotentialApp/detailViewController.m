@@ -12,7 +12,7 @@
     NSString *_title, *_artist, *_key;
     NSInteger *_capo;
     NSMutableArray *_songHistoryArray;
-    NSArray *_AllSongsArray;
+    NSArray *_AllSongsArrayAtDetail;
 }
 @end
 
@@ -22,26 +22,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+
     _songHistoryArray = [[NSMutableArray alloc] init];
+    _AllSongsArrayAtDetail = [[NSArray alloc] init];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    
+    /************ここを消せば通るが，恐らくここに必要**********/
+//    _songHistoryArray = [defaults arrayForKey:@"HistorySONGS"];
+    /************ここを消せば通るが，恐らくここに必要**********/
+
+    
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
     //読み込むプロパティリストのファイルパス（場所）を指定
     NSString *path = [bundle pathForResource:@"AllSongsList" ofType:@"plist"];
     //プロパティリストの中身のデータを取得
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    _AllSongsArray = [dic objectForKey:@"AllSongsList"];
+    _AllSongsArrayAtDetail = [dic objectForKey:@"AllSongsList"];
 
     
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
-    NSMutableArray *_songHistoryArray = [NSMutableArray array];
     NSError *error = nil;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:_AllSongsArray[self.number][@"TITLE"] ofType:@"txt"];
-//    _title = @"涙のキッス";
-//    _artist = @"サザンオールスターズ";
-//    _key = @"+-0";_capo = 3;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:_AllSongsArrayAtDetail[self.number][@"TITLE"] ofType:@"txt"];
     self.SongWordStr.text = [NSString stringWithContentsOfFile:filePath encoding:NSShiftJISStringEncoding error:&error];
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
@@ -50,31 +58,36 @@
 
 
 - (IBAction)tapSaveButton:(id)sender {
-    
     /***********************************************/
     /**********楽曲情報保存フェーズ***********/
     /***********************************************/
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _songHistoryArray = [defaults arrayForKey:@"HistorySONGS"];
+    
+
     //-- ディクショナリに保存
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    [dictionary setObject:_AllSongsArray[self.number][@"TITLE"] forKey:@"TITLE"];
-    [dictionary setObject:_AllSongsArray[self.number][@"ARTIST"] forKey:@"ARTIST"];
-//    [dictionary setObject:_AllSongsArray[self.number][@"KEY"] forKey:@"KEY"];
+    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"TITLE"] forKey:@"TITLE"];
+    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"ARTIST"] forKey:@"ARTIST"];
+//    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"KEY"] forKey:@"KEY"];
 //    [dictionary setObject:(NSString *)_capo forKey:@"CAPO"];
 
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    _songHistoryArray = [defaults arrayForKey:@"ALLSONGS"];
+//    _songHistoryArray = [defaults arrayForKey:@"ALLSONG"];
     //-- NSMutableArrayにディクショナリを追加
     [_songHistoryArray addObject:dictionary];
+//    [_songHistoryArray addObject:@"sfsdfsdf"];
+    
 
-    //-- ユーザデフォルトにNSMutableArrayを追加
-    [defaults setObject:_songHistoryArray forKey:@"ALLSONGS"];
+//    NSLog(@"string ===== %@", _songHistoryArray[self.number][@"TITLE"]);
+    //-- ユーザデフォルトにNSMutableArrayを追加r
+    [defaults setObject:_songHistoryArray forKey:@"HistorySONGS"];
     [defaults synchronize];
+
     /***********************************************/
     /**********楽曲情報保存フェーズ***********/
     /***********************************************/
     UITabBarController *tab = (UITabBarController *)[self presentingViewController];
     [tab setSelectedIndex:2];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

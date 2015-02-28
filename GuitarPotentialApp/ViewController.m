@@ -10,7 +10,7 @@
 #import "detailViewController.h"
 
 @interface ViewController () {
-    NSArray *_AllSongsArray;
+    NSArray *_AllSongsArrayAtView;
 }
 
 @end
@@ -28,14 +28,14 @@
     NSString *path = [bundle pathForResource:@"AllSongsList" ofType:@"plist"];
     //プロパティリストの中身のデータを取得
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    _AllSongsArray = [dic objectForKey:@"AllSongsList"];
+    _AllSongsArrayAtView = [dic objectForKey:@"AllSongsList"];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
 }
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _AllSongsArray.count;
+    return _AllSongsArrayAtView.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -46,7 +46,8 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArray[indexPath.row][@"TITLE"], _AllSongsArray[indexPath.row][@"ARTIST"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArrayAtView[indexPath.row][@"TITLE"], _AllSongsArrayAtView[indexPath.row][@"ARTIST"]];
+    NSLog(@"cell.textLabel.text = %@", cell.textLabel.text);
     return cell;
 }
 
@@ -59,7 +60,7 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [segue destinationViewController];
-    dvc.number = [_AllSongsArray[(int)self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    dvc.number = [_AllSongsArrayAtView[(int)self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
 }
 
 - (void)didReceiveMemoryWarning {

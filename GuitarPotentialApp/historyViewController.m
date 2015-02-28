@@ -10,7 +10,8 @@
 #import "detailViewController.h"
 
 @interface historyViewController () {
-    NSMutableArray *_songInfo;
+    NSMutableArray *_AllSongsArrayAtHistory;
+;
 }
 
 @end
@@ -22,31 +23,35 @@
     // Do any additional setup after loading the view.
     self.historyTableView.delegate = self;
     self.historyTableView.dataSource = self;
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _historyList = [[NSMutableArray alloc] init];
+
     //-- １曲の情報
-    NSMutableArray *_songInfo = [[NSMutableArray alloc] init];
-    _songInfo = [defaults arrayForKey:@"ALLSONGS"];
+    _AllSongsArrayAtHistory = [[NSMutableArray alloc] init];
+    _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
     
-    NSDictionary *dictionary = [[NSDictionary alloc] init];
-    dictionary = [_songInfo objectAtIndex:0];
-    [_historyList addObject:[dictionary objectForKey:@"TITLE"]];
-    [_historyList addObject:[dictionary objectForKey:@"ARTIST"]];
-//    [_historyList addObject:[dictionary objectForKey:@"KEY"]];
-//    self.myTextView.text = [dictionary objectForKey:@"KEY"];
-    NSLog(@"title ===== %@", [dictionary objectForKey:@"TITLE"]);
+    
+//    NSDictionary *dictionary = [[NSDictionary alloc] init];
+//    dictionary = [_AllSongsArrayAtHistory objectAtIndex:0];
+//    [_historyList addObject:[dictionary objectForKey:@"TITLE"]];
+//    [_historyList addObject:[dictionary objectForKey:@"ARTIST"]];
+////    [_historyList addObject:[dictionary objectForKey:@"KEY"]];
+////    self.myTextView.text = [dictionary objectForKey:@"KEY"];
+//    NSLog(@"title ===== %@", [dictionary objectForKey:@"TITLE"]);
+//    NSLog(@"ARTIST ===== %@", [dictionary objectForKey:@"ARTIST"]);
 }
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return /*_songInfo.count + */1;
+    return _AllSongsArrayAtHistory.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    _songInfo = [defaults arrayForKey:@"ALLSONGS"];
+    _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
     NSDictionary *dictionary = [[NSDictionary alloc] init];
-    dictionary = [_songInfo objectAtIndex:0];
+    dictionary = [_AllSongsArrayAtHistory objectAtIndex:0];
 
     static NSString *CellIndentifier = @"Cell";
     //-- 再利用可能なCellオブジェクトを作成
