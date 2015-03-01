@@ -8,8 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71918801A9B131000C5377E /* 涙のキッス.txt */; };
+		A74F46C71AA307CB00ACE730 /* TSUNAMI.txt in Resources */ = {isa = PBXBuildFile; fileRef = A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */; };
 		A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78537241A9B0BB2008DF74F /* detailViewController.m */; };
 		A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7952C311A9F77140084DCE7 /* いとしのエリー.txt */; };
+		A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D2F98D1AA3240300529626 /* GuitarViewController.m */; };
+		A7D2F9A21AA3255200529626 /* head_close.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9901AA3255200529626 /* head_close.png */; };
+		A7D2F9A31AA3255200529626 /* head_open.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9911AA3255200529626 /* head_open.png */; };
+		A7D2F9A41AA3255200529626 /* lighting_head_close.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9921AA3255200529626 /* lighting_head_close.png */; };
+		A7D2F9A51AA3255200529626 /* lighting_head_open.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9931AA3255200529626 /* lighting_head_open.png */; };
+		A7D2F9A61AA3255200529626 /* normal_guitarstring.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9941AA3255200529626 /* normal_guitarstring.png */; };
+		A7D2F9A71AA3255200529626 /* pressedstring1.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9951AA3255200529626 /* pressedstring1.png */; };
+		A7D2F9A81AA3255200529626 /* pressedstring2.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9961AA3255200529626 /* pressedstring2.png */; };
+		A7D2F9A91AA3255200529626 /* pressedstring3.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9971AA3255200529626 /* pressedstring3.png */; };
+		A7D2F9AA1AA3255200529626 /* pressedstring4.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9981AA3255200529626 /* pressedstring4.png */; };
+		A7D2F9AB1AA3255200529626 /* pressedstring5.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9991AA3255200529626 /* pressedstring5.png */; };
+		A7D2F9AC1AA3255200529626 /* pressedstring6.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F99A1AA3255200529626 /* pressedstring6.png */; };
+		A7D2F9AD1AA3255200529626 /* pushed_guitarstring.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F99B1AA3255200529626 /* pushed_guitarstring.png */; };
+		A7D2F9BA1AA3279100529626 /* string1.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B41AA3279100529626 /* string1.png */; };
+		A7D2F9BB1AA3279100529626 /* string2.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B51AA3279100529626 /* string2.png */; };
+		A7D2F9BC1AA3279100529626 /* string3.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B61AA3279100529626 /* string3.png */; };
+		A7D2F9BD1AA3279100529626 /* string4.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B71AA3279100529626 /* string4.png */; };
+		A7D2F9BE1AA3279100529626 /* string5.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B81AA3279100529626 /* string5.png */; };
+		A7D2F9BF1AA3279100529626 /* string6.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B91AA3279100529626 /* string6.png */; };
 		A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */; };
 		A7EA746B1A9B0291009B46AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA746A1A9B0291009B46AB /* main.m */; };
 		A7EA746E1A9B0291009B46AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA746D1A9B0291009B46AB /* AppDelegate.m */; };
@@ -33,9 +53,30 @@
 
 /* Begin PBXFileReference section */
 		A71918801A9B131000C5377E /* 涙のキッス.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "涙のキッス.txt"; sourceTree = "<group>"; usesTabs = 0; };
+		A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = TSUNAMI.txt; sourceTree = "<group>"; };
 		A78537231A9B0BB2008DF74F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		A78537241A9B0BB2008DF74F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		A7952C311A9F77140084DCE7 /* いとしのエリー.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "いとしのエリー.txt"; sourceTree = "<group>"; };
+		A7D2F98C1AA3240300529626 /* GuitarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarViewController.h; sourceTree = "<group>"; };
+		A7D2F98D1AA3240300529626 /* GuitarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarViewController.m; sourceTree = "<group>"; };
+		A7D2F9901AA3255200529626 /* head_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_close.png; sourceTree = "<group>"; };
+		A7D2F9911AA3255200529626 /* head_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_open.png; sourceTree = "<group>"; };
+		A7D2F9921AA3255200529626 /* lighting_head_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_head_close.png; sourceTree = "<group>"; };
+		A7D2F9931AA3255200529626 /* lighting_head_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_head_open.png; sourceTree = "<group>"; };
+		A7D2F9941AA3255200529626 /* normal_guitarstring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal_guitarstring.png; sourceTree = "<group>"; };
+		A7D2F9951AA3255200529626 /* pressedstring1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressedstring1.png; sourceTree = "<group>"; };
+		A7D2F9961AA3255200529626 /* pressedstring2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressedstring2.png; sourceTree = "<group>"; };
+		A7D2F9971AA3255200529626 /* pressedstring3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressedstring3.png; sourceTree = "<group>"; };
+		A7D2F9981AA3255200529626 /* pressedstring4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressedstring4.png; sourceTree = "<group>"; };
+		A7D2F9991AA3255200529626 /* pressedstring5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressedstring5.png; sourceTree = "<group>"; };
+		A7D2F99A1AA3255200529626 /* pressedstring6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pressedstring6.png; sourceTree = "<group>"; };
+		A7D2F99B1AA3255200529626 /* pushed_guitarstring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushed_guitarstring.png; sourceTree = "<group>"; };
+		A7D2F9B41AA3279100529626 /* string1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string1.png; sourceTree = "<group>"; };
+		A7D2F9B51AA3279100529626 /* string2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string2.png; sourceTree = "<group>"; };
+		A7D2F9B61AA3279100529626 /* string3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string3.png; sourceTree = "<group>"; };
+		A7D2F9B71AA3279100529626 /* string4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string4.png; sourceTree = "<group>"; };
+		A7D2F9B81AA3279100529626 /* string5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string5.png; sourceTree = "<group>"; };
+		A7D2F9B91AA3279100529626 /* string6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string6.png; sourceTree = "<group>"; };
 		A7D69F371A9CC2FE00A2AB87 /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
 		A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = historyViewController.m; sourceTree = "<group>"; };
 		A7EA74651A9B0291009B46AB /* GuitarPotentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarPotentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +113,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7D2F98F1AA3255200529626 /* GuitarCodeTrainer画像 */ = {
+			isa = PBXGroup;
+			children = (
+				A7D2F9901AA3255200529626 /* head_close.png */,
+				A7D2F9911AA3255200529626 /* head_open.png */,
+				A7D2F9921AA3255200529626 /* lighting_head_close.png */,
+				A7D2F9931AA3255200529626 /* lighting_head_open.png */,
+				A7D2F9941AA3255200529626 /* normal_guitarstring.png */,
+				A7D2F9951AA3255200529626 /* pressedstring1.png */,
+				A7D2F9961AA3255200529626 /* pressedstring2.png */,
+				A7D2F9971AA3255200529626 /* pressedstring3.png */,
+				A7D2F9981AA3255200529626 /* pressedstring4.png */,
+				A7D2F9991AA3255200529626 /* pressedstring5.png */,
+				A7D2F99A1AA3255200529626 /* pressedstring6.png */,
+				A7D2F99B1AA3255200529626 /* pushed_guitarstring.png */,
+				A7D2F9B41AA3279100529626 /* string1.png */,
+				A7D2F9B51AA3279100529626 /* string2.png */,
+				A7D2F9B61AA3279100529626 /* string3.png */,
+				A7D2F9B71AA3279100529626 /* string4.png */,
+				A7D2F9B81AA3279100529626 /* string5.png */,
+				A7D2F9B91AA3279100529626 /* string6.png */,
+			);
+			path = "GuitarCodeTrainer画像";
+			sourceTree = "<group>";
+		};
 		A7EA745C1A9B0291009B46AB = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +168,8 @@
 				A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */,
 				A78537231A9B0BB2008DF74F /* detailViewController.h */,
 				A78537241A9B0BB2008DF74F /* detailViewController.m */,
+				A7D2F98C1AA3240300529626 /* GuitarViewController.h */,
+				A7D2F98D1AA3240300529626 /* GuitarViewController.m */,
 				A7EA74721A9B0291009B46AB /* Main.storyboard */,
 				A7EA74751A9B0291009B46AB /* Images.xcassets */,
 				A7EA74771A9B0291009B46AB /* LaunchScreen.xib */,
@@ -113,6 +181,8 @@
 		A7EA74681A9B0291009B46AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7D2F98F1AA3255200529626 /* GuitarCodeTrainer画像 */,
+				A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */,
 				A7952C311A9F77140084DCE7 /* いとしのエリー.txt */,
 				A71918801A9B131000C5377E /* 涙のキッス.txt */,
 				A7EA74691A9B0291009B46AB /* Info.plist */,
@@ -218,11 +288,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D2F9A41AA3255200529626 /* lighting_head_close.png in Resources */,
+				A7D2F9A31AA3255200529626 /* head_open.png in Resources */,
+				A7D2F9BE1AA3279100529626 /* string5.png in Resources */,
+				A7D2F9A51AA3255200529626 /* lighting_head_open.png in Resources */,
+				A7D2F9A21AA3255200529626 /* head_close.png in Resources */,
+				A7D2F9AC1AA3255200529626 /* pressedstring6.png in Resources */,
 				A7EA74741A9B0291009B46AB /* Main.storyboard in Resources */,
+				A7D2F9BA1AA3279100529626 /* string1.png in Resources */,
+				A7D2F9BD1AA3279100529626 /* string4.png in Resources */,
+				A7D2F9A61AA3255200529626 /* normal_guitarstring.png in Resources */,
+				A7D2F9AA1AA3255200529626 /* pressedstring4.png in Resources */,
+				A7D2F9BF1AA3279100529626 /* string6.png in Resources */,
+				A7D2F9A81AA3255200529626 /* pressedstring2.png in Resources */,
+				A7D2F9AB1AA3255200529626 /* pressedstring5.png in Resources */,
+				A7D2F9A91AA3255200529626 /* pressedstring3.png in Resources */,
 				A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */,
 				A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */,
 				A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */,
 				A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */,
+				A7D2F9AD1AA3255200529626 /* pushed_guitarstring.png in Resources */,
+				A7D2F9BB1AA3279100529626 /* string2.png in Resources */,
+				A7D2F9BC1AA3279100529626 /* string3.png in Resources */,
+				A74F46C71AA307CB00ACE730 /* TSUNAMI.txt in Resources */,
+				A7D2F9A71AA3255200529626 /* pressedstring1.png in Resources */,
 				A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +332,7 @@
 			files = (
 				A7EA74711A9B0291009B46AB /* ViewController.m in Sources */,
 				A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */,
+				A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */,
 				A7EA746E1A9B0291009B46AB /* AppDelegate.m in Sources */,
 				A7EA746B1A9B0291009B46AB /* main.m in Sources */,
 				A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */,

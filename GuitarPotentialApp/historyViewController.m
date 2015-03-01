@@ -32,7 +32,7 @@
     _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
     
     
-//    NSDictionary *dictionary = [[NSDictionary alloc] init];
+    NSDictionary *dictionary = [[NSDictionary alloc] init];
 //    dictionary = [_AllSongsArrayAtHistory objectAtIndex:0];
 //    [_historyList addObject:[dictionary objectForKey:@"TITLE"]];
 //    [_historyList addObject:[dictionary objectForKey:@"ARTIST"]];
@@ -44,6 +44,9 @@
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
+    NSLog(@"_AllSongsArrayAtHistory.count ==== %d", _AllSongsArrayAtHistory.count);
     return _AllSongsArrayAtHistory.count;
 }
 
@@ -59,9 +62,10 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [dictionary objectForKey:@"TITLE"], [dictionary objectForKey:@"ARTIST"]/*, [_historyList objectAtIndex:2]*/];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [_historyList objectAtIndex:0], [_historyList objectAtIndex:1]/*, [_historyList objectAtIndex:2]*/];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@", [_historyList objectAtIndex:indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]/*, [_historyList objectAtIndex:2]*/];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [dictionary objectForKey:@"TITLE"], [dictionary objectForKey:@"ARTIST"]/*, [_historyList objectAtIndex:2]*/];
+    
+    NSLog(@"AtHistory:%@/%@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]);
     return cell;
 }
 

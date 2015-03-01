@@ -22,8 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
 
     _songHistoryArray = [[NSMutableArray alloc] init];
     _AllSongsArrayAtDetail = [[NSArray alloc] init];
@@ -31,10 +29,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     
-    /************ここを消せば通るが，恐らくここに必要**********/
+    /************ここを消せば通るが，恐らくここにこれが必要**********/
 //    _songHistoryArray = [defaults arrayForKey:@"HistorySONGS"];
-    /************ここを消せば通るが，恐らくここに必要**********/
-
+    /************ここを消せば通るが，恐らくここにこれが必要**********/
     
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
@@ -63,7 +60,6 @@
     /***********************************************/
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _songHistoryArray = [defaults arrayForKey:@"HistorySONGS"];
-    
 
     //-- ディクショナリに保存
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
@@ -72,10 +68,8 @@
 //    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"KEY"] forKey:@"KEY"];
 //    [dictionary setObject:(NSString *)_capo forKey:@"CAPO"];
 
-//    _songHistoryArray = [defaults arrayForKey:@"ALLSONG"];
     //-- NSMutableArrayにディクショナリを追加
     [_songHistoryArray addObject:dictionary];
-//    [_songHistoryArray addObject:@"sfsdfsdf"];
     
 
 //    NSLog(@"string ===== %@", _songHistoryArray[self.number][@"TITLE"]);
