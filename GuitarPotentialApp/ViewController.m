@@ -49,20 +49,20 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArrayAtView[indexPath.row][@"TITLE"], _AllSongsArrayAtView[indexPath.row][@"ARTIST"]];
-    NSLog(@"cell.textLabel.text = %@", cell.textLabel.text);
+//    NSLog(@"cell.textLabel.text = %@", cell.textLabel.text);
     return cell;
 }
 
 //-- 行が押された時に発動するメソッド
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //-- 遷移画面のカプセル化（インスタンス化）
-    detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
+//    detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [segue destinationViewController];
-    dvc.number = [_AllSongsArrayAtView[(int)self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    dvc.number = [_AllSongsArrayAtView[/*(int)*/self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
 }
 
 - (void)didReceiveMemoryWarning {

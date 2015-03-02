@@ -29,30 +29,19 @@
 
     //-- １曲の情報
     _AllSongsArrayAtHistory = [[NSMutableArray alloc] init];
-    _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
-    
-    
-    NSDictionary *dictionary = [[NSDictionary alloc] init];
-//    dictionary = [_AllSongsArrayAtHistory objectAtIndex:0];
-//    [_historyList addObject:[dictionary objectForKey:@"TITLE"]];
-//    [_historyList addObject:[dictionary objectForKey:@"ARTIST"]];
-////    [_historyList addObject:[dictionary objectForKey:@"KEY"]];
-////    self.myTextView.text = [dictionary objectForKey:@"KEY"];
-//    NSLog(@"title ===== %@", [dictionary objectForKey:@"TITLE"]);
-//    NSLog(@"ARTIST ===== %@", [dictionary objectForKey:@"ARTIST"]);
+    _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
 }
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
-    NSLog(@"_AllSongsArrayAtHistory.count ==== %d", _AllSongsArrayAtHistory.count);
+    _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
     return _AllSongsArrayAtHistory.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    _AllSongsArrayAtHistory = [defaults arrayForKey:@"HistorySONGS"];
+    _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
     NSDictionary *dictionary = [[NSDictionary alloc] init];
     dictionary = [_AllSongsArrayAtHistory objectAtIndex:0];
 
@@ -62,10 +51,8 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]/*, [_historyList objectAtIndex:2]*/];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", [dictionary objectForKey:@"TITLE"], [dictionary objectForKey:@"ARTIST"]/*, [_historyList objectAtIndex:2]*/];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
     
-    NSLog(@"AtHistory:%@/%@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]);
     return cell;
 }
 
@@ -77,6 +64,12 @@
     dvc.selectNum = (int)indexPath.row;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //-- 遷移画面のカプセル化（インスタンス化）
+    detailViewController *dvc = [segue destinationViewController];
+    dvc.number = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    NSLog(@"numberAtHistory === %d", dvc.number);
+}
 
 
 - (void)didReceiveMemoryWarning {

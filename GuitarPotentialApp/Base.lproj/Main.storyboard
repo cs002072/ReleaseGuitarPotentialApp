@@ -226,6 +226,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="95" y="161" width="210" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="uyb-MQ-Ztg" kind="showDetail" id="qgb-Hz-iwP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqY-fz-gUl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -235,9 +238,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="95" y="232" width="195" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="uyb-MQ-Ztg" kind="showDetail" id="tKQ-PU-2rZ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-Rj-2Ox">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -294,479 +294,391 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="61" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwd-Lu-Y2V">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <imageView tag="61" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gpl-d1-ID9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="20" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="33" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuN-O3-Jeb">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="51" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pa8-lF-Lxa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="20" width="48" height="67"/>
+                                    <rect key="frame" x="75" y="33" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwa-ZN-Ryt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="41" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-fN-DdM">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="20" width="48" height="67"/>
+                                    <rect key="frame" x="122" y="33" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4D-yl-1pz">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="31" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RtP-Ow-xdS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="20" width="48" height="67"/>
+                                    <rect key="frame" x="169" y="33" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ect-tY-YoW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="21" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="QRR-sr-d1S">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="20" width="48" height="67"/>
+                                    <rect key="frame" x="216" y="33" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-Xy-Sq5">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="KN8-Fe-0Ey">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="20" width="48" height="67"/>
+                                    <rect key="frame" x="263" y="33" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="62" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuL-zq-r3E">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="62" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Smd-bh-dtH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="86" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="100" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGX-07-Zn3">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="52" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-af-KjJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="86" width="48" height="67"/>
+                                    <rect key="frame" x="75" y="100" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-zX-Fze">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="42" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="aFA-0p-cTe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="86" width="48" height="67"/>
+                                    <rect key="frame" x="122" y="100" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQ3-lt-2Dg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="32" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="O19-kc-jEj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="86" width="48" height="67"/>
+                                    <rect key="frame" x="169" y="100" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="123-Tj-53q">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="22" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-sA-eQK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="86" width="48" height="67"/>
+                                    <rect key="frame" x="216" y="100" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNT-8I-Qvt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="jt1-rq-0a4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="86" width="48" height="67"/>
+                                    <rect key="frame" x="263" y="100" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="63" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uE-9s-wnU">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="63" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="B0P-3P-Gsd">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="152" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="167" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="53" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-Jq-e9z">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="53" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-EX-4ua">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="152" width="48" height="67"/>
+                                    <rect key="frame" x="75" y="167" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdM-3o-smu">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="43" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="UIE-DE-ycy">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="152" width="48" height="67"/>
+                                    <rect key="frame" x="122" y="167" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnB-4C-XXW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="33" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZ5-Oo-sd5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="152" width="48" height="67"/>
+                                    <rect key="frame" x="169" y="167" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9j4-fs-CET">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="23" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="PPn-Ck-fKY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="152" width="48" height="67"/>
+                                    <rect key="frame" x="216" y="167" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOr-OZ-d0Z">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-mI-rC8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="152" width="48" height="67"/>
+                                    <rect key="frame" x="263" y="167" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="64" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDS-1V-gYd">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="64" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="1xa-jU-aMc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="218" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="234" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="54" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpP-Dd-h2x">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="54" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-Fd-gaR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="218" width="48" height="67"/>
+                                    <rect key="frame" x="75" y="234" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZB-ZR-hNl">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="44" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="2vm-uw-b0F">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="218" width="48" height="67"/>
+                                    <rect key="frame" x="122" y="234" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6E-sl-kmj">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="34" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="QzI-bU-FHq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="218" width="48" height="67"/>
+                                    <rect key="frame" x="169" y="234" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MK-kg-K1u">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="24" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-Hy-vU9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="218" width="48" height="67"/>
+                                    <rect key="frame" x="216" y="234" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAM-Rk-b5h">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="cCZ-Rb-uUi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="218" width="48" height="67"/>
+                                    <rect key="frame" x="263" y="234" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="65" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-9k-Ygx">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="65" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="49d-9A-LLb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="284" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="301" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="55" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-51-BTj">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="55" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-1G-bEA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="284" width="48" height="67"/>
+                                    <rect key="frame" x="75" y="301" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="45" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62t-rL-IdP">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="45" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="aNQ-5I-5Z8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="284" width="48" height="67"/>
+                                    <rect key="frame" x="122" y="301" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-B4-M0H">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="35" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RvB-d5-21X">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="284" width="48" height="67"/>
+                                    <rect key="frame" x="169" y="301" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIU-Dw-fbA">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Hi-SgO">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="284" width="48" height="67"/>
+                                    <rect key="frame" x="216" y="301" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgd-Ye-8gq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-0y-hyK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="284" width="48" height="67"/>
+                                    <rect key="frame" x="263" y="301" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="66" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEc-Hb-zom">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="66" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-Pk-Zpl">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="350" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="368" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAN-Cp-5qZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="string6.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="56" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RpU-WV-96m">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="416" width="48" height="140"/>
+                                    <rect key="frame" x="75" y="368" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QZ-6l-T0c">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="string5.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="46" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="yxE-J0-P2T">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="416" width="48" height="140"/>
+                                    <rect key="frame" x="122" y="368" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcC-de-5dP">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="string4.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="36" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-cb-dvb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="416" width="48" height="140"/>
+                                    <rect key="frame" x="169" y="368" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3f-Z3-Ngh">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="string3.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="26" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ggg-zY-rdc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="416" width="48" height="140"/>
+                                    <rect key="frame" x="216" y="368" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="56" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbJ-Nk-JFZ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="IiM-yJ-S5S">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="63" y="350" width="48" height="67"/>
+                                    <rect key="frame" x="263" y="368" width="48" height="68"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="46" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKb-eI-O3W">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string6.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNu-nq-khL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="350" width="48" height="67"/>
+                                    <rect key="frame" x="28" y="435" width="48" height="145"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4Q-bH-od2">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string5.png" translatesAutoresizingMaskIntoConstraints="NO" id="brg-nB-CYq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="157" y="350" width="48" height="67"/>
+                                    <rect key="frame" x="75" y="435" width="48" height="145"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrd-Bo-POh">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-RD-FZC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="350" width="48" height="67"/>
+                                    <rect key="frame" x="122" y="435" width="48" height="145"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C35-su-chh">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="normal_guitarstring.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string3.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-XK-5pm">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="350" width="48" height="67"/>
+                                    <rect key="frame" x="169" y="435" width="48" height="145"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-xo-a1t">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="string2.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Fq-2Ia">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="416" width="48" height="140"/>
+                                    <rect key="frame" x="216" y="435" width="48" height="145"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-j8-YPY">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="string1.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string1.png" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-cB-zoe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="416" width="48" height="140"/>
+                                    <rect key="frame" x="263" y="435" width="48" height="145"/>
                                 </variation>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Bwd-Lu-Y2V"/>
-                                <exclude reference="vuN-O3-Jeb"/>
-                                <exclude reference="nwa-ZN-Ryt"/>
-                                <exclude reference="Y4D-yl-1pz"/>
-                                <exclude reference="ect-tY-YoW"/>
-                                <exclude reference="0ke-Xy-Sq5"/>
-                                <exclude reference="BuL-zq-r3E"/>
-                                <exclude reference="eGX-07-Zn3"/>
-                                <exclude reference="FPT-zX-Fze"/>
-                                <exclude reference="tQ3-lt-2Dg"/>
-                                <exclude reference="123-Tj-53q"/>
-                                <exclude reference="vNT-8I-Qvt"/>
-                                <exclude reference="6uE-9s-wnU"/>
-                                <exclude reference="flQ-Jq-e9z"/>
-                                <exclude reference="IdM-3o-smu"/>
-                                <exclude reference="MnB-4C-XXW"/>
-                                <exclude reference="9j4-fs-CET"/>
-                                <exclude reference="OOr-OZ-d0Z"/>
-                                <exclude reference="iDS-1V-gYd"/>
-                                <exclude reference="jpP-Dd-h2x"/>
-                                <exclude reference="aZB-ZR-hNl"/>
-                                <exclude reference="E6E-sl-kmj"/>
-                                <exclude reference="3MK-kg-K1u"/>
-                                <exclude reference="gAM-Rk-b5h"/>
-                                <exclude reference="oUi-9k-Ygx"/>
-                                <exclude reference="Quc-51-BTj"/>
-                                <exclude reference="62t-rL-IdP"/>
-                                <exclude reference="n6K-B4-M0H"/>
-                                <exclude reference="OIU-Dw-fbA"/>
-                                <exclude reference="Bgd-Ye-8gq"/>
-                                <exclude reference="cEc-Hb-zom"/>
-                                <exclude reference="qAN-Cp-5qZ"/>
-                                <exclude reference="1QZ-6l-T0c"/>
-                                <exclude reference="lcC-de-5dP"/>
-                                <exclude reference="p3f-Z3-Ngh"/>
-                                <exclude reference="bbJ-Nk-JFZ"/>
-                                <exclude reference="FKb-eI-O3W"/>
-                                <exclude reference="f4Q-bH-od2"/>
-                                <exclude reference="rrd-Bo-POh"/>
-                                <exclude reference="C35-su-chh"/>
-                                <exclude reference="8Yd-xo-a1t"/>
-                                <exclude reference="gvB-j8-YPY"/>
+                                <exclude reference="Gpl-d1-ID9"/>
+                                <exclude reference="Pa8-lF-Lxa"/>
+                                <exclude reference="RVu-fN-DdM"/>
+                                <exclude reference="RtP-Ow-xdS"/>
+                                <exclude reference="QRR-sr-d1S"/>
+                                <exclude reference="KN8-Fe-0Ey"/>
+                                <exclude reference="Smd-bh-dtH"/>
+                                <exclude reference="8j2-af-KjJ"/>
+                                <exclude reference="aFA-0p-cTe"/>
+                                <exclude reference="O19-kc-jEj"/>
+                                <exclude reference="E9J-sA-eQK"/>
+                                <exclude reference="jt1-rq-0a4"/>
+                                <exclude reference="B0P-3P-Gsd"/>
+                                <exclude reference="O9A-EX-4ua"/>
+                                <exclude reference="UIE-DE-ycy"/>
+                                <exclude reference="iZ5-Oo-sd5"/>
+                                <exclude reference="PPn-Ck-fKY"/>
+                                <exclude reference="Bnc-mI-rC8"/>
+                                <exclude reference="1xa-jU-aMc"/>
+                                <exclude reference="gh6-Fd-gaR"/>
+                                <exclude reference="2vm-uw-b0F"/>
+                                <exclude reference="QzI-bU-FHq"/>
+                                <exclude reference="0g0-Hy-vU9"/>
+                                <exclude reference="cCZ-Rb-uUi"/>
+                                <exclude reference="49d-9A-LLb"/>
+                                <exclude reference="Twy-1G-bEA"/>
+                                <exclude reference="aNQ-5I-5Z8"/>
+                                <exclude reference="RvB-d5-21X"/>
+                                <exclude reference="Ob0-Hi-SgO"/>
+                                <exclude reference="hXa-0y-hyK"/>
+                                <exclude reference="Bga-Pk-Zpl"/>
+                                <exclude reference="RpU-WV-96m"/>
+                                <exclude reference="yxE-J0-P2T"/>
+                                <exclude reference="VnK-cb-dvb"/>
+                                <exclude reference="Ggg-zY-rdc"/>
+                                <exclude reference="IiM-yJ-S5S"/>
+                                <exclude reference="fNu-nq-khL"/>
+                                <exclude reference="brg-nB-CYq"/>
+                                <exclude reference="ysf-RD-FZC"/>
+                                <exclude reference="K2V-XK-5pm"/>
+                                <exclude reference="Fd0-Fq-2Ia"/>
+                                <exclude reference="O5a-cB-zoe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Bwd-Lu-Y2V"/>
-                                <include reference="vuN-O3-Jeb"/>
-                                <include reference="nwa-ZN-Ryt"/>
-                                <include reference="Y4D-yl-1pz"/>
-                                <include reference="ect-tY-YoW"/>
-                                <include reference="0ke-Xy-Sq5"/>
-                                <include reference="BuL-zq-r3E"/>
-                                <include reference="eGX-07-Zn3"/>
-                                <include reference="FPT-zX-Fze"/>
-                                <include reference="tQ3-lt-2Dg"/>
-                                <include reference="123-Tj-53q"/>
-                                <include reference="vNT-8I-Qvt"/>
-                                <include reference="6uE-9s-wnU"/>
-                                <include reference="flQ-Jq-e9z"/>
-                                <include reference="IdM-3o-smu"/>
-                                <include reference="MnB-4C-XXW"/>
-                                <include reference="9j4-fs-CET"/>
-                                <include reference="OOr-OZ-d0Z"/>
-                                <include reference="iDS-1V-gYd"/>
-                                <include reference="jpP-Dd-h2x"/>
-                                <include reference="aZB-ZR-hNl"/>
-                                <include reference="E6E-sl-kmj"/>
-                                <include reference="3MK-kg-K1u"/>
-                                <include reference="gAM-Rk-b5h"/>
-                                <include reference="oUi-9k-Ygx"/>
-                                <include reference="Quc-51-BTj"/>
-                                <include reference="62t-rL-IdP"/>
-                                <include reference="n6K-B4-M0H"/>
-                                <include reference="OIU-Dw-fbA"/>
-                                <include reference="Bgd-Ye-8gq"/>
-                                <include reference="cEc-Hb-zom"/>
-                                <include reference="qAN-Cp-5qZ"/>
-                                <include reference="1QZ-6l-T0c"/>
-                                <include reference="lcC-de-5dP"/>
-                                <include reference="p3f-Z3-Ngh"/>
-                                <include reference="bbJ-Nk-JFZ"/>
-                                <include reference="FKb-eI-O3W"/>
-                                <include reference="f4Q-bH-od2"/>
-                                <include reference="rrd-Bo-POh"/>
-                                <include reference="C35-su-chh"/>
-                                <include reference="8Yd-xo-a1t"/>
-                                <include reference="gvB-j8-YPY"/>
+                                <include reference="Gpl-d1-ID9"/>
+                                <include reference="Pa8-lF-Lxa"/>
+                                <include reference="RVu-fN-DdM"/>
+                                <include reference="RtP-Ow-xdS"/>
+                                <include reference="QRR-sr-d1S"/>
+                                <include reference="KN8-Fe-0Ey"/>
+                                <include reference="Smd-bh-dtH"/>
+                                <include reference="8j2-af-KjJ"/>
+                                <include reference="aFA-0p-cTe"/>
+                                <include reference="O19-kc-jEj"/>
+                                <include reference="E9J-sA-eQK"/>
+                                <include reference="jt1-rq-0a4"/>
+                                <include reference="B0P-3P-Gsd"/>
+                                <include reference="O9A-EX-4ua"/>
+                                <include reference="UIE-DE-ycy"/>
+                                <include reference="iZ5-Oo-sd5"/>
+                                <include reference="PPn-Ck-fKY"/>
+                                <include reference="Bnc-mI-rC8"/>
+                                <include reference="1xa-jU-aMc"/>
+                                <include reference="gh6-Fd-gaR"/>
+                                <include reference="2vm-uw-b0F"/>
+                                <include reference="QzI-bU-FHq"/>
+                                <include reference="0g0-Hy-vU9"/>
+                                <include reference="cCZ-Rb-uUi"/>
+                                <include reference="49d-9A-LLb"/>
+                                <include reference="Twy-1G-bEA"/>
+                                <include reference="aNQ-5I-5Z8"/>
+                                <include reference="RvB-d5-21X"/>
+                                <include reference="Ob0-Hi-SgO"/>
+                                <include reference="hXa-0y-hyK"/>
+                                <include reference="Bga-Pk-Zpl"/>
+                                <include reference="RpU-WV-96m"/>
+                                <include reference="yxE-J0-P2T"/>
+                                <include reference="VnK-cb-dvb"/>
+                                <include reference="Ggg-zY-rdc"/>
+                                <include reference="IiM-yJ-S5S"/>
+                                <include reference="fNu-nq-khL"/>
+                                <include reference="brg-nB-CYq"/>
+                                <include reference="ysf-RD-FZC"/>
+                                <include reference="K2V-XK-5pm"/>
+                                <include reference="Fd0-Fq-2Ia"/>
+                                <include reference="O5a-cB-zoe"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="string11" destination="KN8-Fe-0Ey" id="ac7-1M-KiI"/>
+                        <outlet property="string12" destination="jt1-rq-0a4" id="4pj-HI-lH3"/>
+                        <outlet property="string13" destination="Bnc-mI-rC8" id="zPc-4J-xma"/>
+                        <outlet property="string14" destination="cCZ-Rb-uUi" id="oH7-S9-qx1"/>
+                        <outlet property="string15" destination="hXa-0y-hyK" id="dAw-T5-LlJ"/>
+                        <outlet property="string16" destination="IiM-yJ-S5S" id="0XX-V2-Sv1"/>
+                        <outlet property="string21" destination="QRR-sr-d1S" id="8zT-W8-JS2"/>
+                        <outlet property="string22" destination="E9J-sA-eQK" id="bwh-4b-ptU"/>
+                        <outlet property="string23" destination="PPn-Ck-fKY" id="3XL-Yg-bM0"/>
+                        <outlet property="string24" destination="0g0-Hy-vU9" id="bko-ly-bca"/>
+                        <outlet property="string25" destination="Ob0-Hi-SgO" id="5m0-uF-vgo"/>
+                        <outlet property="string26" destination="Ggg-zY-rdc" id="ntL-NS-ZNs"/>
+                        <outlet property="string31" destination="RtP-Ow-xdS" id="hO2-Xn-ocN"/>
+                        <outlet property="string32" destination="O19-kc-jEj" id="FSq-Uh-jZ5"/>
+                        <outlet property="string33" destination="iZ5-Oo-sd5" id="trg-x4-ZRt"/>
+                        <outlet property="string34" destination="QzI-bU-FHq" id="xHi-4r-ahn"/>
+                        <outlet property="string35" destination="RvB-d5-21X" id="7Hv-aC-d79"/>
+                        <outlet property="string36" destination="VnK-cb-dvb" id="wBL-Wy-ABo"/>
+                        <outlet property="string41" destination="RVu-fN-DdM" id="QN9-ol-Ljq"/>
+                        <outlet property="string42" destination="aFA-0p-cTe" id="Wh9-5z-gCp"/>
+                        <outlet property="string43" destination="UIE-DE-ycy" id="1av-Ll-Kfu"/>
+                        <outlet property="string44" destination="2vm-uw-b0F" id="mpU-WO-x2Q"/>
+                        <outlet property="string45" destination="aNQ-5I-5Z8" id="5p1-BC-VUy"/>
+                        <outlet property="string46" destination="yxE-J0-P2T" id="Ki7-1v-HXj"/>
+                        <outlet property="string51" destination="Pa8-lF-Lxa" id="5kF-qv-DQB"/>
+                        <outlet property="string52" destination="8j2-af-KjJ" id="1dv-dW-PX5"/>
+                        <outlet property="string53" destination="O9A-EX-4ua" id="t2h-u3-GyJ"/>
+                        <outlet property="string54" destination="gh6-Fd-gaR" id="1Y8-qD-gcx"/>
+                        <outlet property="string55" destination="Twy-1G-bEA" id="vg9-z2-0Uv"/>
+                        <outlet property="string56" destination="RpU-WV-96m" id="fC1-hy-sdH"/>
+                        <outlet property="string61" destination="Gpl-d1-ID9" id="ZLC-m1-sM1"/>
+                        <outlet property="string62" destination="Smd-bh-dtH" id="Fdt-6m-mL7"/>
+                        <outlet property="string63" destination="B0P-3P-Gsd" id="Cr7-9G-xg1"/>
+                        <outlet property="string64" destination="1xa-jU-aMc" id="tdU-mX-HN0"/>
+                        <outlet property="string65" destination="49d-9A-LLb" id="NZa-bM-n2R"/>
+                        <outlet property="string66" destination="Bga-Pk-Zpl" id="VxO-bT-S5s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK8-l0-phy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -794,6 +706,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VKs-OB-ken" id="fib-65-YzX">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SAR-jO-Tv0" kind="showDetail" id="AVo-wB-6M2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -816,12 +731,11 @@
                     <tabBarItem key="tabBarItem" title="Item" id="f0e-nJ-rPE"/>
                     <connections>
                         <outlet property="historyTableView" destination="UkX-sn-DAq" id="dp3-rI-GYZ"/>
-                        <segue destination="SAR-jO-Tv0" kind="showDetail" id="R8I-zu-Adu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYz-19-GNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="291" y="1765"/>
+            <point key="canvasLocation" x="309" y="1603"/>
         </scene>
     </scenes>
     <resources>
@@ -834,6 +748,6 @@
         <image name="string6.png" width="48" height="272"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R8I-zu-Adu"/>
+        <segue reference="AVo-wB-6M2"/>
     </inferredMetricsTieBreakers>
 </document>

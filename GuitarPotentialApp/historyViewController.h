@@ -13,7 +13,6 @@
     NSMutableArray *_historyList;//-- 履歴の楽曲リスト
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *myTextView;
 @property (weak, nonatomic) IBOutlet UITableView *historyTableView;
 
 @end

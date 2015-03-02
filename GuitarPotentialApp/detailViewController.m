@@ -9,15 +9,14 @@
 #import "detailViewController.h"
 
 @interface detailViewController () {
-    NSString *_title, *_artist, *_key;
-    NSInteger *_capo;
     NSMutableArray *_songHistoryArray;
     NSArray *_AllSongsArrayAtDetail;
+    NSInteger *_songHistoryArrayNum;
+//    BOOL boolNum = NO;
 }
 @end
 
 @implementation detailViewController
-//@synthesize number;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,13 +24,6 @@
 
     _songHistoryArray = [[NSMutableArray alloc] init];
     _AllSongsArrayAtDetail = [[NSArray alloc] init];
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    
-    /************ここを消せば通るが，恐らくここにこれが必要**********/
-//    _songHistoryArray = [defaults arrayForKey:@"HistorySONGS"];
-    /************ここを消せば通るが，恐らくここにこれが必要**********/
     
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
@@ -59,20 +51,22 @@
     /**********楽曲情報保存フェーズ***********/
     /***********************************************/
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    _songHistoryArray = [defaults arrayForKey:@"HistorySONGS"];
-
+    _songHistoryArray = [[NSMutableArray alloc] init];
+    
+    BOOL boolFlag = [defaults boolForKey:@"BOOL"];
+    if (boolFlag == YES){
+        _songHistoryArray = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
+    }
+    [defaults setBool:YES forKey:@"BOOL"];
+    [defaults synchronize];
     //-- ディクショナリに保存
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"NO"] forKey:@"NO"];
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"TITLE"] forKey:@"TITLE"];
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"ARTIST"] forKey:@"ARTIST"];
-//    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"KEY"] forKey:@"KEY"];
-//    [dictionary setObject:(NSString *)_capo forKey:@"CAPO"];
 
     //-- NSMutableArrayにディクショナリを追加
     [_songHistoryArray addObject:dictionary];
-    
-
-//    NSLog(@"string ===== %@", _songHistoryArray[self.number][@"TITLE"]);
     //-- ユーザデフォルトにNSMutableArrayを追加r
     [defaults setObject:_songHistoryArray forKey:@"HistorySONGS"];
     [defaults synchronize];
