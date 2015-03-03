@@ -16,8 +16,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="QwR-a6-iXx"/>
-                        <segue destination="C8T-eu-pWE" kind="relationship" relationship="viewControllers" id="AVf-zr-RPM"/>
-                        <segue destination="xAI-oQ-CDa" kind="relationship" relationship="viewControllers" id="Y14-NW-SNZ"/>
+                        <segue destination="RLm-f3-67y" kind="relationship" relationship="viewControllers" id="F47-N7-FTq"/>
+                        <segue destination="xAI-oQ-CDa" kind="relationship" relationship="viewControllers" id="bCN-d4-tnK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9X-4f-kGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,12 +204,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962.5" y="624"/>
+            <point key="canvasLocation" x="3880.5" y="624"/>
         </scene>
-        <!--Item-->
+        <!--Guitar Mode View Controller-->
         <scene sceneID="fNe-Z7-vJh">
             <objects>
-                <viewController id="C8T-eu-pWE" sceneMemberID="viewController">
+                <viewController id="C8T-eu-pWE" customClass="GuitarModeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z6Z-wp-cn6"/>
                         <viewControllerLayoutGuide type="bottom" id="4UN-w0-M3Y"/>
@@ -227,7 +227,7 @@
                                     <rect key="frame" x="95" y="161" width="210" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="uyb-MQ-Ztg" kind="showDetail" id="qgb-Hz-iwP"/>
+                                    <action selector="GuitarCodePracticeButton:" destination="C8T-eu-pWE" eventType="touchUpInside" id="Kq7-qT-MEq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqY-fz-gUl">
@@ -276,16 +276,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="k0B-je-LoD"/>
+                    <navigationItem key="navigationItem" id="WUu-92-aNl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJW-Se-bsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="885"/>
+            <point key="canvasLocation" x="1263" y="909"/>
         </scene>
         <!--Guitar View Controller-->
         <scene sceneID="9os-Px-0eJ">
             <objects>
-                <viewController id="uyb-MQ-Ztg" customClass="GuitarViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuitarViewController" id="uyb-MQ-Ztg" customClass="GuitarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fea-RB-95g"/>
                         <viewControllerLayoutGuide type="bottom" id="Gev-I8-6Ub"/>
@@ -682,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK8-l0-phy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1120.5" y="885"/>
+            <point key="canvasLocation" x="1876.5" y="909"/>
         </scene>
         <!--Item-->
         <scene sceneID="Tap-MB-qXE">
@@ -735,7 +735,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYz-19-GNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="1603"/>
+            <point key="canvasLocation" x="309" y="1759"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="mfw-wW-o6B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLm-f3-67y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="k0B-je-LoD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sOO-f2-9nc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C8T-eu-pWE" kind="relationship" relationship="rootViewController" id="tMP-A5-4TR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8H-rR-cYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="909"/>
         </scene>
     </scenes>
     <resources>

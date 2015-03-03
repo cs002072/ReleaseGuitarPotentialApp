@@ -38,6 +38,7 @@
 		A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7EA74751A9B0291009B46AB /* Images.xcassets */; };
 		A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EA74771A9B0291009B46AB /* LaunchScreen.xib */; };
 		A7EA74851A9B0291009B46AB /* GuitarPotentialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */; };
+		A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */; };
 		A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,8 @@
 		A7EA747E1A9B0291009B46AB /* GuitarPotentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarPotentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EA74831A9B0291009B46AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuitarPotentialAppTests.m; sourceTree = "<group>"; };
+		A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarModeViewController.h; sourceTree = "<group>"; };
+		A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarModeViewController.m; sourceTree = "<group>"; };
 		A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllSongsList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +174,8 @@
 				A7D2F98C1AA3240300529626 /* GuitarViewController.h */,
 				A7D2F98D1AA3240300529626 /* GuitarViewController.m */,
 				A7EA74721A9B0291009B46AB /* Main.storyboard */,
+				A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */,
+				A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */,
 				A7EA74751A9B0291009B46AB /* Images.xcassets */,
 				A7EA74771A9B0291009B46AB /* LaunchScreen.xib */,
 				A7EA74681A9B0291009B46AB /* Supporting Files */,
@@ -332,6 +337,7 @@
 			files = (
 				A7EA74711A9B0291009B46AB /* ViewController.m in Sources */,
 				A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */,
+				A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */,
 				A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */,
 				A7EA746E1A9B0291009B46AB /* AppDelegate.m in Sources */,
 				A7EA746B1A9B0291009B46AB /* main.m in Sources */,

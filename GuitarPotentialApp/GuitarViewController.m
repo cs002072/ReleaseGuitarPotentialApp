@@ -24,7 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    _pushedFlag = [[NSMutableArray alloc] init];
+    _DummyPushedFlag = [[NSMutableArray alloc] init];
+
     // Do any additional setup after loading the view.
     _codeId = @[@[@"11", @"21", @"31", @"41", @"51", @"61"],
                 @[@"12", @"22", @"32", @"42", @"52", @"62"],
@@ -35,12 +37,15 @@
     for (int i = 0; i < 6; i++) {
         for (int j = 0; j < 7; j++) {
             _isflag = NO;
-            _DummyPushedFlag = [_pushedFlag objectAtIndex:i];
-//            [_DummyPushedFlag addObject:_isflag];
+//            _DummyPushedFlag = [_pushedFlag objectAtIndex:i];
+            [_DummyPushedFlag addObject:@(_isflag)];
+//            [_DummyPushedFlag set]
+            NSLog(@"dsdfsdf");
         }
+        
     }
-//    _pushedFlag =   @[@[@NO, @YES, @NO, @NO, @NO, @NO, @NO],
-//                      @[@NO, @NO, @NO, @NO, @NO, @NO, @NO],
+//    _pushedFlag = @[@[@NO, @NO, @NO, @NO, @NO, @NO, @NO],
+//                      @[@YES, @NO, @NO, @NO, @NO, @NO, @NO],
 //                      @[@NO, @NO, @NO, @NO, @NO, @NO, @NO],
 //                      @[@NO, @NO, @NO, @NO, @NO, @NO, @NO],
 //                      @[@NO, @NO, @NO, @NO, @NO, @NO, @NO],
@@ -51,23 +56,22 @@
                        @[self.string14, self.string24, self.string34, self.string44, self.string54, self.string64],
                        @[self.string15, self.string25, self.string35, self.string45, self.string55, self.string65],
                        @[self.string16, self.string26, self.string36, self.string46, self.string56, self.string66]];
-    
 //    NSLog(@"beginTouched");
-    
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-//    UIImageView *ImageViewAtGuitar;
+    UIImageView *ImageViewAtGuitar;
     switch (touch.view.tag) {
-
-        default:    [self pushedString];
+        default:
             if ([_pushedFlag[0][1] isEqual:@YES]){
                 self.string11.image = [UIImage imageNamed:@"normal_guitarstring.png"];
                 return;
             }
             self.string11.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
-//            _pushedFlag[0][1] = false;
+//            BOOL sdfsd = [
+            
+            //            _pushedFlag[0][1] = false;
 //            _pushedFlag[0][1]=YES;
             break;
     }
@@ -75,6 +79,12 @@
 
 - (void) pushedString {
     
+}
+
+// 遷移前の画面に戻るためのボタンを押した時の処理
+- (IBAction)goBack {
+    self.navigationController.navigationBarHidden = NO;  // 元の画面に戻る際にナビゲーションバーを再表示
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
