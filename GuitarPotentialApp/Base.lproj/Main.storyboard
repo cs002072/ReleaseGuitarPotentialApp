@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3880.5" y="624"/>
+            <point key="canvasLocation" x="1306.5" y="644"/>
         </scene>
         <!--Guitar Mode View Controller-->
         <scene sceneID="fNe-Z7-vJh">
@@ -280,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJW-Se-bsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1263" y="909"/>
+            <point key="canvasLocation" x="1377" y="1897"/>
         </scene>
         <!--Guitar View Controller-->
         <scene sceneID="9os-Px-0eJ">
@@ -682,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK8-l0-phy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.5" y="909"/>
+            <point key="canvasLocation" x="2064" y="1897"/>
         </scene>
         <!--Item-->
         <scene sceneID="Tap-MB-qXE">

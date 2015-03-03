@@ -39,16 +39,7 @@
     //画面遷移するViewControllerのカプセル化（インスタンス化）
     GuitarViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"GuitarViewController"];
     
-    //選択された地域の友達リストを遷移先に渡す
-    //    dvc.friendsList = _areaArray[indexPath.row][@"FriendsList"];
-    //    dvc.areaString = _areaArray[indexPath.row][@"Name"];
-
-    
     dvc.hidesBottomBarWhenPushed = YES;  // 画面遷移後にタブバーを隠すための処理
-//    [self.navigationController pushViewController:dvc animated:YES];
-    
-    
-    
     //ナビゲーションコントローラーの機能で画面遷移
     [[self navigationController] pushViewController:dvc animated:YES];
 }
