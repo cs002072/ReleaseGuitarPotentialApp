@@ -510,37 +510,37 @@
                                     <rect key="frame" x="263" y="368" width="48" height="68"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string6.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNu-nq-khL">
+                            <imageView tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string6.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNu-nq-khL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="28" y="435" width="48" height="145"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string5.png" translatesAutoresizingMaskIntoConstraints="NO" id="brg-nB-CYq">
+                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string5.png" translatesAutoresizingMaskIntoConstraints="NO" id="brg-nB-CYq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="75" y="435" width="48" height="145"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-RD-FZC">
+                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-RD-FZC">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="122" y="435" width="48" height="145"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string3.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-XK-5pm">
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string3.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-XK-5pm">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="169" y="435" width="48" height="145"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Fq-2Ia">
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Fq-2Ia">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="216" y="435" width="48" height="145"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string1.png" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-cB-zoe">
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string1.png" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-cB-zoe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="263" y="435" width="48" height="145"/>

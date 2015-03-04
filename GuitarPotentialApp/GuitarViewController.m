@@ -7,6 +7,7 @@
 //
 
 #import "GuitarViewController.h"
+#include <AVFoundation/AVFoundation.h>
 
 @interface GuitarViewController () {
     NSArray *_codeId;
@@ -14,9 +15,11 @@
     NSMutableArray *_DummyPushedFlag;
     NSMutableArray *_dummyArray;
     NSMutableArray *_truePosition;
-    NSArray *_codeImageView;
+    NSMutableArray *_codeImageView;
+    AVAudioPlayer *_audio;
 
     BOOL _isflag;
+    int _stringNum;
 //    _songList = @[@"涙のキッス", @"いとしのエリー"];
 }
 
@@ -26,9 +29,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _stringNum = 9;
     _pushedFlag = [[NSMutableArray alloc] init];
     _dummyArray = [[NSMutableArray alloc] init];
+    _codeImageView = [[NSMutableArray alloc] init];
+    _truePosition = [[NSMutableArray alloc] init];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"sound01" ofType:@"wav"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    _audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     
     // Do any additional setup after loading the view.
     _codeId = @[@[@"11", @"21", @"31", @"41", @"51", @"61"],
@@ -45,39 +53,116 @@
         }
         [_pushedFlag addObject:_DummyPushedFlag];
     }
-    _codeImageView = @[@[self.string11, self.string21, self.string31, self.string41, self.string51, self.string61],
-                       @[self.string12, self.string22, self.string32, self.string42, self.string52, self.string62],
-                       @[self.string13, self.string23, self.string33, self.string43, self.string53, self.string63],
-                       @[self.string14, self.string24, self.string34, self.string44, self.string54, self.string64],
-                       @[self.string15, self.string25, self.string35, self.string45, self.string55, self.string65],
-                       @[self.string16, self.string26, self.string36, self.string46, self.string56, self.string66]];
+    _codeImageView = @[@[self.string11, self.string12, self.string13, self.string14, self.string15, self.string16],
+                       @[self.string21, self.string22, self.string23, self.string24, self.string25, self.string26],
+                       @[self.string31, self.string32, self.string33, self.string34, self.string35, self.string36],
+                       @[self.string41, self.string42, self.string43, self.string44, self.string45, self.string46],
+                       @[self.string51, self.string52, self.string53, self.string54, self.string55, self.string56],
+                       @[self.string61, self.string62, self.string63, self.string64, self.string65, self.string66]];
+
+    
+    /***********************************************/
+    /**********ギター指板初期化フェーズ***********/
+    /***********************************************/
+
+    for (int i = 0; i < [_codeId count]; i++) {
+        for (int j = 0; j <= [[_codeId objectAtIndex:0] count]; j++) {
+            if (j == 0){
+                _isflag = YES;
+                [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:j withObject:@(_isflag)];
+                [_truePosition addObject:@(j)];
+                //[_truePosition replaceObjectAtIndex:i withObject:0];
+            } else {
+                _isflag = NO;
+                [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:j withObject:@(_isflag)];
+            }
+        }
+    }
+    /***********************************************/
+    /**********ギター指板初期化フェーズ***********/
+    /***********************************************/
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
-//    UIImageView *ImageViewAtGuitar;
     switch (touch.view.tag) {
-        
+        case 1:
+            _stringNum = 0;
+            _audio.currentTime = 0;
+            [_audio play];
+            break;
+            
         default:
-            if ([_pushedFlag[0][1] isEqual:@YES]){
-                self.string11.image = [UIImage imageNamed:@"normal_guitarstring.png"];
-                //pushedFlag[i][j + 1] = false;
-                _isflag = NO;
-                [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:1 withObject:@(_isflag)];
-                /****************こっから！*****************/
-                //pushedFlag[i][truePosition[i]] = true;
-
-                return;
-            }
-            self.string11.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
-            _isflag = YES;
-            [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:1 withObject:@(_isflag)];
+            [self pushedString:touch.view.tag];
             break;
     }
 }
 
-- (void) pushedString {
+- (void) soundPlayer:(NSMutableArray *)pushedFlag {
+}
+
+- (void) pushedString:(NSInteger) tag {
+    int i = 0, j = 0;
+    NSMutableArray *dummyArrayAtPushString;
+    dummyArrayAtPushString = [[NSMutableArray alloc] init];
+    switch (tag) {
+            //-- １弦全部の処理
+        case 11:i = 0;j = 0;break;  case 12:i = 0;j = 1;break;  case 13:i = 0;j = 2;break;
+        case 14:i = 0;j = 3;break;  case 15:i = 0;j = 4;break;  case 16:i = 0;j = 5;break;
+            
+            //-- ２弦全部の処理
+        case 21:i = 1;j = 0;break;  case 22:i = 1;j = 1;break;  case 23:i = 1;j = 2;break;
+        case 24:i = 1;j = 3;break;  case 25:i = 1;j = 4;break;  case 26:i = 1;j = 5;break;
+            
+            //-- ３弦全部の処理
+        case 31:i = 2;j = 0;break;  case 32:i = 2;j = 1;break;  case 33:i = 2;j = 2;break;
+        case 34:i = 2;j = 3;break;  case 35:i = 2;j = 4;break;  case 36:i = 2;j = 5;break;
+            
+            //-- ４弦全部の処理
+        case 41:i = 3;j = 0;break;  case 42:i = 3;j = 1;break;  case 43:i = 3;j = 2;break;
+        case 44:i = 3;j = 3;break;  case 45:i = 3;j = 4;break;  case 46:i = 3;j = 5;break;
+            
+            //-- ５弦全部の処理
+        case 51:i = 4;j = 0;break;  case 52:i = 4;j = 1;break;  case 53:i = 4;j = 2;break;
+        case 54:i = 4;j = 3;break;  case 55:i = 4;j = 4;break;  case 56:i = 4;j = 5;break;
+            
+            //-- ６弦全部の処理
+        case 61:i = 5;j = 0;break;  case 62:i = 5;j = 1;break;  case 63:i = 5;j = 2;break;
+        case 64:i = 5;j = 3;break;  case 65:i = 5;j = 4;break;  case 66:i = 5;j = 5;break;
+            
+            
+        default:
+            break;
+    }
+    dummyArrayAtPushString = [_codeImageView objectAtIndex:i];
+    UIImageView *ImageViewAtGuitar = [dummyArrayAtPushString objectAtIndex:j];
+    if ([_pushedFlag[i][j + 1] isEqual:@YES]){
+        ImageViewAtGuitar.image = [UIImage imageNamed:@"normal_guitarstring.png"];
+        _isflag = NO;
+        [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:j + 1 withObject:@(_isflag)];
+        [_truePosition replaceObjectAtIndex:i withObject:@(0)];
+        _isflag = YES;
+        [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:[[_truePosition objectAtIndex:i] intValue] withObject:@(_isflag)];
+        return;
+    }
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    for (int k = 1; k <= [[_codeId objectAtIndex:0] count]; k++){
+        // 押す弦の場所を変えたかったら
+        if ([_pushedFlag[i][k] isEqual:@YES]){
+            //CodeImageView[i][k - 1].setImageResource(R.drawable.normal_guitarstring);
+            ImageViewAtGuitar = [dummyArrayAtPushString objectAtIndex:k - 1];
+            ImageViewAtGuitar.image = [UIImage imageNamed:@"normal_guitarstring.png"];
+        }
+    }
+    _isflag = NO;
+    [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:[[_truePosition objectAtIndex:i] intValue] withObject:@(_isflag)];
+    [_truePosition replaceObjectAtIndex:i withObject:@(j + 1)];
+    _isflag = YES;
+    [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:j + 1 withObject:@(_isflag)];
+//    codeChecker();
+    return;
     
+
 }
 
 // 遷移前の画面に戻るためのボタンを押した時の処理

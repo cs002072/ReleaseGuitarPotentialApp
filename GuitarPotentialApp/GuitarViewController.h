@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GuitarViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *string11;
 @property (weak, nonatomic) IBOutlet UIImageView *string21;
 @property (weak, nonatomic) IBOutlet UIImageView *string31;
