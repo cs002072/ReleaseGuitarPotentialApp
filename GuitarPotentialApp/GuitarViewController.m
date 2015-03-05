@@ -7,6 +7,7 @@
 //
 
 #import "GuitarViewController.h"
+#import "SEManager.h"
 #include <AVFoundation/AVFoundation.h>
 
 @interface GuitarViewController () {
@@ -15,7 +16,8 @@
     NSMutableArray *_DummyPushedFlag;
     NSMutableArray *_dummyArray;
     NSMutableArray *_truePosition;
-    NSMutableArray *_codeImageView;
+    NSArray *_codeImageView;
+    NSArray *_soundArray;
     AVAudioPlayer *_audio;
 
     BOOL _isflag;
@@ -32,11 +34,9 @@
     _stringNum = 9;
     _pushedFlag = [[NSMutableArray alloc] init];
     _dummyArray = [[NSMutableArray alloc] init];
-    _codeImageView = [[NSMutableArray alloc] init];
+    _codeImageView = [[NSArray alloc] init];
     _truePosition = [[NSMutableArray alloc] init];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"sound01" ofType:@"wav"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    _audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    _soundArray = [[NSArray alloc] init];
     
     // Do any additional setup after loading the view.
     _codeId = @[@[@"11", @"21", @"31", @"41", @"51", @"61"],
@@ -44,7 +44,7 @@
                 @[@"13", @"23", @"33", @"43", @"53", @"63"],
                 @[@"14", @"24", @"34", @"44", @"54", @"64"],
                 @[@"15", @"25", @"35", @"45", @"55", @"65"],
-                @[@"16", @"26", @"36", @"46", @"56", @"66"],];
+                @[@"16", @"26", @"36", @"46", @"56", @"66"]];
     for (int i = 0; i < 6; i++) {
         _DummyPushedFlag = [[NSMutableArray alloc] init];
         for (int j = 0; j < 7; j++) {
@@ -53,6 +53,13 @@
         }
         [_pushedFlag addObject:_DummyPushedFlag];
     }
+    _soundArray = @[@[@"sound01.wav", @"sound11.wav", @"sound21.wav", @"sound31.wav", @"sound41.wav", @"sound51.wav", @"sound61.wav"],
+                    @[@"sound02.wav", @"sound12.wav", @"sound22.wav", @"sound32.wav", @"sound42.wav", @"sound52.wav", @"sound62.wav"],
+                    @[@"sound03.wav", @"sound13.wav", @"sound23.wav", @"sound33.wav", @"sound43.wav", @"sound53.wav", @"sound63.wav"],
+                    @[@"sound04.wav", @"sound14.wav", @"sound24.wav", @"sound34.wav", @"sound44.wav", @"sound54.wav", @"sound64.wav"],
+                    @[@"sound05.wav", @"sound15.wav", @"sound25.wav", @"sound35.wav", @"sound45.wav", @"sound55.wav", @"sound65.wav"],
+                    @[@"sound06.wav", @"sound16.wav", @"sound26.wav", @"sound36.wav", @"sound46.wav", @"sound56.wav", @"sound66"]];
+    
     _codeImageView = @[@[self.string11, self.string12, self.string13, self.string14, self.string15, self.string16],
                        @[self.string21, self.string22, self.string23, self.string24, self.string25, self.string26],
                        @[self.string31, self.string32, self.string33, self.string34, self.string35, self.string36],
@@ -86,11 +93,13 @@
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     switch (touch.view.tag) {
-        case 1:
-            _stringNum = 0;
-            _audio.currentTime = 0;
-            [_audio play];
-            break;
+        case 0: return;
+        case 1: _stringNum = 0; [self soundPlayer:_pushedFlag :0 :0];   break;
+        case 2: _stringNum = 1; [self soundPlayer:_pushedFlag :1 :0];   break;
+        case 3: _stringNum = 2; [self soundPlayer:_pushedFlag :2 :0];   break;
+        case 4: _stringNum = 3; [self soundPlayer:_pushedFlag :3 :0];   break;
+        case 5: _stringNum = 4; [self soundPlayer:_pushedFlag :4 :0];   break;
+        case 6: _stringNum = 5; [self soundPlayer:_pushedFlag :5 :0];   break;
             
         default:
             [self pushedString:touch.view.tag];
@@ -98,7 +107,20 @@
     }
 }
 
-- (void) soundPlayer:(NSMutableArray *)pushedFlag {
+- (void) soundPlayer:(NSMutableArray *)pushedFlag :(NSInteger)String :(NSInteger)soundFlag {
+    if (soundFlag == 0 || soundFlag == 1 || soundFlag == 2){
+        for (int i = (int)[[_pushedFlag objectAtIndex:0] count] - 1; i >= 0; i--){
+            if ([[[_pushedFlag objectAtIndex:String] objectAtIndex:i] isEqual:@YES]){
+                NSString *path = [[NSBundle mainBundle] pathForResource:[[_soundArray objectAtIndex:String] objectAtIndex:i] ofType:@"wav"];
+                NSURL *url = [NSURL fileURLWithPath:path];
+                _audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+//                _audio.currentTime = 0;
+//                [_audio play];
+                [[SEManager sharedManager] playSound:[[_soundArray objectAtIndex:String] objectAtIndex:i]];
+                return;
+            }
+        }
+    }
 }
 
 - (void) pushedString:(NSInteger) tag {
