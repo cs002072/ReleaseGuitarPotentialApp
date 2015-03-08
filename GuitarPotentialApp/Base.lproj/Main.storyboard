@@ -112,28 +112,49 @@
                                             <rect key="frame" x="0.0" y="0.0" width="400" height="1500"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se0-IJ-wbJ">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="74" y="46" width="48" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="tapCancelButton:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="bgY-TR-zdY"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pao-yC-RFp">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <state key="normal" title="Save">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="244" y="46" width="34" height="30"/>
+                                            <rect key="frame" x="284" y="46" width="34" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="tapSaveButton:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="YY3-Be-mM1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-4S-ePF">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Key/Capo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="165" y="46" width="69" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="openPickerView:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="oHS-6Y-BjL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jep-dY-uBu">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="165" y="93" width="42" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se0-IJ-wbJ">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="51" y="46" width="48" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="tapCancelButton:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="bgY-TR-zdY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,8 +165,10 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="btt-5Z-3gl"/>
-                                        <exclude reference="Se0-IJ-wbJ"/>
                                         <exclude reference="pao-yC-RFp"/>
+                                        <exclude reference="HgK-4S-ePF"/>
+                                        <exclude reference="jep-dY-uBu"/>
+                                        <exclude reference="Se0-IJ-wbJ"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="4QA-LU-z39"/>
@@ -154,8 +177,10 @@
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="btt-5Z-3gl"/>
-                                        <include reference="Se0-IJ-wbJ"/>
                                         <include reference="pao-yC-RFp"/>
+                                        <include reference="HgK-4S-ePF"/>
+                                        <include reference="jep-dY-uBu"/>
+                                        <include reference="Se0-IJ-wbJ"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="4QA-LU-z39"/>
@@ -200,11 +225,78 @@
                     <size key="freeformSize" width="400" height="1500"/>
                     <connections>
                         <outlet property="SongWordStr" destination="btt-5Z-3gl" id="Usf-hf-RoV"/>
+                        <outlet property="selectButton" destination="HgK-4S-ePF" id="ReQ-J5-OMm"/>
+                        <outlet property="selectedStringLabel" destination="jep-dY-uBu" id="cBi-ez-nx7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1306.5" y="644"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="wfg-Km-ZPg">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" id="gJL-4n-L51" customClass="PickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tO-2m-XCT"/>
+                        <viewControllerLayoutGuide type="bottom" id="krB-Uk-e25"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JTk-7Q-b15">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97T-Xd-m9a">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="384" width="400" height="216"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRi-Yb-LBg">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="384" width="400" height="216"/>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-4q-Szj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="完了">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="258" y="375" width="61" height="33"/>
+                                </variation>
+                                <connections>
+                                    <action selector="closePickerView:" destination="gJL-4n-L51" eventType="touchUpInside" id="vdH-46-Mut"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="97T-Xd-m9a"/>
+                                <exclude reference="cRi-Yb-LBg"/>
+                                <exclude reference="kZB-4q-Szj"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="97T-Xd-m9a"/>
+                                <include reference="cRi-Yb-LBg"/>
+                                <include reference="kZB-4q-Szj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="closePickerButton" destination="kZB-4q-Szj" id="5SR-Ja-kX9"/>
+                        <outlet property="keyCapoPicker" destination="cRi-Yb-LBg" id="0Jh-wN-bjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4X-lr-uEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146.5" y="283"/>
         </scene>
         <!--Guitar Mode View Controller-->
         <scene sceneID="fNe-Z7-vJh">
