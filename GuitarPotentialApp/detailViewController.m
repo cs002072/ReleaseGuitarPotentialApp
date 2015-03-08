@@ -50,10 +50,16 @@
     /***********************************************/
     NSArray *array = [self.SongWordStr.text componentsSeparatedByString:@"\n"];
     for (NSString *component in array) {
-        NSLog(@"%@", component);
-//        NSArray *array2 = [component componentsSeparatedByString:@"　"];
-//        for (NSString *component2 in array2) {
-//            NSLog(@"%@", component2);
+        NSArray *array2 = [component componentsSeparatedByString:@" "];
+        for (NSString *component2 in array2) {
+            NSLog(@"%@", component2);
+        }
+//        NSRange r = NSMakeRange(0, 1);
+//        NSComparisonResult cmpA = [component compare:@"A" options:NSCaseInsensitiveSearch range:r];
+//        NSComparisonResult cmpZ = [component compare:@"Z" options:NSCaseInsensitiveSearch range:r];
+//        if(cmpA >= 0 && cmpZ <= 0){
+//            NSLog(@"%@", component);
+//        } else {
 //        }
     }
     /***********************************************/
