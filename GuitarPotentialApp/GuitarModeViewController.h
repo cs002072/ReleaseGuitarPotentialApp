@@ -10,5 +10,6 @@
 
 @interface GuitarModeViewController : UIViewController
 - (IBAction)GuitarCodePracticeButton:(id)sender;
+- (IBAction)StrokePracticeButton:(id)sender;
 
 @end

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GuitarViewController : UIViewController
+@interface GuitarViewController : UIViewController <UIGestureRecognizerDelegate>
+
+- (void) soundPlayer:(NSMutableArray *)pushedFlag :(NSInteger)String :(NSInteger)soundFlag;
 
 @property (weak, nonatomic) IBOutlet UIImageView *string11;
 @property (weak, nonatomic) IBOutlet UIImageView *string21;

@@ -20,8 +20,8 @@
     NSArray *_soundArray;
     AVAudioPlayer *_audio;
 
-    BOOL _isflag;
-    int _stringNum;
+    BOOL _isflag, _touchesMovedFlag;
+    int _stringNum, _touchesMovedMemory;
 //    _songList = @[@"涙のキッス", @"いとしのエリー"];
 }
 
@@ -30,6 +30,8 @@
 @implementation GuitarViewController
 
 - (void)viewDidLoad {
+    // Do any additional setup after loading the view.
+
     [super viewDidLoad];
     _stringNum = 9;
     _pushedFlag = [[NSMutableArray alloc] init];
@@ -37,8 +39,15 @@
     _codeImageView = [[NSArray alloc] init];
     _truePosition = [[NSMutableArray alloc] init];
     _soundArray = [[NSArray alloc] init];
+    _touchesMovedFlag = NO;
     
-    // Do any additional setup after loading the view.
+    //-- 左スワイプ
+    UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(view_SwipeLeft:)];
+    //-- 左スワイプを認識するように設定
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    //-- ビューにGestureを追加
+    [self.view addGestureRecognizer:swipeLeftGesture];
+    
     _codeId = @[@[@"11", @"21", @"31", @"41", @"51", @"61"],
                 @[@"12", @"22", @"32", @"42", @"52", @"62"],
                 @[@"13", @"23", @"33", @"43", @"53", @"63"],
@@ -58,7 +67,7 @@
                     @[@"sound03.wav", @"sound13.wav", @"sound23.wav", @"sound33.wav", @"sound43.wav", @"sound53.wav", @"sound63.wav"],
                     @[@"sound04.wav", @"sound14.wav", @"sound24.wav", @"sound34.wav", @"sound44.wav", @"sound54.wav", @"sound64.wav"],
                     @[@"sound05.wav", @"sound15.wav", @"sound25.wav", @"sound35.wav", @"sound45.wav", @"sound55.wav", @"sound65.wav"],
-                    @[@"sound06.wav", @"sound16.wav", @"sound26.wav", @"sound36.wav", @"sound46.wav", @"sound56.wav", @"sound66"]];
+                    @[@"sound06.wav", @"sound16.wav", @"sound26.wav", @"sound36.wav", @"sound46.wav", @"sound56.wav", @"sound66.wav"]];
     
     _codeImageView = @[@[self.string11, self.string12, self.string13, self.string14, self.string15, self.string16],
                        @[self.string21, self.string22, self.string23, self.string24, self.string25, self.string26],
@@ -90,33 +99,72 @@
     /***********************************************/
 }
 
+- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    //-- モーションがシェイクのときに実行
+    if (motion == UIEventSubtypeMotionShake){
+        for (int i = (integer_t)[_codeId count] - 1; i >= 0; i--){
+            [self soundPlayer:_pushedFlag :i :1];
+        }
+    }
+}
+
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     switch (touch.view.tag) {
         case 0: return;
-        case 1: _stringNum = 0; [self soundPlayer:_pushedFlag :0 :0];   break;
-        case 2: _stringNum = 1; [self soundPlayer:_pushedFlag :1 :0];   break;
-        case 3: _stringNum = 2; [self soundPlayer:_pushedFlag :2 :0];   break;
-        case 4: _stringNum = 3; [self soundPlayer:_pushedFlag :3 :0];   break;
-        case 5: _stringNum = 4; [self soundPlayer:_pushedFlag :4 :0];   break;
-        case 6: _stringNum = 5; [self soundPlayer:_pushedFlag :5 :0];   break;
-            
-        default:
-            [self pushedString:touch.view.tag];
+        case 1:case 2:case 3:case 4:case 5:case 6:
+            _stringNum = (int)touch.view.tag - 1;
+            [self soundPlayer:_pushedFlag :(int)touch.view.tag - 1 :0];
             break;
+        default:    [self pushedString:touch.view.tag]; break;
     }
 }
+
+- (void) view_SwipeLeft:(UISwipeGestureRecognizer *)sender {
+//    NSLog(@"dgsgsdg");
+    
+//    switch (sender.) {
+//        case 1:
+//            NSLog(@"dsfsdfgsd");
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    sender.
+}
+
+
+//- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+////    for (UITouch *touch in touches) {
+////        CGPoint location = [touch locationInView:@"GuitarViewController"];
+//    UITouch *touch = [touches anyObject];
+//    if (_touchesMovedFlag == YES){
+//        if (_touchesMovedMemory != touch.view.tag){
+//            _touchesMovedFlag = NO;
+//        }
+//        return;
+//    }
+//    _touchesMovedMemory = (int)touch.view.tag;
+//    switch (touch.view.tag) {
+//        case 1: _stringNum = 0; [self soundPlayer:_pushedFlag :0 :0];   break;
+//        case 2: _stringNum = 1; [self soundPlayer:_pushedFlag :1 :0];   break;
+//        case 3: _stringNum = 2; [self soundPlayer:_pushedFlag :2 :0];   break;
+//        case 4: _stringNum = 3; [self soundPlayer:_pushedFlag :3 :0];   break;
+//        case 5: _stringNum = 4; [self soundPlayer:_pushedFlag :4 :0];   break;
+//        case 6: _stringNum = 5; [self soundPlayer:_pushedFlag :5 :0];   break;
+//    }
+//    _touchesMovedFlag = YES;
+//    NSLog(@"touch.view.tag === %ld", (long)touch.view.tag);
+//}
+
 
 - (void) soundPlayer:(NSMutableArray *)pushedFlag :(NSInteger)String :(NSInteger)soundFlag {
     if (soundFlag == 0 || soundFlag == 1 || soundFlag == 2){
         for (int i = (int)[[_pushedFlag objectAtIndex:0] count] - 1; i >= 0; i--){
             if ([[[_pushedFlag objectAtIndex:String] objectAtIndex:i] isEqual:@YES]){
-                NSString *path = [[NSBundle mainBundle] pathForResource:[[_soundArray objectAtIndex:String] objectAtIndex:i] ofType:@"wav"];
-                NSURL *url = [NSURL fileURLWithPath:path];
-                _audio = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-//                _audio.currentTime = 0;
-//                [_audio play];
                 [[SEManager sharedManager] playSound:[[_soundArray objectAtIndex:String] objectAtIndex:i]];
+                if (soundFlag == 1) [NSThread sleepForTimeInterval:0.05f];
                 return;
             }
         }
@@ -151,7 +199,6 @@
             //-- ６弦全部の処理
         case 61:i = 5;j = 0;break;  case 62:i = 5;j = 1;break;  case 63:i = 5;j = 2;break;
         case 64:i = 5;j = 3;break;  case 65:i = 5;j = 4;break;  case 66:i = 5;j = 5;break;
-            
             
         default:
             break;
@@ -197,6 +244,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

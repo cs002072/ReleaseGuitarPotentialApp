@@ -20,10 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _songList = @[@"涙のキッス", @"いとしのエリー"];
-//    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-//    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    
+
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
     //読み込むプロパティリストのファイルパス（場所）を指定
@@ -49,7 +46,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArrayAtView[indexPath.row][@"TITLE"], _AllSongsArrayAtView[indexPath.row][@"ARTIST"]];
-//    NSLog(@"cell.textLabel.text = %@", cell.textLabel.text);
     return cell;
 }
 

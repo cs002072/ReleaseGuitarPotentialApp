@@ -32,7 +32,6 @@
     //プロパティリストの中身のデータを取得
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     _AllSongsArrayAtDetail = [dic objectForKey:@"AllSongsList"];
-
     
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
@@ -43,8 +42,24 @@
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
-}
 
+
+
+    /***********************************************/
+    /**********テキスト分解フェーズ***********/
+    /***********************************************/
+    NSArray *array = [self.SongWordStr.text componentsSeparatedByString:@"\n"];
+    for (NSString *component in array) {
+        NSLog(@"%@", component);
+//        NSArray *array2 = [component componentsSeparatedByString:@"　"];
+//        for (NSString *component2 in array2) {
+//            NSLog(@"%@", component2);
+//        }
+    }
+    /***********************************************/
+    /**********テキスト分解フェーズ***********/
+    /***********************************************/
+}
 
 - (IBAction)tapSaveButton:(id)sender {
     /***********************************************/

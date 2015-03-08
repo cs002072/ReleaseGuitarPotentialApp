@@ -73,6 +73,8 @@
 		A7D2F9BD1AA3279100529626 /* string4.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B71AA3279100529626 /* string4.png */; };
 		A7D2F9BE1AA3279100529626 /* string5.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B81AA3279100529626 /* string5.png */; };
 		A7D2F9BF1AA3279100529626 /* string6.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9B91AA3279100529626 /* string6.png */; };
+		A7D69DAA1AAACEED002B6990 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D69DA91AAACEED002B6990 /* CoreMotion.framework */; };
+		A7D69DAD1AAAE64F002B6990 /* StrokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D69DAC1AAAE64F002B6990 /* StrokeViewController.m */; };
 		A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */; };
 		A7E9E3041AA73DBB00E75587 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E9E3031AA73DBB00E75587 /* AVFoundation.framework */; };
 		A7EA746B1A9B0291009B46AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA746A1A9B0291009B46AB /* main.m */; };
@@ -166,6 +168,9 @@
 		A7D2F9B71AA3279100529626 /* string4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string4.png; sourceTree = "<group>"; };
 		A7D2F9B81AA3279100529626 /* string5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string5.png; sourceTree = "<group>"; };
 		A7D2F9B91AA3279100529626 /* string6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string6.png; sourceTree = "<group>"; };
+		A7D69DA91AAACEED002B6990 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		A7D69DAB1AAAE64F002B6990 /* StrokeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokeViewController.h; sourceTree = "<group>"; };
+		A7D69DAC1AAAE64F002B6990 /* StrokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeViewController.m; sourceTree = "<group>"; };
 		A7D69F371A9CC2FE00A2AB87 /* historyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = historyViewController.h; sourceTree = "<group>"; };
 		A7D69F381A9CC2FE00A2AB87 /* historyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = historyViewController.m; sourceTree = "<group>"; };
 		A7E9E3031AA73DBB00E75587 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -192,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D69DAA1AAACEED002B6990 /* CoreMotion.framework in Frameworks */,
 				A7E9E3041AA73DBB00E75587 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +290,7 @@
 		A7EA745C1A9B0291009B46AB = {
 			isa = PBXGroup;
 			children = (
+				A7D69DA91AAACEED002B6990 /* CoreMotion.framework */,
 				A7E9E3031AA73DBB00E75587 /* AVFoundation.framework */,
 				A7EA74671A9B0291009B46AB /* GuitarPotentialApp */,
 				A7EA74811A9B0291009B46AB /* GuitarPotentialAppTests */,
@@ -314,9 +321,11 @@
 				A78537241A9B0BB2008DF74F /* detailViewController.m */,
 				A7D2F98C1AA3240300529626 /* GuitarViewController.h */,
 				A7D2F98D1AA3240300529626 /* GuitarViewController.m */,
-				A7EA74721A9B0291009B46AB /* Main.storyboard */,
 				A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */,
 				A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */,
+				A7D69DAB1AAAE64F002B6990 /* StrokeViewController.h */,
+				A7D69DAC1AAAE64F002B6990 /* StrokeViewController.m */,
+				A7EA74721A9B0291009B46AB /* Main.storyboard */,
 				A79F83231AA858EB004297D7 /* SEManager.h */,
 				A79F83241AA858EB004297D7 /* SEManager.m */,
 				A7EA74751A9B0291009B46AB /* Images.xcassets */,
@@ -521,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D69DAD1AAAE64F002B6990 /* StrokeViewController.m in Sources */,
 				A7EA74711A9B0291009B46AB /* ViewController.m in Sources */,
 				A79F83251AA858EB004297D7 /* SEManager.m in Sources */,
 				A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */,
@@ -651,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shinichiro Oka (A9TG2Z8NN8)";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = GuitarPotentialApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -663,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Shinichiro Oka (A9TG2Z8NN8)";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				INFOPLIST_FILE = GuitarPotentialApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

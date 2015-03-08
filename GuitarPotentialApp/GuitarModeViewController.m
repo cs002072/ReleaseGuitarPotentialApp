@@ -8,6 +8,7 @@
 
 #import "GuitarModeViewController.h"
 #import "GuitarViewController.h"
+#import "StrokeViewController.h"
 
 @interface GuitarModeViewController ()
 
@@ -42,5 +43,14 @@
     dvc.hidesBottomBarWhenPushed = YES;  // 画面遷移後にタブバーを隠すための処理
     //ナビゲーションコントローラーの機能で画面遷移
     [[self navigationController] pushViewController:dvc animated:YES];
+}
+
+- (IBAction)StrokePracticeButton:(id)sender {
+    //画面遷移するViewControllerのカプセル化（インスタンス化）
+    StrokeViewController *svc = [self.storyboard instantiateViewControllerWithIdentifier:@"StrokeViewController"];
+    
+    svc.hidesBottomBarWhenPushed = YES;  // 画面遷移後にタブバーを隠すための処理
+    //ナビゲーションコントローラーの機能で画面遷移
+    [[self navigationController] pushViewController:svc animated:YES];
 }
 @end

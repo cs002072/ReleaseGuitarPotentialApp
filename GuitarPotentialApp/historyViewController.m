@@ -30,7 +30,38 @@
     //-- １曲の情報
     _AllSongsArrayAtHistory = [[NSMutableArray alloc] init];
     _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
+    
+    /**************これ必要くさい*****************/
+    /**************これ必要くさい*****************/
+    /**************これ必要くさい*****************/
+//    //-- ナビゲーションバー追加？
+//    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    //-- セルを削除する機能を追加
+//    self.title = @"履歴";
+//    self.navigationItem.leftBarButtonItem = [self editButtonItem];
+    /**************これ必要くさい*****************/
+    /**************これ必要くさい*****************/
+    /**************これ必要くさい*****************/
 }
+
+/**************これは微妙・・・*****************/
+/**************これは微妙・・・*****************/
+/**************これは微妙・・・*****************/
+//-- 履歴を横スワイプしたとき
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete)
+//    {
+//        NSLog(@"asdas");
+//    }
+//}
+/**************これは微妙・・・*****************/
+/**************これは微妙・・・*****************/
+/**************これは微妙・・・*****************/
+
+
+
 
 //-- 行数を返す
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -58,7 +89,6 @@
 
 //-- 行が押された時に発動するメソッド
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
     dvc.selectNum = (int)indexPath.row;
@@ -71,6 +101,36 @@
     NSLog(@"numberAtHistory === %d", dvc.number);
 }
 
+- (IBAction)allDeleteHistoryButton:(id)sender {
+    // アラートビューを作成
+    // キャンセルボタンを表示しない場合はcancelButtonTitleにnilを指定
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"履歴を全て消去！"
+                          message:@"本当に実行しますか？"
+                          delegate:self
+                          cancelButtonTitle:@"キャンセル！"
+                          otherButtonTitles:@"消去する！", nil];
+    // アラートビューを表示
+    [alert show];
+}
+
+/**
+ * アラートのボタンが押されたとき
+ */
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    switch (buttonIndex) {
+        case 1: // Button1が押されたとき
+            [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+            [self.historyTableView reloadData];
+            break;
+            
+        default: // キャンセルが押されたとき
+            NSLog(@"Cancel");
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
