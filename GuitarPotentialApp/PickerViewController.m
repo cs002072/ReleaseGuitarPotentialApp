@@ -8,7 +8,10 @@
 
 #import "PickerViewController.h"
 
-@interface PickerViewController ()
+@interface PickerViewController () {
+    NSArray *_keyArray;
+    NSArray *_capoArray;
+}
 
 @end
 
@@ -19,6 +22,12 @@
     // Do any additional setup after loading the view.
     self.keyCapoPicker.delegate = self;
     self.keyCapoPicker.dataSource = self;
+
+    _keyArray = [[NSArray alloc] init];
+    _capoArray = [[NSArray alloc] init];
+    
+    _keyArray = @[@"-7", @"-6", @"-5", @"-4", @"-3", @"-2", @"-1", @"+-0", @"+1", @"+2", @"+3", @"+4", @"+5", @"+6", @"+7"];
+    _capoArray = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7"];
 }
 
 //-- PickerViewで要素が選択されたときに呼び出されるメソッド
@@ -29,17 +38,36 @@
 
 //-- Pickerの列数を指定するメソッド
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
+    return 2;
 }
 
 //-- PickerViewに表示する行数を指定するメソッド
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 10;
+    switch (component) {
+        case 0:     return [_keyArray count];
+        case 1:     return [_capoArray count];
+        default:    return 0;
+    }
 }
+
+
 
 //-- PickerViewの各行に表示する文字列を指定するメソッド
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [NSString stringWithFormat:@"%ld", (long)row];
+    
+    switch (component) {
+        case 0:     return [NSString stringWithFormat:@"%@", [_keyArray objectAtIndex:row]];
+        case 1:     return [NSString stringWithFormat:@"%@", [_capoArray objectAtIndex:row]];
+        default:    return 0;
+    }
+}
+
+- (CGFloat) pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    switch (component) {
+        case 0:     return 100.0;
+        case 1:     return 50.0;
+        default:    return 0;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

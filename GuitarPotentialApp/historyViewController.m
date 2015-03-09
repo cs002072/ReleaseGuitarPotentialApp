@@ -49,18 +49,20 @@
 /**************これは微妙・・・*****************/
 /**************これは微妙・・・*****************/
 //-- 履歴を横スワイプしたとき
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete)
-//    {
-//        NSLog(@"asdas");
-//    }
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSLog(@"asdas");
+    }
+}
+/**************これは微妙・・・*****************/
+/**************これは微妙・・・*****************/
+/**************これは微妙・・・*****************/
+
+//- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return @"削除";
 //}
-/**************これは微妙・・・*****************/
-/**************これは微妙・・・*****************/
-/**************これは微妙・・・*****************/
-
-
 
 
 //-- 行数を返す
