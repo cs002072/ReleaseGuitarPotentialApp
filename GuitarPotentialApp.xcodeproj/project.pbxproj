@@ -86,6 +86,7 @@
 		A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EA74771A9B0291009B46AB /* LaunchScreen.xib */; };
 		A7EA74851A9B0291009B46AB /* GuitarPotentialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */; };
 		A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */; };
+		A7FA53DB1AAD79AC00F257D8 /* yen_5.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FA53DA1AAD79AC00F257D8 /* yen_5.png */; };
 		A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuitarPotentialAppTests.m; sourceTree = "<group>"; };
 		A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarModeViewController.h; sourceTree = "<group>"; };
 		A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarModeViewController.m; sourceTree = "<group>"; };
+		A7FA53DA1AAD79AC00F257D8 /* yen_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yen_5.png; path = "../../../画像/OtsuriApp-images/yen_5.png"; sourceTree = "<group>"; };
 		A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllSongsList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -343,6 +345,7 @@
 		A7EA74681A9B0291009B46AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7FA53DA1AAD79AC00F257D8 /* yen_5.png */,
 				A7A2367F1AA75C62006678F1 /* raw */,
 				A7D2F98F1AA3255200529626 /* GuitarCodeTrainer画像 */,
 				A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */,
@@ -499,6 +502,7 @@
 				A7A236B41AA75C62006678F1 /* sound15.wav in Resources */,
 				A7A236CE1AA75C62006678F1 /* sound61.wav in Resources */,
 				A7A236B51AA75C62006678F1 /* sound16.wav in Resources */,
+				A7FA53DB1AAD79AC00F257D8 /* yen_5.png in Resources */,
 				A7A236BC1AA75C62006678F1 /* sound31.wav in Resources */,
 				A7D2F9BB1AA3279100529626 /* string2.png in Resources */,
 				A7A236CB1AA75C62006678F1 /* sound54.wav in Resources */,

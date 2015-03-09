@@ -28,7 +28,8 @@
 //    _defference = (double)0;
     if (_motionManager.accelerometerAvailable){
         //-- センサーの更新間隔を指定
-        _motionManager.accelerometerUpdateInterval = 1 / 10;//-- 10Hz
+//        _motionManager.accelerometerUpdateInterval = 1 / 10;//-- 10Hz
+        _motionManager.accelerometerUpdateInterval = 0.02;//-- 10Hz
         //-- ハンドラを指定
         CMAccelerometerHandler handler = ^(CMAccelerometerData *data, NSError *error){
             NSLog(@"XLabel == %f", data.acceleration.x);
@@ -36,9 +37,19 @@
             NSLog(@"ZLabel == %f", data.acceleration.z);
             NSLog(@"\n\n\n\n\n\n");
 
-            if (data.acceleration.z < -1.0){
-                NSLog(@"data.acceleration.z == %f", data.acceleration.z);
-            }
+            float wx = self.ballmg.center.x + data.acceleration.x * 20;
+            float wy = self.ballmg.center.y + data.acceleration.y * 20;
+            if (wx < 25)        wx = 25;
+            else if (295 < wx)  wx = 295;
+            else if (wy < 25)   wy = 25;
+            else if (435 < wy)  wy = 435;
+            
+            /*変更*/
+            
+            self.ballmg.center = CGPointMake(wx, wy);
+//            if (data.acceleration.z < -1.0){
+//                NSLog(@"data.acceleration.z == %f", data.acceleration.z);
+//            }
 //            if (fabs(*(_defference)) - fabs(data.acceleration.z) <= 1.5){
 //                NSLog(@"kksdfsdfksdf");
 //            }

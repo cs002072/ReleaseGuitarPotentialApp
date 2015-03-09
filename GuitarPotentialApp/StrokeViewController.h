@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StrokeViewController : UIViewController
+@interface StrokeViewController : UIViewController <UIAccelerometerDelegate>
 //- (void) soundPlayer:(NSMutableArray *)pushedFlag :(NSInteger)String :(NSInteger)soundFlag;
+@property (weak, nonatomic) IBOutlet UIImageView *ballmg;
 
 @end

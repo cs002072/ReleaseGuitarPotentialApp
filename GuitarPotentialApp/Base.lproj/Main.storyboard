@@ -389,8 +389,29 @@
                     <view key="view" contentMode="scaleToFill" id="rhO-yH-mBZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yen_5.png" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-sH-Bv8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="175" y="275" width="50" height="50"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MTy-sH-Bv8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="MTy-sH-Bv8"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="ballmg" destination="MTy-sH-Bv8" id="l8I-J0-MvG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLr-YM-SFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -865,7 +886,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYz-19-GNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.5" y="1764"/>
+            <point key="canvasLocation" x="333" y="1764"/>
         </scene>
         <!--Item-->
         <scene sceneID="mfw-wW-o6B">
@@ -895,6 +916,7 @@
         <image name="string4.png" width="48" height="272"/>
         <image name="string5.png" width="48" height="272"/>
         <image name="string6.png" width="48" height="272"/>
+        <image name="yen_5.png" width="110" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AVo-wB-6M2"/>

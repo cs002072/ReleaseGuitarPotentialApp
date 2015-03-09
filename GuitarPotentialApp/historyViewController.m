@@ -11,7 +11,6 @@
 
 @interface historyViewController () {
     NSMutableArray *_AllSongsArrayAtHistory;
-;
 }
 
 @end
@@ -61,7 +60,7 @@
 /**************これは微妙・・・*****************/
 
 //- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return @"削除";
+//    return @"delete";
 //}
 
 
@@ -100,7 +99,6 @@
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [segue destinationViewController];
     dvc.number = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"NO"] intValue];
-    NSLog(@"numberAtHistory === %d", dvc.number);
 }
 
 - (IBAction)allDeleteHistoryButton:(id)sender {
