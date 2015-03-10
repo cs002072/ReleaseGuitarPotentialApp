@@ -26,8 +26,10 @@
 @end
 
 @protocol PickerViewControllerDelegate <NSObject>
-// 選択された文字列を適用するためのデリゲートメソッド
--(void)applySelectedString:(NSString *)str;
+// 選択された文字列を適用するためのデリゲートメソッド（キーを選択したときのメソッド）
+-(void)applySelectedKey:(NSString *)str;
+//-- カポを選択したときのメソッド
+-(void)applySelectedCapo:(NSString *)str;
 // 当該PickerViewを閉じるためのデリゲートメソッド
 -(void)closePickerView:(PickerViewController *)controller;
 

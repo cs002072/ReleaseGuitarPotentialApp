@@ -97,6 +97,16 @@
     /***********************************************/
     /**********ギター指板初期化フェーズ***********/
     /***********************************************/
+
+
+
+    //-- ナビゲーションバー追加？
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
+    //-- セルを削除する機能を追加
+    self.title = @"履歴";
+    self.navigationItem.leftBarButtonItem = [self editButtonItem];
+
 }
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {

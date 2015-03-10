@@ -44,7 +44,6 @@
             else if (wy < 25)   wy = 25;
             else if (435 < wy)  wy = 435;
             
-            /*変更*/
             
             self.ballmg.center = CGPointMake(wx, wy);
 //            if (data.acceleration.z < -1.0){

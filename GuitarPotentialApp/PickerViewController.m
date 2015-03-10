@@ -26,14 +26,20 @@
     _keyArray = [[NSArray alloc] init];
     _capoArray = [[NSArray alloc] init];
     
-    _keyArray = @[@"-7", @"-6", @"-5", @"-4", @"-3", @"-2", @"-1", @"+-0", @"+1", @"+2", @"+3", @"+4", @"+5", @"+6", @"+7"];
+    _keyArray = @[@"-7", @"-6", @"-5", @"-4", @"-3", @"-2", @"-1", @"0", @"+1", @"+2", @"+3", @"+4", @"+5", @"+6", @"+7"];
     _capoArray = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7"];
 }
 
 //-- PickerViewで要素が選択されたときに呼び出されるメソッド
 - (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     //-- デリゲード先の処理を呼び出し，選択された文字列を親viewに表示させる
-    [self.delegate applySelectedString:[NSString stringWithFormat:@"%ld", (long)row]];
+//    [self.delegate applySelectedString:[NSString stringWithFormat:@"%ld", (long)row]];
+    switch (component) {
+        case 0: [self.delegate applySelectedKey:[NSString stringWithFormat:@"%@", [_keyArray objectAtIndex:row]]];   break;
+        case 1:
+            [self.delegate applySelectedCapo:[NSString stringWithFormat:@"%@", [_capoArray objectAtIndex:row]]];   break;
+        default:    break;
+    }
 }
 
 //-- Pickerの列数を指定するメソッド

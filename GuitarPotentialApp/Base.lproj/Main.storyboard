@@ -109,16 +109,16 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="400" height="1500"/>
+                                            <rect key="frame" x="0.0" y="122" width="400" height="1378"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pao-yC-RFp">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Save">
+                                        <state key="normal" title="保存">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="284" y="46" width="34" height="30"/>
+                                            <rect key="frame" x="273" y="46" width="30" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="tapSaveButton:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="YY3-Be-mM1"/>
@@ -126,37 +126,64 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-4S-ePF">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Key/Capo">
+                                        <state key="normal" title="キー/カポ">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="165" y="46" width="69" height="30"/>
+                                            <rect key="frame" x="165" y="46" width="66" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="openPickerView:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="oHS-6Y-BjL"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jep-dY-uBu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jep-dY-uBu">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="165" y="93" width="42" height="21"/>
+                                            <rect key="frame" x="92" y="93" width="25" height="21"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se0-IJ-wbJ">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Cancel">
+                                        <state key="normal" title="キャンセル">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="51" y="46" width="48" height="30"/>
+                                            <rect key="frame" x="51" y="46" width="75" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="tapCancelButton:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="bgY-TR-zdY"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AnO-VC-P1S">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="230" y="93" width="31" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キー：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEW-h4-9oe">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="42" y="93" width="51" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カポ：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqw-hA-jja">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="180" y="93" width="51" height="21"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -169,6 +196,9 @@
                                         <exclude reference="HgK-4S-ePF"/>
                                         <exclude reference="jep-dY-uBu"/>
                                         <exclude reference="Se0-IJ-wbJ"/>
+                                        <exclude reference="AnO-VC-P1S"/>
+                                        <exclude reference="FEW-h4-9oe"/>
+                                        <exclude reference="Jqw-hA-jja"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="4QA-LU-z39"/>
@@ -181,6 +211,9 @@
                                         <include reference="HgK-4S-ePF"/>
                                         <include reference="jep-dY-uBu"/>
                                         <include reference="Se0-IJ-wbJ"/>
+                                        <include reference="AnO-VC-P1S"/>
+                                        <include reference="FEW-h4-9oe"/>
+                                        <include reference="Jqw-hA-jja"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="4QA-LU-z39"/>
@@ -226,7 +259,8 @@
                     <connections>
                         <outlet property="SongWordStr" destination="btt-5Z-3gl" id="Usf-hf-RoV"/>
                         <outlet property="selectButton" destination="HgK-4S-ePF" id="ReQ-J5-OMm"/>
-                        <outlet property="selectedStringLabel" destination="jep-dY-uBu" id="cBi-ez-nx7"/>
+                        <outlet property="selectedCapo" destination="AnO-VC-P1S" id="Ufo-Sq-Ixl"/>
+                        <outlet property="selectedKey" destination="jep-dY-uBu" id="vd6-MR-DiA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>

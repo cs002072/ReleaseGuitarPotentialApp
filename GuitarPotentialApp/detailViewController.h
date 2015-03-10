@@ -18,7 +18,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *SongWordStr;
 @property (nonatomic, assign) int number;
 @property (weak, nonatomic) IBOutlet UIButton *selectButton;
-@property (weak, nonatomic) IBOutlet UILabel *selectedStringLabel;
+@property (weak, nonatomic) IBOutlet UILabel *selectedKey;
+@property (weak, nonatomic) IBOutlet UILabel *selectedCapo;
+
+
 
 //-- 呼び出すPickerViewのポインタ *strongを指定してポインタを掴んでおかないと解放されてしまう
 @property (strong, nonatomic) PickerViewController *pickerViewController;

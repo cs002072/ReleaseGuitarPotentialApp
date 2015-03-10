@@ -33,12 +33,12 @@
     /**************これ必要くさい*****************/
     /**************これ必要くさい*****************/
     /**************これ必要くさい*****************/
-//    //-- ナビゲーションバー追加？
-//    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    //-- ナビゲーションバー追加？
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
     
     //-- セルを削除する機能を追加
-//    self.title = @"履歴";
-//    self.navigationItem.leftBarButtonItem = [self editButtonItem];
+    self.title = @"履歴";
+    self.navigationItem.leftBarButtonItem = [self editButtonItem];
     /**************これ必要くさい*****************/
     /**************これ必要くさい*****************/
     /**************これ必要くさい*****************/
@@ -47,14 +47,14 @@
 /**************これは微妙・・・*****************/
 /**************これは微妙・・・*****************/
 /**************これは微妙・・・*****************/
-//-- 履歴を横スワイプしたとき
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        NSLog(@"asdas");
-    }
-}
+////-- 履歴を横スワイプしたとき
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete)
+//    {
+//        NSLog(@"asdas");
+//    }
+//}
 /**************これは微妙・・・*****************/
 /**************これは微妙・・・*****************/
 /**************これは微妙・・・*****************/
