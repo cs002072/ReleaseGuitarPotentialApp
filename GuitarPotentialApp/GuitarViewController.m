@@ -7,6 +7,7 @@
 //
 
 #import "GuitarViewController.h"
+#import "AppDelegate.h"
 #import "SEManager.h"
 #include <AVFoundation/AVFoundation.h>
 
@@ -97,16 +98,109 @@
     /***********************************************/
     /**********ギター指板初期化フェーズ***********/
     /***********************************************/
-
+//    UINavigationController *navi = [self navigationController];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"コード一覧" style:UIBarButtonItemStylePlain target:self action:@selector(pushedGuitarContent)];
+    self.navigationItem.rightBarButtonItem = rightItem;
 
 
     //-- ナビゲーションバー追加？
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-    
-    //-- セルを削除する機能を追加
-    self.title = @"履歴";
-    self.navigationItem.leftBarButtonItem = [self editButtonItem];
+//    [self.navigationController setNavigationBarHidden:NO animated:NO];
+//    UIBarButtonItem *btn = [[[UIBarButtonItem alloc]
+//                             initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+//                             target:self action:@selector(hoge:)]; autorelease];
+//    self.navigationItem.rightBarButtonItem = btn;
+//    self.navigationItem.leftBarButtonItem = [self editButtonItem];
 
+}
+
+- (void) pushedGuitarContent {
+    //-- pickerViewControllerのインスタンスをstoryboradから取得
+    self.guitarContentViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"GuitarContentViewController"];
+    self.guitarContentViewController.delegate  = self;
+    
+    
+    //-- PickerViewをサブビューとして表示する
+    //-- 表示するときはアニメーションをつけて下から上にゆっくり表示させる
+    //-- アニメーション完了時のPickerViewの位置を計算
+    UIView *codeIchiran = self.guitarContentViewController.view;
+    CGPoint middleCenter = codeIchiran.center;
+
+    //-- アニメーション開始時のPickerViewの位置を計算
+    UIWindow *mainWindow = (((AppDelegate *) [UIApplication sharedApplication].delegate).window);
+    CGSize offSize = [UIScreen mainScreen].bounds.size;
+    CGPoint offScreenCenter = CGPointMake(offSize.width / 2.0, offSize.height * 1.5);
+    codeIchiran.center = offScreenCenter;
+    [mainWindow addSubview:codeIchiran];
+    //-- アニメーションを使ってPickerViewをアニメーション完了時の位置に表示されるようにする
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    codeIchiran.center = middleCenter;
+    [UIView commitAnimations];
+}
+
+- (void) closeGuitarContent:(UIViewController *)controller {
+    // PickerViewをアニメーションを使ってゆっくり非表示にする
+    UIView *codeIchiran = controller.view;
+    
+    // アニメーション完了時のPickerViewの位置を計算
+    CGSize offSize = [UIScreen mainScreen].bounds.size;
+    CGPoint offScreenCenter = CGPointMake(offSize.width / 2.0, offSize.height * 1.5);
+    
+    [UIView beginAnimations:nil context:(void *)codeIchiran];
+    [UIView setAnimationDuration:0.3];
+    [UIView setAnimationDelegate:self];
+    // アニメーション終了時に呼び出す処理を設定
+    [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
+    codeIchiran.center = offScreenCenter;
+    [UIView commitAnimations];
+    
+}
+
+- (void)CandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:4] objectAtIndex:2];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:3] objectAtIndex:1];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:1] objectAtIndex:0];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    
+    _isflag = NO;   [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:3 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:1 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0 withObject:@(_isflag)];
+}
+- (void)DandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:2] objectAtIndex:1];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:1] objectAtIndex:2];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:0] objectAtIndex:1];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+
+    _isflag = YES;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:3 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:2  withObject:@(_isflag)];
+}
+
+
+
+
+
+-(void)hoge:(UIBarButtonItem*)b{
+    NSLog(@"ボタンを押されましたね");
 }
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {

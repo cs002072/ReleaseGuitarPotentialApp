@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ahd-0x-mKZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tz9-31-BgE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="d3J-lk-sbU">
             <objects>
                 <tabBarController id="Ahd-0x-mKZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="u95-dl-m33"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VJZ-Yz-y31">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -16,13 +18,29 @@
                     </tabBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="QwR-a6-iXx"/>
-                        <segue destination="RLm-f3-67y" kind="relationship" relationship="viewControllers" id="F47-N7-FTq"/>
-                        <segue destination="xAI-oQ-CDa" kind="relationship" relationship="viewControllers" id="bCN-d4-tnK"/>
+                        <segue destination="C8T-eu-pWE" kind="relationship" relationship="viewControllers" id="cWQ-fZ-OFe"/>
+                        <segue destination="xAI-oQ-CDa" kind="relationship" relationship="viewControllers" id="ckZ-nX-iOo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9X-4f-kGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-654" y="511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1PE-gM-ytA">
+            <objects>
+                <navigationController id="Tz9-31-BgE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zll-Sa-QZN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ahd-0x-mKZ" kind="relationship" relationship="rootViewController" id="fZK-yd-c9d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXw-zu-dFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1476" y="511"/>
         </scene>
         <!--Item-->
         <scene sceneID="ufC-wZ-h7g">
@@ -61,7 +79,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="52" width="400" height="442"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="430"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -265,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306.5" y="644"/>
+            <point key="canvasLocation" x="2416.5" y="312"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="wfg-Km-ZPg">
@@ -331,9 +349,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4X-lr-uEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146.5" y="283"/>
+            <point key="canvasLocation" x="3058.5" y="307"/>
         </scene>
-        <!--Guitar Mode View Controller-->
+        <!--Item-->
         <scene sceneID="fNe-Z7-vJh">
             <objects>
                 <viewController id="C8T-eu-pWE" customClass="GuitarModeViewController" sceneMemberID="viewController">
@@ -406,11 +424,11 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="WUu-92-aNl"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="Yep-Y9-Hor"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJW-Se-bsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="1897"/>
+            <point key="canvasLocation" x="309" y="1070"/>
         </scene>
         <!--Stroke View Controller-->
         <scene sceneID="Xbp-SC-aJL">
@@ -449,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLr-YM-SFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2040" y="2204"/>
+            <point key="canvasLocation" x="958.5" y="1497"/>
         </scene>
         <!--Guitar View Controller-->
         <scene sceneID="9os-Px-0eJ">
@@ -853,7 +871,143 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK8-l0-phy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="1537"/>
+            <point key="canvasLocation" x="958.5" y="843"/>
+        </scene>
+        <!--Guitar Content View Controller-->
+        <scene sceneID="25t-66-GOO">
+            <objects>
+                <viewController storyboardIdentifier="GuitarContentViewController" id="0ta-53-lTZ" customClass="GuitarContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TSx-Hn-vCt"/>
+                        <viewControllerLayoutGuide type="bottom" id="rne-1L-QUo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="99R-R2-5dp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="go4-To-BlY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.88997395830000003" green="0.88997395830000003" blue="0.88997395830000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="355" width="400" height="245"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9t-sA-BXJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="C">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="410" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="CandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="2gQ-UI-9Nf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO6-FQ-UtI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="D">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="410" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="DandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="g8w-aT-3cL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHk-O0-clC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="E">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="119" y="410" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="EandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="LHN-aY-lEj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHU-aQ-hnc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="F">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="167" y="410" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="FandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="USm-jP-t2j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iei-Yj-h9i">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="G">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="453" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="GandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="E3R-Bk-hSe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3k-86-XtY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="A">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="453" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="AandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="ley-kt-rgL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOn-B8-h9M">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="B">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="119" y="453" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="BandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="BHG-xO-FhN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="go4-To-BlY"/>
+                                <exclude reference="c9t-sA-BXJ"/>
+                                <exclude reference="lO6-FQ-UtI"/>
+                                <exclude reference="JHk-O0-clC"/>
+                                <exclude reference="eHU-aQ-hnc"/>
+                                <exclude reference="iei-Yj-h9i"/>
+                                <exclude reference="q3k-86-XtY"/>
+                                <exclude reference="DOn-B8-h9M"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="go4-To-BlY"/>
+                                <include reference="c9t-sA-BXJ"/>
+                                <include reference="lO6-FQ-UtI"/>
+                                <include reference="JHk-O0-clC"/>
+                                <include reference="eHU-aQ-hnc"/>
+                                <include reference="iei-Yj-h9i"/>
+                                <include reference="q3k-86-XtY"/>
+                                <include reference="DOn-B8-h9M"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zd-X1-5JC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="843"/>
         </scene>
         <!--Item-->
         <scene sceneID="Tap-MB-qXE">
@@ -867,6 +1021,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4M-vp-PfF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="履歴" id="GdW-Hd-GLX">
+                                        <barButtonItem key="rightBarButtonItem" title="全て消去" id="r0i-bh-ABc">
+                                            <connections>
+                                                <action selector="allDeleteHistoryButton:" destination="xAI-oQ-CDa" id="Dct-Lf-Yw6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UkX-sn-DAq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -883,33 +1049,36 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="44" width="400" height="507"/>
+                                    <rect key="frame" x="0.0" y="74" width="400" height="477"/>
                                 </variation>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlN-cf-q2W">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="全て消去">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="249" y="6" width="60" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="allDeleteHistoryButton:" destination="xAI-oQ-CDa" eventType="touchUpInside" id="SvR-jN-3gG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o4M-vp-PfF" firstAttribute="leading" secondItem="ekB-DI-eh2" secondAttribute="leadingMargin" constant="-16" id="22f-8a-Vhf"/>
+                            <constraint firstItem="o4M-vp-PfF" firstAttribute="top" secondItem="ekB-DI-eh2" secondAttribute="topMargin" id="Rrv-3T-r8r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o4M-vp-PfF" secondAttribute="trailing" constant="-16" id="bsE-ni-SDR"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="o4M-vp-PfF"/>
                                 <exclude reference="UkX-sn-DAq"/>
-                                <exclude reference="rlN-cf-q2W"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="22f-8a-Vhf"/>
+                                <exclude reference="Rrv-3T-r8r"/>
+                                <exclude reference="bsE-ni-SDR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="o4M-vp-PfF"/>
                                 <include reference="UkX-sn-DAq"/>
-                                <include reference="rlN-cf-q2W"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="22f-8a-Vhf"/>
+                                <include reference="Rrv-3T-r8r"/>
+                                <include reference="bsE-ni-SDR"/>
                             </mask>
                         </variation>
                     </view>
@@ -920,26 +1089,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYz-19-GNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="1764"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="mfw-wW-o6B">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLm-f3-67y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="k0B-je-LoD"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sOO-f2-9nc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="C8T-eu-pWE" kind="relationship" relationship="rootViewController" id="tMP-A5-4TR"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w8H-rR-cYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="333" y="909"/>
+            <point key="canvasLocation" x="621" y="2436"/>
         </scene>
     </scenes>
     <resources>

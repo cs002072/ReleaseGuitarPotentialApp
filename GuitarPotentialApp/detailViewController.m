@@ -15,8 +15,10 @@
     NSArray *_codeCircleArray;
     NSInteger *_songHistoryArrayNum;
     NSMutableArray *_codeArray;
+    NSMutableArray *_newCodeArray;
     NSString *_previousKey, *_strKey, *_strCapo;
     NSString *_previousCapo;
+    int _codeNum;
     //    BOOL boolNum = NO;
 }
 @end
@@ -29,10 +31,11 @@
 
     _songHistoryArray = [[NSMutableArray alloc] init];
     _codeArray = [[NSMutableArray alloc] init];
+    _newCodeArray = [[NSMutableArray alloc] init];
     _AllSongsArrayAtDetail = [[NSArray alloc] init];
     _codeCircleArray = [[NSArray alloc] init];
     
-    _codeCircleArray = @[@"C", @"C#/D♭", @"D", @"D#/E♭", @"E", @"F", @"F#/G♭", @"G", @"G#/A♭", @"A", @"A#/B♭", @"B"];
+    _codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
     //読み込むプロパティリストのファイルパス（場所）を指定
@@ -41,10 +44,11 @@
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     _AllSongsArrayAtDetail = [dic objectForKey:@"AllSongsList"];
     
-    _previousKey = @"+-0";
+    _previousKey = @"0";
     _previousCapo = @"0";
-    _strKey = @"+-0";
+    _strKey = @"0";
     _strCapo = @"0";
+    _codeNum = -1;
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
@@ -71,7 +75,7 @@
                 NSComparisonResult cmpZ = [component3 compare:@"Z" options:NSCaseInsensitiveSearch range:r];
                 if(cmpA >= 0 && cmpZ <= 0){
                     [_codeArray addObject:component3];
-                    NSLog(@"%@", component3);
+//                    NSLog(@"%@", component3);
                 }
             }
         }
@@ -126,31 +130,6 @@
 // PickerViewController上にある透明ボタンがタップされたときに呼び出されるPickerViewControllerDelegateプロトコルのデリゲートメソッド
 - (void)closePickerView:(PickerViewController *)controller
 {
-    /***************************************************/
-    /******************キーとカポの再描画******************/
-    /***************************************************/
-    _previousKey = self.selectedKey.text;
-    self.selectedKey.text = _strKey;
-    NSLog(@"_previousKey = %@, selectedKey = %@", _previousKey, self.selectedKey.text);
-    _previousCapo = self.selectedCapo.text;
-    self.selectedCapo.text = _strCapo;
-    NSLog(@"_previousCapo = %@, selectedCapo = %@", _previousCapo, self.selectedCapo.text);
-    /***************************************************/
-    /******************キーとカポの再描画******************/
-    /***************************************************/
-    
-    /***************************************************/
-    /******************キーの計算******************/
-    /***************************************************/
-    for (NSString *codeStr in _codeArray) {
-        //if ()
-    }
-    
-    /***************************************************/
-    /******************キーの計算******************/
-    /***************************************************/
-    
-    
     // PickerViewをアニメーションを使ってゆっくり非表示にする
     UIView *pickerView = controller.view;
     
@@ -165,6 +144,74 @@
     [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
     pickerView.center = offScreenCenter;
     [UIView commitAnimations];
+
+    /***************************************************/
+    /******************キーとカポの再描画******************/
+    /***************************************************/
+    _previousKey = self.selectedKey.text;
+    self.selectedKey.text = _strKey;
+    _previousCapo = self.selectedCapo.text;
+    self.selectedCapo.text = _strCapo;
+    /***************************************************/
+    /******************キーとカポの再描画******************/
+    /***************************************************/
+    
+    /***************************************************/
+    /******************ギターコードの抽出******************/
+    /***************************************************/
+    for (NSString *codeStr in _codeArray) {
+        NSString *textRange_0, *textRange_1;
+        int previousKey, nowKey, numUpDowKey;
+        if (codeStr.length <= 4){
+            textRange_1 = [codeStr substringWithRange:NSMakeRange(0, 1)];
+        }
+        else {
+            textRange_0 = [codeStr substringWithRange:NSMakeRange(0, 4)];
+            if ([textRange_0 isEqualToString:@"Capo"])  continue;
+            textRange_1 = [codeStr substringWithRange:NSMakeRange(0, 1)];
+        }
+//_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
+        if ([textRange_1 isEqualToString:@"C"]){
+            NSArray *codeSeparate = [codeStr componentsSeparatedByString:@"C"];
+            _codeNum = 0;
+            previousKey = [_previousKey intValue];
+            nowKey = [self.selectedKey.text intValue];
+            numUpDowKey = nowKey - previousKey;
+//            codeStr = [_codeCircleArray objectAtIndex:previousKey + numUpDowKey];
+            
+            [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:previousKey + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            NSLog(@"sdfsd");
+        } else if ([textRange_1 isEqualToString:@"D"]){
+            _codeNum = 3;
+//            [_newCodeArray addObject:codeStr];
+        } else if ([textRange_1 isEqualToString:@"E"]){
+//            [_newCodeArray addObject:codeStr];
+        } else if ([textRange_1 isEqualToString:@"F"]){
+//            [_newCodeArray addObject:codeStr];
+        } else if ([textRange_1 isEqualToString:@"G"]){
+  //          [_newCodeArray addObject:codeStr];
+        } else if ([textRange_1 isEqualToString:@"A"]){
+    //        [_newCodeArray addObject:codeStr];
+        } else if ([textRange_1 isEqualToString:@"B"]){
+      //      [_newCodeArray addObject:codeStr];
+        }
+        NSLog(@"sdfs");
+    }
+    /***************************************************/
+    /******************ギターコードの抽出******************/
+    /***************************************************/
+
+    /***************************************************/
+    /******************キーの計算******************/
+    /***************************************************/
+//    textRange_2 = [codeStr substringWithRange:NSMakeRange(0, 1)];
+
+//    if ()
+    
+    /***************************************************/
+    /******************キーの計算******************/
+    /***************************************************/
+
 }
 
 // 単位のPickerViewを閉じるアニメーションが終了したときに呼び出されるメソッド
@@ -207,9 +254,43 @@
     /***********************************************/
     /**********楽曲情報保存フェーズ***********/
     /***********************************************/
-    UITabBarController *tab = (UITabBarController *)[self presentingViewController];
-    [tab setSelectedIndex:2];
+    
+//        UITabBarController *tab = (UITabBarController *)[self presentingViewController];
+//        [tab setSelectedIndex:2];
+
+    
+    
+//    UINavigationController *navi = (UINavigationController *)[self presentingViewController];
+//    UITabBarController *tab = (UITabBarController *)[navi tabBarController];
+//    [tab setSelectedIndex:2];
+//    [[[self navigationController] tabBarController] setSelectedIndex:2];
+    
+//    UITabBarController *tab = (UITabBarController *)[self parentViewController];
+//    [tab setSelectedIndex:2];
+
+//    NSLog(@"Beforecount = %d", [self.navigationController.viewControllers count]);
+//    self.tabBarController.selectedIndex = 2;
+//    NSLog(@"Aftercount = %d", [self.navigationController.viewControllers count]);
+//
+
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"履歴に追加しました！"
+                          message:@""
+                          delegate:self
+                          cancelButtonTitle:@"キャンセル！"
+                          otherButtonTitles:@"OK！", nil];
+    // アラートビューを表示
+    [alert show];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+/**
+ * アラートのボタンが押されたとき
+ */
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+
 }
 
 - (IBAction)tapCancelButton:(id)sender {

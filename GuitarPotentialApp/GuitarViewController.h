@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GuitarContentViewController.h"
 
 @interface GuitarViewController : UIViewController <UIGestureRecognizerDelegate>
 
 - (void) soundPlayer:(NSMutableArray *)pushedFlag :(NSInteger)String :(NSInteger)soundFlag;
+@property (strong, nonatomic) GuitarContentViewController *guitarContentViewController;
 
 @property (weak, nonatomic) IBOutlet UIImageView *string11;
 @property (weak, nonatomic) IBOutlet UIImageView *string21;

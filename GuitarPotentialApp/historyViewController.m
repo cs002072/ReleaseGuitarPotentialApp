@@ -29,39 +29,26 @@
     //-- １曲の情報
     _AllSongsArrayAtHistory = [[NSMutableArray alloc] init];
     _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
+
+    UINavigationController *navi = [self navigationController];
+
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"全て消去" style:UIBarButtonItemStylePlain target:self action:nil];
+    navi.navigationItem.rightBarButtonItem = rightItem;
     
-    /**************これ必要くさい*****************/
-    /**************これ必要くさい*****************/
-    /**************これ必要くさい*****************/
-    //-- ナビゲーションバー追加？
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    navi.navigationItem.leftBarButtonItem = [self editButtonItem];
     
-    //-- セルを削除する機能を追加
-    self.title = @"履歴";
-    self.navigationItem.leftBarButtonItem = [self editButtonItem];
-    /**************これ必要くさい*****************/
-    /**************これ必要くさい*****************/
-    /**************これ必要くさい*****************/
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"全て消去" style:UIBarButtonItemStylePlain target:self action:nil];
+//    self.navigationItem.rightBarButtonItem = rightItem;
+//    
+//    self.navigationItem.leftBarButtonItem = [self editButtonItem];
+
+
 }
 
-/**************これは微妙・・・*****************/
-/**************これは微妙・・・*****************/
-/**************これは微妙・・・*****************/
-////-- 履歴を横スワイプしたとき
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete)
-//    {
-//        NSLog(@"asdas");
-//    }
-//}
-/**************これは微妙・・・*****************/
-/**************これは微妙・・・*****************/
-/**************これは微妙・・・*****************/
-
-//- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return @"delete";
-//}
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 
 
 //-- 行数を返す
@@ -69,6 +56,43 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
     return _AllSongsArrayAtHistory.count;
+}
+
+
+/************************************************************/
+/************************************************************/
+/************************************************************/
+/*************************１つ消去ボタンを押した時ここに行くには・・・？
+ ***********************************/
+/************************************************************/
+/************************************************************/
+/************************************************************/
+/************************************************************/
+/************************************************************/
+/************************************************************/
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _AllSongsArrayAtHistory = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_AllSongsArrayAtHistory removeObjectAtIndex:indexPath.row]; // 削除ボタンが押された行のデータを配列から削除します。
+        [self.historyTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // ここは空のままでOKです。
+    }
+}
+
+// 編集モードになった時に呼ばれるメソッド
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    NSLog(@"%s", __func__);
+    [super setEditing:editing animated:animated];
+    if (editing) {
+        // 編集モードの処理
+        NSLog(@"編集モードに入りました。");
+    }else{
+        // 編集モードから戻った時の処理
+        NSLog(@"編集モードから出ました。");
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,7 +124,9 @@
     detailViewController *dvc = [segue destinationViewController];
     dvc.number = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"NO"] intValue];
 }
-
+- (IBAction)DeleteHistoryButton:(id)sender {
+    [self setEditing:YES animated:NO];
+}
 - (IBAction)allDeleteHistoryButton:(id)sender {
     // アラートビューを作成
     // キャンセルボタンを表示しない場合はcancelButtonTitleにnilを指定

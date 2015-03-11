@@ -54,6 +54,7 @@
 		A7A236D11AA75C62006678F1 /* sound64.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7A236A71AA75C62006678F1 /* sound64.wav */; };
 		A7A236D21AA75C62006678F1 /* sound65.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7A236A81AA75C62006678F1 /* sound65.wav */; };
 		A7A236D31AA75C62006678F1 /* sound66.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7A236A91AA75C62006678F1 /* sound66.wav */; };
+		A7A466C31AAEE45400FB050D /* GuitarContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A466C21AAEE45400FB050D /* GuitarContentViewController.m */; };
 		A7BEAD431AAC75AB00E2657B /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BEAD421AAC75AB00E2657B /* PickerViewController.m */; };
 		A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D2F98D1AA3240300529626 /* GuitarViewController.m */; };
 		A7D2F9A21AA3255200529626 /* head_close.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D2F9901AA3255200529626 /* head_close.png */; };
@@ -150,6 +151,8 @@
 		A7A236A71AA75C62006678F1 /* sound64.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound64.wav; sourceTree = "<group>"; };
 		A7A236A81AA75C62006678F1 /* sound65.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound65.wav; sourceTree = "<group>"; };
 		A7A236A91AA75C62006678F1 /* sound66.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound66.wav; sourceTree = "<group>"; };
+		A7A466C11AAEE45400FB050D /* GuitarContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarContentViewController.h; sourceTree = "<group>"; };
+		A7A466C21AAEE45400FB050D /* GuitarContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarContentViewController.m; sourceTree = "<group>"; };
 		A7BEAD411AAC75AB00E2657B /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		A7BEAD421AAC75AB00E2657B /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		A7D2F98C1AA3240300529626 /* GuitarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarViewController.h; sourceTree = "<group>"; };
@@ -324,14 +327,16 @@
 				A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */,
 				A78537231A9B0BB2008DF74F /* detailViewController.h */,
 				A78537241A9B0BB2008DF74F /* detailViewController.m */,
+				A7BEAD411AAC75AB00E2657B /* PickerViewController.h */,
+				A7BEAD421AAC75AB00E2657B /* PickerViewController.m */,
 				A7D2F98C1AA3240300529626 /* GuitarViewController.h */,
 				A7D2F98D1AA3240300529626 /* GuitarViewController.m */,
+				A7A466C11AAEE45400FB050D /* GuitarContentViewController.h */,
+				A7A466C21AAEE45400FB050D /* GuitarContentViewController.m */,
 				A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */,
 				A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */,
 				A7D69DAB1AAAE64F002B6990 /* StrokeViewController.h */,
 				A7D69DAC1AAAE64F002B6990 /* StrokeViewController.m */,
-				A7BEAD411AAC75AB00E2657B /* PickerViewController.h */,
-				A7BEAD421AAC75AB00E2657B /* PickerViewController.m */,
 				A7EA74721A9B0291009B46AB /* Main.storyboard */,
 				A79F83231AA858EB004297D7 /* SEManager.h */,
 				A79F83241AA858EB004297D7 /* SEManager.m */,
@@ -547,6 +552,7 @@
 				A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */,
 				A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */,
 				A7EA746E1A9B0291009B46AB /* AppDelegate.m in Sources */,
+				A7A466C31AAEE45400FB050D /* GuitarContentViewController.m in Sources */,
 				A7EA746B1A9B0291009B46AB /* main.m in Sources */,
 				A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */,
 			);

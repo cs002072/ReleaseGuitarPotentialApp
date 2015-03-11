@@ -15,5 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *historyTableView;
 - (IBAction)allDeleteHistoryButton:(id)sender;
+- (IBAction)DeleteHistoryButton:(id)sender;
+//- (IBAction)DeleteHistoryButton:(id)sender;
 
 @end

@@ -17,8 +17,6 @@
 // 処理のデリゲート先の参照
 @property (weak, nonatomic) id<PickerViewControllerDelegate> delegate;
 
-
-
 // PickerViewを閉じる処理を行うメソッド。closeButtonが押下されたときに呼び出される
 - (IBAction)closePickerView:(id)sender;
 

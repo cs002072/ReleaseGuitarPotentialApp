@@ -21,15 +21,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    //プロジェクト内のファイルにアクセスできるオブジェクトを作成
+    //プロジェクト内のファイルにアクセスできるオ ブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
     //読み込むプロパティリストのファイルパス（場所）を指定
     NSString *path = [bundle pathForResource:@"AllSongsList" ofType:@"plist"];
     //プロパティリストの中身のデータを取得
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     _AllSongsArrayAtView = [dic objectForKey:@"AllSongsList"];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+
+
 }
 
 //-- 行数を返す
