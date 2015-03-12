@@ -31,9 +31,9 @@
 
     _songHistoryArray = [[NSMutableArray alloc] init];
     _codeArray = [[NSMutableArray alloc] init];
-    _newCodeArray = [[NSMutableArray alloc] init];
     _AllSongsArrayAtDetail = [[NSArray alloc] init];
     _codeCircleArray = [[NSArray alloc] init];
+    _newCodeArray = [[NSMutableArray alloc] init];
     
     _codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
@@ -130,6 +130,11 @@
 // PickerViewController上にある透明ボタンがタップされたときに呼び出されるPickerViewControllerDelegateプロトコルのデリゲートメソッド
 - (void)closePickerView:(PickerViewController *)controller
 {
+
+    if (_newCodeArray.count > 0){
+        _codeArray = _newCodeArray;
+        _newCodeArray = [[NSMutableArray alloc] init];
+    }
     // PickerViewをアニメーションを使ってゆっくり非表示にする
     UIView *pickerView = controller.view;
     
@@ -160,42 +165,102 @@
     /******************ギターコードの抽出******************/
     /***************************************************/
     for (NSString *codeStr in _codeArray) {
+
+        NSLog(@"nodeStr = %@", codeStr);
         NSString *textRange_0, *textRange_1;
-        int previousKey, nowKey, numUpDowKey;
+        NSArray *codeSeparate;
+        int previousKey, nowKey, numUpDowKey, trueUpDown;
         if (codeStr.length <= 4){
             textRange_1 = [codeStr substringWithRange:NSMakeRange(0, 1)];
         }
         else {
             textRange_0 = [codeStr substringWithRange:NSMakeRange(0, 4)];
-            if ([textRange_0 isEqualToString:@"Capo"])  continue;
+            if ([textRange_0 isEqualToString:@"Capo"] || [textRange_0 isEqualToString:@"Baby"])  continue;
             textRange_1 = [codeStr substringWithRange:NSMakeRange(0, 1)];
         }
+        
+        
+        previousKey = [_previousKey intValue];
+        nowKey = [self.selectedKey.text intValue];
+        numUpDowKey = nowKey - previousKey;
+        
 //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
         if ([textRange_1 isEqualToString:@"C"]){
-            NSArray *codeSeparate = [codeStr componentsSeparatedByString:@"C"];
-            _codeNum = 0;
-            previousKey = [_previousKey intValue];
-            nowKey = [self.selectedKey.text intValue];
-            numUpDowKey = nowKey - previousKey;
-//            codeStr = [_codeCircleArray objectAtIndex:previousKey + numUpDowKey];
+            codeSeparate = [codeStr componentsSeparatedByString:@"C"];
+
+            if (numUpDowKey < 0){
+                _codeNum = (int)_codeCircleArray.count;
+            } else {
+                _codeNum = 0;
+            }
+            [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             
-            [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:previousKey + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
-            NSLog(@"sdfsd");
         } else if ([textRange_1 isEqualToString:@"D"]){
-            _codeNum = 3;
-//            [_newCodeArray addObject:codeStr];
+            codeSeparate = [codeStr componentsSeparatedByString:@"D"];
+            _codeNum = 2;
+            if (_codeNum + numUpDowKey < 0){
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else {
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            }
         } else if ([textRange_1 isEqualToString:@"E"]){
-//            [_newCodeArray addObject:codeStr];
+            codeSeparate = [codeStr componentsSeparatedByString:@"E"];
+            _codeNum = 4;
+            if (_codeNum + numUpDowKey < 0){
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else {
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            }
         } else if ([textRange_1 isEqualToString:@"F"]){
-//            [_newCodeArray addObject:codeStr];
+            codeSeparate = [codeStr componentsSeparatedByString:@"F"];
+//_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
+            _codeNum = 5;
+            trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
+            if (_codeNum + numUpDowKey < 0){
+                /*配列の値が負になったとき*/
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else if (_codeNum + numUpDowKey >= _codeCircleArray.count){
+                /*配列の値が正になったとき*/
+                _codeNum = -1;
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else {
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            }
         } else if ([textRange_1 isEqualToString:@"G"]){
-  //          [_newCodeArray addObject:codeStr];
+            codeSeparate = [codeStr componentsSeparatedByString:@"G"];
+//_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
+            _codeNum = 7;
+            trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
+            if (_codeNum + numUpDowKey >= _codeCircleArray.count){
+                /*配列の値が正になったとき*/
+                _codeNum = -1;
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else {
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            }
         } else if ([textRange_1 isEqualToString:@"A"]){
-    //        [_newCodeArray addObject:codeStr];
+            codeSeparate = [codeStr componentsSeparatedByString:@"A"];
+            _codeNum = 9;
+            trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
+            if (_codeNum + numUpDowKey >= _codeCircleArray.count){
+                /*配列の値が正になったとき*/
+                _codeNum = -1;
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else {
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            }
         } else if ([textRange_1 isEqualToString:@"B"]){
-      //      [_newCodeArray addObject:codeStr];
+            codeSeparate = [codeStr componentsSeparatedByString:@"B"];
+            _codeNum = 11;
+            trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
+            if (_codeNum + numUpDowKey >= _codeCircleArray.count){
+                /*配列の値が正になったとき*/
+                _codeNum = -1;
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            } else {
+                [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            }
         }
-        NSLog(@"sdfs");
     }
     /***************************************************/
     /******************ギターコードの抽出******************/
@@ -211,7 +276,9 @@
     /***************************************************/
     /******************キーの計算******************/
     /***************************************************/
-
+    
+    
+    
 }
 
 // 単位のPickerViewを閉じるアニメーションが終了したときに呼び出されるメソッド
