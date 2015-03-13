@@ -14,10 +14,11 @@
     NSArray *_AllSongsArrayAtDetail;
     NSArray *_codeCircleArray;
     NSInteger *_songHistoryArrayNum;
-    NSMutableArray *_codeArray;
-    NSMutableArray *_newCodeArray;
+    NSMutableArray *_codeArray, *_wordArray;
+    NSMutableArray *_newCodeArray, *_oldCodeArray;
     NSString *_previousKey, *_strKey, *_strCapo;
     NSString *_previousCapo;
+    NSArray *_array;
     int _codeNum;
     //    BOOL boolNum = NO;
 }
@@ -34,6 +35,8 @@
     _AllSongsArrayAtDetail = [[NSArray alloc] init];
     _codeCircleArray = [[NSArray alloc] init];
     _newCodeArray = [[NSMutableArray alloc] init];
+    _oldCodeArray = [[NSMutableArray alloc] init];
+    _wordArray = [[NSMutableArray alloc] init];
     
     _codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
@@ -64,8 +67,8 @@
     /***********************************************/
     /**********テキスト分解フェーズ***********/
     /***********************************************/
-    NSArray *array = [self.SongWordStr.text componentsSeparatedByString:@"\n"];
-    for (NSString *component in array) {
+    _array = [self.SongWordStr.text componentsSeparatedByString:@"\n"];
+    for (NSString *component in _array) {
         NSArray *array2 = [component componentsSeparatedByString:@" "];
         for (NSString *component2 in array2) {
             NSArray *array3 = [component2 componentsSeparatedByString:@"　"];
@@ -75,11 +78,13 @@
                 NSComparisonResult cmpZ = [component3 compare:@"Z" options:NSCaseInsensitiveSearch range:r];
                 if(cmpA >= 0 && cmpZ <= 0){
                     [_codeArray addObject:component3];
-//                    NSLog(@"%@", component3);
+                } else {
+                    [_wordArray addObject:component3];
                 }
             }
         }
     }
+    NSLog(@"sfsdf");
     /***********************************************/
     /**********テキスト分解フェーズ***********/
     /***********************************************/
@@ -134,6 +139,7 @@
     if (_newCodeArray.count > 0){
         _codeArray = _newCodeArray;
         _newCodeArray = [[NSMutableArray alloc] init];
+        _oldCodeArray = [[NSMutableArray alloc] init];
     }
     // PickerViewをアニメーションを使ってゆっくり非表示にする
     UIView *pickerView = controller.view;
@@ -166,7 +172,7 @@
     /***************************************************/
     for (NSString *codeStr in _codeArray) {
 
-        NSLog(@"nodeStr = %@", codeStr);
+        NSLog(@"codeStr = %@", codeStr);
         NSString *textRange_0, *textRange_1;
         NSArray *codeSeparate;
         int previousKey, nowKey, numUpDowKey, trueUpDown;
@@ -187,31 +193,39 @@
 //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
         if ([textRange_1 isEqualToString:@"C"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"C"];
-
             if (numUpDowKey < 0){
                 _codeNum = (int)_codeCircleArray.count;
             } else {
                 _codeNum = 0;
             }
             [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+            [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             
-        } else if ([textRange_1 isEqualToString:@"D"]){
+        }
+        else if ([textRange_1 isEqualToString:@"D"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"D"];
             _codeNum = 2;
             if (_codeNum + numUpDowKey < 0){
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
-        } else if ([textRange_1 isEqualToString:@"E"]){
+        }
+        else if ([textRange_1 isEqualToString:@"E"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"E"];
             _codeNum = 4;
             if (_codeNum + numUpDowKey < 0){
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
-        } else if ([textRange_1 isEqualToString:@"F"]){
+        }
+        else if ([textRange_1 isEqualToString:@"F"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"F"];
 //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
             _codeNum = 5;
@@ -219,14 +233,18 @@
             if (_codeNum + numUpDowKey < 0){
                 /*配列の値が負になったとき*/
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             } else if (_codeNum + numUpDowKey >= _codeCircleArray.count){
                 /*配列の値が正になったとき*/
                 _codeNum = -1;
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
-        } else if ([textRange_1 isEqualToString:@"G"]){
+        }
+        else if ([textRange_1 isEqualToString:@"G"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"G"];
 //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
             _codeNum = 7;
@@ -235,10 +253,13 @@
                 /*配列の値が正になったとき*/
                 _codeNum = -1;
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
-        } else if ([textRange_1 isEqualToString:@"A"]){
+        }
+        else if ([textRange_1 isEqualToString:@"A"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"A"];
             _codeNum = 9;
             trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
@@ -246,10 +267,13 @@
                 /*配列の値が正になったとき*/
                 _codeNum = -1;
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
-        } else if ([textRange_1 isEqualToString:@"B"]){
+        }
+        else if ([textRange_1 isEqualToString:@"B"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"B"];
             _codeNum = 11;
             trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
@@ -257,27 +281,33 @@
                 /*配列の値が正になったとき*/
                 _codeNum = -1;
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey - trueUpDown] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
+                [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
         }
     }
     /***************************************************/
     /******************ギターコードの抽出******************/
     /***************************************************/
-
-    /***************************************************/
-    /******************キーの計算******************/
-    /***************************************************/
-//    textRange_2 = [codeStr substringWithRange:NSMakeRange(0, 1)];
-
-//    if ()
+    NSString *strArray2;
+    NSRange range;
+    self.SongWordStr.text = @"";strArray2 = @"";
+    for (NSString *strArray in _array) {
+        for (int i = 0; i < _oldCodeArray.count; i++) {
+            range = [strArray rangeOfString:[_oldCodeArray objectAtIndex:i]];
+            if (range.location != NSNotFound){
+                strArray2 = [strArray stringByReplacingOccurrencesOfString:[_oldCodeArray objectAtIndex:i] withString:[_newCodeArray objectAtIndex:i]];
+            } else {
+                strArray2 = strArray;
+            }
+        }
+        self.SongWordStr.text = [self.SongWordStr.text stringByAppendingString:strArray2];
+        NSLog(@"%@", self.SongWordStr.text);
+    }
     
-    /***************************************************/
-    /******************キーの計算******************/
-    /***************************************************/
-    
-    
+//    NSLog(@"%@", self.SongWordStr.text);
     
 }
 

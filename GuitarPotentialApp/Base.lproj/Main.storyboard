@@ -1010,6 +1010,24 @@
             </objects>
             <point key="canvasLocation" x="1638" y="843"/>
         </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="mSa-Cg-xvD">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewController" id="TPM-Uv-3hq" customClass="TutorialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AaK-Sw-9Fo"/>
+                        <viewControllerLayoutGuide type="bottom" id="sm0-68-hjF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EM1-S6-Tjh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDK-sr-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="2136"/>
+        </scene>
         <!--Item-->
         <scene sceneID="Tap-MB-qXE">
             <objects>

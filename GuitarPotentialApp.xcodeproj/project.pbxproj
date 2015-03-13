@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71918801A9B131000C5377E /* 涙のキッス.txt */; };
+		A73648911AB208C9002DC97C /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73648901AB208C9002DC97C /* TutorialViewController.m */; };
 		A74F46C71AA307CB00ACE730 /* TSUNAMI.txt in Resources */ = {isa = PBXBuildFile; fileRef = A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */; };
 		A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78537241A9B0BB2008DF74F /* detailViewController.m */; };
 		A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7952C311A9F77140084DCE7 /* いとしのエリー.txt */; };
-		A79F83251AA858EB004297D7 /* SEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79F83241AA858EB004297D7 /* SEManager.m */; };
+		A79DB06D1AB2ABCC00BD0B54 /* SEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79DB06C1AB2ABCC00BD0B54 /* SEManager.m */; };
 		A7A236AA1AA75C62006678F1 /* sound01.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7A236801AA75C62006678F1 /* sound01.wav */; };
 		A7A236AB1AA75C62006678F1 /* sound02.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7A236811AA75C62006678F1 /* sound02.wav */; };
 		A7A236AC1AA75C62006678F1 /* sound03.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7A236821AA75C62006678F1 /* sound03.wav */; };
@@ -103,12 +104,14 @@
 
 /* Begin PBXFileReference section */
 		A71918801A9B131000C5377E /* 涙のキッス.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "涙のキッス.txt"; sourceTree = "<group>"; usesTabs = 0; };
+		A736488F1AB208C9002DC97C /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		A73648901AB208C9002DC97C /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = TSUNAMI.txt; sourceTree = "<group>"; };
 		A78537231A9B0BB2008DF74F /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
 		A78537241A9B0BB2008DF74F /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 		A7952C311A9F77140084DCE7 /* いとしのエリー.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "いとしのエリー.txt"; sourceTree = "<group>"; };
-		A79F83231AA858EB004297D7 /* SEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SEManager.h; path = "../../../../Downloads/SEManager-master/SESample/SEManager.h"; sourceTree = "<group>"; };
-		A79F83241AA858EB004297D7 /* SEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SEManager.m; path = "../../../../Downloads/SEManager-master/SESample/SEManager.m"; sourceTree = "<group>"; };
+		A79DB06B1AB2ABCC00BD0B54 /* SEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEManager.h; sourceTree = "<group>"; };
+		A79DB06C1AB2ABCC00BD0B54 /* SEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEManager.m; sourceTree = "<group>"; };
 		A7A236801AA75C62006678F1 /* sound01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound01.wav; sourceTree = "<group>"; };
 		A7A236811AA75C62006678F1 /* sound02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound02.wav; sourceTree = "<group>"; };
 		A7A236821AA75C62006678F1 /* sound03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound03.wav; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 		A7EA74671A9B0291009B46AB /* GuitarPotentialApp */ = {
 			isa = PBXGroup;
 			children = (
+				A79DB06B1AB2ABCC00BD0B54 /* SEManager.h */,
+				A79DB06C1AB2ABCC00BD0B54 /* SEManager.m */,
 				A7EA746C1A9B0291009B46AB /* AppDelegate.h */,
 				A7EA746D1A9B0291009B46AB /* AppDelegate.m */,
 				A7EA746F1A9B0291009B46AB /* ViewController.h */,
@@ -337,9 +342,9 @@
 				A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */,
 				A7D69DAB1AAAE64F002B6990 /* StrokeViewController.h */,
 				A7D69DAC1AAAE64F002B6990 /* StrokeViewController.m */,
+				A736488F1AB208C9002DC97C /* TutorialViewController.h */,
+				A73648901AB208C9002DC97C /* TutorialViewController.m */,
 				A7EA74721A9B0291009B46AB /* Main.storyboard */,
-				A79F83231AA858EB004297D7 /* SEManager.h */,
-				A79F83241AA858EB004297D7 /* SEManager.m */,
 				A7EA74751A9B0291009B46AB /* Images.xcassets */,
 				A7EA74771A9B0291009B46AB /* LaunchScreen.xib */,
 				A7EA74681A9B0291009B46AB /* Supporting Files */,
@@ -546,13 +551,14 @@
 			files = (
 				A7D69DAD1AAAE64F002B6990 /* StrokeViewController.m in Sources */,
 				A7EA74711A9B0291009B46AB /* ViewController.m in Sources */,
+				A73648911AB208C9002DC97C /* TutorialViewController.m in Sources */,
 				A7BEAD431AAC75AB00E2657B /* PickerViewController.m in Sources */,
-				A79F83251AA858EB004297D7 /* SEManager.m in Sources */,
 				A7D69F391A9CC2FE00A2AB87 /* historyViewController.m in Sources */,
 				A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */,
 				A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */,
 				A7EA746E1A9B0291009B46AB /* AppDelegate.m in Sources */,
 				A7A466C31AAEE45400FB050D /* GuitarContentViewController.m in Sources */,
+				A79DB06D1AB2ABCC00BD0B54 /* SEManager.m in Sources */,
 				A7EA746B1A9B0291009B46AB /* main.m in Sources */,
 				A78537251A9B0BB2008DF74F /* detailViewController.m in Sources */,
 			);
