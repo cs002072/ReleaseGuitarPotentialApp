@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    NSInteger pageSize = 5; // ページ数
+    NSInteger pageSize = 12; // ページ数
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
     
@@ -88,11 +88,11 @@
     
     //    //キャンセルボタン
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame = CGRectMake(10, height-40, 30, 30);
+    cancelButton.frame = CGRectMake(10, height-150, 90, 60);
     //    [canselButton.titleLabel setFont:[UIFont systemFontOfSize:22]];
     //    [canselButton setTitle:@"Cansel" forState:UIControlStateNormal];
     //    [canselButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    UIImage *img =[UIImage imageNamed:@"cancelImage"];
+    UIImage *img =[UIImage imageNamed:@"CanselTutorialButton.png"];
     [cancelButton setImage:img forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(backtoHome:)forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:cancelButton];

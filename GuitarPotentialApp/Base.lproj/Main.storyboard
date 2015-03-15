@@ -143,13 +143,15 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="121" width="406" height="1380"/>
+                                            <rect key="frame" x="0.0" y="121" width="400" height="1380"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-4S-ePF">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6m8-xz-ESf"/>
                                             <constraint firstAttribute="height" constant="50" id="InQ-wb-irF"/>
+                                            <constraint firstAttribute="height" constant="50" id="iyh-dW-d2y"/>
                                             <constraint firstAttribute="width" constant="100" id="oLG-he-mSy"/>
                                         </constraints>
                                         <state key="normal" image="KeyChangeButton_GuitarPotential.png">
@@ -157,14 +159,17 @@
                                         </state>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="6m8-xz-ESf"/>
                                                 <exclude reference="InQ-wb-irF"/>
+                                                <exclude reference="iyh-dW-d2y"/>
                                                 <exclude reference="oLG-he-mSy"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="189" y="23" width="100" height="50"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
+                                                <include reference="6m8-xz-ESf"/>
                                                 <exclude reference="InQ-wb-irF"/>
+                                                <include reference="iyh-dW-d2y"/>
                                                 <exclude reference="oLG-he-mSy"/>
                                             </mask>
                                         </variation>
@@ -174,11 +179,24 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se0-IJ-wbJ">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="bJd-QM-fOc"/>
+                                            <constraint firstAttribute="height" constant="50" id="xDg-0e-qrP"/>
+                                        </constraints>
                                         <state key="normal" image="CanselButton_GuitarPotential.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="3" y="23" width="100" height="50"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="bJd-QM-fOc"/>
+                                                <exclude reference="xDg-0e-qrP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="bJd-QM-fOc"/>
+                                                <include reference="xDg-0e-qrP"/>
+                                            </mask>
                                         </variation>
                                         <connections>
                                             <action selector="tapCancelButton:" destination="SAR-jO-Tv0" eventType="touchUpInside" id="bgY-TR-zdY"/>
@@ -188,7 +206,9 @@
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="3X6-Dy-4ZB"/>
+                                            <constraint firstAttribute="width" constant="100" id="8pn-rS-z4E"/>
                                             <constraint firstAttribute="height" constant="50" id="vg8-ld-QBD"/>
+                                            <constraint firstAttribute="height" constant="50" id="y8A-pE-4sT"/>
                                         </constraints>
                                         <state key="normal" image="SaveButton_GuitarPotential.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -196,14 +216,17 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="3X6-Dy-4ZB"/>
+                                                <exclude reference="8pn-rS-z4E"/>
                                                 <exclude reference="vg8-ld-QBD"/>
+                                                <exclude reference="y8A-pE-4sT"/>
                                             </mask>
                                         </variation>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="297" y="23" width="100" height="50"/>
+                                        <variation key="widthClass=compact">
                                             <mask key="constraints">
                                                 <exclude reference="3X6-Dy-4ZB"/>
+                                                <include reference="8pn-rS-z4E"/>
                                                 <exclude reference="vg8-ld-QBD"/>
+                                                <include reference="y8A-pE-4sT"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -232,12 +255,12 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1500" id="4QA-LU-z39"/>
-                                    <constraint firstItem="pao-yC-RFp" firstAttribute="top" secondItem="7xV-Jt-sxf" secondAttribute="top" constant="31" id="Jwo-Ws-78u"/>
-                                    <constraint firstItem="HgK-4S-ePF" firstAttribute="leading" secondItem="Se0-IJ-wbJ" secondAttribute="trailing" constant="46" id="Tsf-qw-cxL"/>
-                                    <constraint firstItem="Se0-IJ-wbJ" firstAttribute="top" secondItem="7xV-Jt-sxf" secondAttribute="top" constant="31" id="Vxg-uE-7fk"/>
-                                    <constraint firstItem="Se0-IJ-wbJ" firstAttribute="leading" secondItem="7xV-Jt-sxf" secondAttribute="leading" constant="3" id="bfc-4D-WfV"/>
-                                    <constraint firstItem="HgK-4S-ePF" firstAttribute="top" secondItem="7xV-Jt-sxf" secondAttribute="top" constant="31" id="cDH-kd-Tmc"/>
-                                    <constraint firstAttribute="trailing" secondItem="pao-yC-RFp" secondAttribute="trailing" constant="20" id="dgj-6w-ExB"/>
+                                    <constraint firstAttribute="trailing" secondItem="pao-yC-RFp" secondAttribute="trailing" constant="3" id="C0U-I5-fhp"/>
+                                    <constraint firstItem="HgK-4S-ePF" firstAttribute="top" secondItem="7xV-Jt-sxf" secondAttribute="top" constant="23" id="IXV-5N-vKh"/>
+                                    <constraint firstItem="Se0-IJ-wbJ" firstAttribute="top" secondItem="7xV-Jt-sxf" secondAttribute="top" constant="23" id="U6z-2S-0fa"/>
+                                    <constraint firstItem="pao-yC-RFp" firstAttribute="leading" secondItem="HgK-4S-ePF" secondAttribute="trailing" constant="8" id="Ytr-Xy-8cd"/>
+                                    <constraint firstItem="Se0-IJ-wbJ" firstAttribute="leading" secondItem="7xV-Jt-sxf" secondAttribute="leading" constant="3" id="fQE-Fi-OfD"/>
+                                    <constraint firstItem="pao-yC-RFp" firstAttribute="top" secondItem="7xV-Jt-sxf" secondAttribute="top" constant="23" id="ko0-eH-KMi"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -250,12 +273,12 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="4QA-LU-z39"/>
-                                        <exclude reference="Vxg-uE-7fk"/>
-                                        <exclude reference="bfc-4D-WfV"/>
-                                        <exclude reference="Tsf-qw-cxL"/>
-                                        <exclude reference="cDH-kd-Tmc"/>
-                                        <exclude reference="Jwo-Ws-78u"/>
-                                        <exclude reference="dgj-6w-ExB"/>
+                                        <exclude reference="U6z-2S-0fa"/>
+                                        <exclude reference="fQE-Fi-OfD"/>
+                                        <exclude reference="IXV-5N-vKh"/>
+                                        <exclude reference="C0U-I5-fhp"/>
+                                        <exclude reference="Ytr-Xy-8cd"/>
+                                        <exclude reference="ko0-eH-KMi"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -269,12 +292,12 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="4QA-LU-z39"/>
-                                        <exclude reference="Vxg-uE-7fk"/>
-                                        <exclude reference="bfc-4D-WfV"/>
-                                        <exclude reference="Tsf-qw-cxL"/>
-                                        <exclude reference="cDH-kd-Tmc"/>
-                                        <exclude reference="Jwo-Ws-78u"/>
-                                        <exclude reference="dgj-6w-ExB"/>
+                                        <include reference="U6z-2S-0fa"/>
+                                        <include reference="fQE-Fi-OfD"/>
+                                        <include reference="IXV-5N-vKh"/>
+                                        <include reference="C0U-I5-fhp"/>
+                                        <include reference="Ytr-Xy-8cd"/>
+                                        <include reference="ko0-eH-KMi"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1174,6 +1197,6 @@
         <image name="string6.png" width="48" height="272"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5HZ-09-VXH"/>
+        <segue reference="AVo-wB-6M2"/>
     </inferredMetricsTieBreakers>
 </document>
