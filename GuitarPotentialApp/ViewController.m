@@ -62,13 +62,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //-- 遷移画面のカプセル化（インスタンス化）
 //    detailViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
+//    dvc.number = [_AllSongsArrayAtView[self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+////    NSLog(@"%d", dvc.number);
+//    [[self navigationController]pushViewController:dvc animated:YES];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //-- 遷移画面のカプセル化（インスタンス化）
-    detailViewController *dvc = [segue destinationViewController];
-//    TutorialViewController *tvc = [segue destinationViewController];
-    dvc.number = [_AllSongsArrayAtView[/*(int)*/self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    if ([segue.identifier  isEqual: @"showTutorialSegue"]){
+//        TutorialViewController *tvc = [segue destinationViewController];
+    } else {
+        detailViewController *dvc = [segue destinationViewController];
+    //    TutorialViewController *tvc = [segue destinationViewController];
+        dvc.number = [_AllSongsArrayAtView[self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +85,7 @@
 
 - (IBAction)pushTutorialButton:(id)sender {
 //    TutorialViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialViewController"];
+//    [[self navigationController]pushViewController:tvc animated:YES];
     [self performSegueWithIdentifier:@"showTutorialSegue" sender:nil];
 }
 @end

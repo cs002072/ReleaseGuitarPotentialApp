@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    NSInteger pageSize = 6; // ページ数
+    NSInteger pageSize = 5; // ページ数
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
     
@@ -55,7 +55,7 @@
         //        NSLog(@"imagenum:%d",i);
         //head_close.png
 //        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"tutorialImage%d", i]];
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"head_close.png"]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"Tutorial%d_GuitarPotential.png", i+1]];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.frame = CGRectMake(i * width, 0, width, height);
         [self.scrollView addSubview:imageView];

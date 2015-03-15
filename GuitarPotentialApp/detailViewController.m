@@ -58,6 +58,7 @@
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
     NSError *error = nil;
+    NSLog(@"%d", self.number);
     NSString *filePath = [[NSBundle mainBundle] pathForResource:_AllSongsArrayAtDetail[self.number][@"TITLE"] ofType:@"txt"];
     self.SongWordStr.text = [NSString stringWithContentsOfFile:filePath encoding:NSShiftJISStringEncoding error:&error];
     /***********************************************/

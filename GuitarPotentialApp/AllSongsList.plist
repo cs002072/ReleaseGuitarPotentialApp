@@ -11,6 +11,8 @@
 			<string>涙のキッス</string>
 			<key>ARTIST</key>
 			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>NO</key>
@@ -19,6 +21,8 @@
 			<string>いとしのエリー</string>
 			<key>ARTIST</key>
 			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>NO</key>
@@ -27,6 +31,8 @@
 			<string>TSUNAMI</string>
 			<key>ARTIST</key>
 			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
 		</dict>
 	</array>
 </dict>

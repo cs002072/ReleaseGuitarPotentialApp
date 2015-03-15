@@ -107,7 +107,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], /*_AllSongsArrayAtHistory[indexPath.row][@"KEY"],*/ _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
     
     return cell;
 }

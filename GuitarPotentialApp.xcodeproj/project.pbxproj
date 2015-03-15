@@ -97,6 +97,21 @@
 		A7EA74851A9B0291009B46AB /* GuitarPotentialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */; };
 		A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */; };
 		A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */; };
+		A7FE3E981AB55A93007165B9 /* GuitarCodePracticeButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E971AB55A93007165B9 /* GuitarCodePracticeButton_GuitarPotential.png */; };
+		A7FE3EA01AB562F4007165B9 /* AButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E991AB562F4007165B9 /* AButton_GuitarPotential.png */; };
+		A7FE3EA11AB562F4007165B9 /* BButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E9A1AB562F4007165B9 /* BButton_GuitarPotential.png */; };
+		A7FE3EA21AB562F4007165B9 /* CButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E9B1AB562F4007165B9 /* CButton_GuitarPotential.png */; };
+		A7FE3EA31AB562F4007165B9 /* DButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E9C1AB562F4007165B9 /* DButton_GuitarPotential.png */; };
+		A7FE3EA41AB562F4007165B9 /* EButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E9D1AB562F4007165B9 /* EButton_GuitarPotential.png */; };
+		A7FE3EA51AB562F4007165B9 /* FButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E9E1AB562F4007165B9 /* FButton_GuitarPotential.png */; };
+		A7FE3EA61AB562F4007165B9 /* GButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3E9F1AB562F4007165B9 /* GButton_GuitarPotential.png */; };
+		A7FE3EA81AB56F1D007165B9 /* GuitarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EA71AB56F1D007165B9 /* GuitarIcon.png */; };
+		A7FE3EAF1AB58D1B007165B9 /* Tutorial1_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EAA1AB58D1B007165B9 /* Tutorial1_GuitarPotential.png */; };
+		A7FE3EB01AB58D1B007165B9 /* Tutorial2_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EAB1AB58D1B007165B9 /* Tutorial2_GuitarPotential.png */; };
+		A7FE3EB11AB58D1B007165B9 /* Tutorial3_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EAC1AB58D1B007165B9 /* Tutorial3_GuitarPotential.png */; };
+		A7FE3EB21AB58D1B007165B9 /* Tutorial4_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EAD1AB58D1B007165B9 /* Tutorial4_GuitarPotential.png */; };
+		A7FE3EB31AB58D1B007165B9 /* Tutorial5_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EAE1AB58D1B007165B9 /* Tutorial5_GuitarPotential.png */; };
+		A7FE3EB51AB59094007165B9 /* Tutorial6_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FE3EB41AB59094007165B9 /* Tutorial6_GuitarPotential.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +230,21 @@
 		A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarModeViewController.h; sourceTree = "<group>"; };
 		A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarModeViewController.m; sourceTree = "<group>"; };
 		A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllSongsList.plist; sourceTree = "<group>"; };
+		A7FE3E971AB55A93007165B9 /* GuitarCodePracticeButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuitarCodePracticeButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E991AB562F4007165B9 /* AButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E9A1AB562F4007165B9 /* BButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E9B1AB562F4007165B9 /* CButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E9C1AB562F4007165B9 /* DButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E9D1AB562F4007165B9 /* EButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E9E1AB562F4007165B9 /* FButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3E9F1AB562F4007165B9 /* GButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3EA71AB56F1D007165B9 /* GuitarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuitarIcon.png; sourceTree = "<group>"; };
+		A7FE3EAA1AB58D1B007165B9 /* Tutorial1_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial1_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3EAB1AB58D1B007165B9 /* Tutorial2_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial2_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3EAC1AB58D1B007165B9 /* Tutorial3_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial3_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3EAD1AB58D1B007165B9 /* Tutorial4_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial4_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3EAE1AB58D1B007165B9 /* Tutorial5_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tutorial5_GuitarPotential.png; sourceTree = "<group>"; };
+		A7FE3EB41AB59094007165B9 /* Tutorial6_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tutorial6_GuitarPotential.png; path = ../Tutorials_GuitarPotential/Tutorial6_GuitarPotential.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +270,15 @@
 		A70164CF1AB4690A00C137E2 /* GuitarPotentialボタン */ = {
 			isa = PBXGroup;
 			children = (
+				A7FE3EA71AB56F1D007165B9 /* GuitarIcon.png */,
+				A7FE3E991AB562F4007165B9 /* AButton_GuitarPotential.png */,
+				A7FE3E9A1AB562F4007165B9 /* BButton_GuitarPotential.png */,
+				A7FE3E9B1AB562F4007165B9 /* CButton_GuitarPotential.png */,
+				A7FE3E9C1AB562F4007165B9 /* DButton_GuitarPotential.png */,
+				A7FE3E9D1AB562F4007165B9 /* EButton_GuitarPotential.png */,
+				A7FE3E9E1AB562F4007165B9 /* FButton_GuitarPotential.png */,
+				A7FE3E9F1AB562F4007165B9 /* GButton_GuitarPotential.png */,
+				A7FE3E971AB55A93007165B9 /* GuitarCodePracticeButton_GuitarPotential.png */,
 				A70164DC1AB479BF00C137E2 /* HomeButton_GuitarPotential.png */,
 				A70164DD1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png */,
 				A70164D81AB477F700C137E2 /* Home-50.png */,
@@ -349,6 +388,7 @@
 		A7EA74671A9B0291009B46AB /* GuitarPotentialApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7FE3EA91AB58D1B007165B9 /* TutorialPictures_GuitarPotential */,
 				A79DB06E1AB2ADE000BD0B54 /* raw */,
 				A79DB06B1AB2ABCC00BD0B54 /* SEManager.h */,
 				A79DB06C1AB2ABCC00BD0B54 /* SEManager.m */,
@@ -410,6 +450,20 @@
 				A7EA74831A9B0291009B46AB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7FE3EA91AB58D1B007165B9 /* TutorialPictures_GuitarPotential */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE3EAA1AB58D1B007165B9 /* Tutorial1_GuitarPotential.png */,
+				A7FE3EAB1AB58D1B007165B9 /* Tutorial2_GuitarPotential.png */,
+				A7FE3EAC1AB58D1B007165B9 /* Tutorial3_GuitarPotential.png */,
+				A7FE3EAD1AB58D1B007165B9 /* Tutorial4_GuitarPotential.png */,
+				A7FE3EAE1AB58D1B007165B9 /* Tutorial5_GuitarPotential.png */,
+				A7FE3EB41AB59094007165B9 /* Tutorial6_GuitarPotential.png */,
+			);
+			name = TutorialPictures_GuitarPotential;
+			path = ../../../TutorialPictures_GuitarPotential;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +552,7 @@
 				A79DB0B41AB2ADE000BD0B54 /* sound44.wav in Resources */,
 				A79DB0B31AB2ADE000BD0B54 /* sound43.wav in Resources */,
 				A79DB0BB1AB2ADE000BD0B54 /* sound55.wav in Resources */,
+				A7FE3EAF1AB58D1B007165B9 /* Tutorial1_GuitarPotential.png in Resources */,
 				A7D2F9BE1AA3279100529626 /* string5.png in Resources */,
 				A79DB0BA1AB2ADE000BD0B54 /* sound54.wav in Resources */,
 				A79DB0A01AB2ADE000BD0B54 /* sound12.wav in Resources */,
@@ -505,10 +560,12 @@
 				A70164DA1AB477F700C137E2 /* Home-50.png in Resources */,
 				A79DB0AD1AB2ADE000BD0B54 /* sound33.wav in Resources */,
 				A79DB0C11AB2ADE000BD0B54 /* sound65.wav in Resources */,
+				A7FE3EA41AB562F4007165B9 /* EButton_GuitarPotential.png in Resources */,
 				A7D2F9A51AA3255200529626 /* lighting_head_open.png in Resources */,
 				A79DB0B71AB2ADE000BD0B54 /* sound51.wav in Resources */,
 				A70164D41AB4690A00C137E2 /* KeyChangeButton_GuitarPotential.png in Resources */,
 				A7D2F9A21AA3255200529626 /* head_close.png in Resources */,
+				A7FE3EB21AB58D1B007165B9 /* Tutorial4_GuitarPotential.png in Resources */,
 				A7D2F9AC1AA3255200529626 /* pressedstring6.png in Resources */,
 				A79DB09A1AB2ADE000BD0B54 /* sound02.wav in Resources */,
 				A79DB0AA1AB2ADE000BD0B54 /* sound26.wav in Resources */,
@@ -528,11 +585,14 @@
 				A79DB0A81AB2ADE000BD0B54 /* sound24.wav in Resources */,
 				A7D2F9AA1AA3255200529626 /* pressedstring4.png in Resources */,
 				A79DB0AB1AB2ADE000BD0B54 /* sound31.wav in Resources */,
+				A7FE3EA01AB562F4007165B9 /* AButton_GuitarPotential.png in Resources */,
 				A7D2F9BF1AA3279100529626 /* string6.png in Resources */,
+				A7FE3EA51AB562F4007165B9 /* FButton_GuitarPotential.png in Resources */,
 				A7D2F9A81AA3255200529626 /* pressedstring2.png in Resources */,
 				A7D2F9AB1AA3255200529626 /* pressedstring5.png in Resources */,
 				A7D2F9A91AA3255200529626 /* pressedstring3.png in Resources */,
 				A79DB0AE1AB2ADE000BD0B54 /* sound34.wav in Resources */,
+				A7FE3EA61AB562F4007165B9 /* GButton_GuitarPotential.png in Resources */,
 				A79DB09D1AB2ADE000BD0B54 /* sound05.wav in Resources */,
 				A79DB0B11AB2ADE000BD0B54 /* sound41.wav in Resources */,
 				A79DB0A71AB2ADE000BD0B54 /* sound23.wav in Resources */,
@@ -546,6 +606,7 @@
 				A79DB09E1AB2ADE000BD0B54 /* sound06.wav in Resources */,
 				A79DB0BD1AB2ADE000BD0B54 /* sound61.wav in Resources */,
 				A79DB0A11AB2ADE000BD0B54 /* sound13.wav in Resources */,
+				A7FE3EA11AB562F4007165B9 /* BButton_GuitarPotential.png in Resources */,
 				A79DB0A51AB2ADE000BD0B54 /* sound21.wav in Resources */,
 				A79DB0A31AB2ADE000BD0B54 /* sound15.wav in Resources */,
 				A79DB0A61AB2ADE000BD0B54 /* sound22.wav in Resources */,
@@ -553,20 +614,28 @@
 				A79DB0BC1AB2ADE000BD0B54 /* sound56.wav in Resources */,
 				A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */,
 				A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */,
+				A7FE3EA81AB56F1D007165B9 /* GuitarIcon.png in Resources */,
 				A70164D31AB4690A00C137E2 /* CanselButton_GuitarPotential.png in Resources */,
 				A7D2F9AD1AA3255200529626 /* pushed_guitarstring.png in Resources */,
 				A79DB09F1AB2ADE000BD0B54 /* sound11.wav in Resources */,
+				A7FE3EB31AB58D1B007165B9 /* Tutorial5_GuitarPotential.png in Resources */,
 				A79DB0A21AB2ADE000BD0B54 /* sound14.wav in Resources */,
 				A79DB0B61AB2ADE000BD0B54 /* sound46.wav in Resources */,
+				A7FE3EB01AB58D1B007165B9 /* Tutorial2_GuitarPotential.png in Resources */,
 				A79DB0BF1AB2ADE000BD0B54 /* sound63.wav in Resources */,
+				A7FE3EB11AB58D1B007165B9 /* Tutorial3_GuitarPotential.png in Resources */,
 				A7D2F9BB1AA3279100529626 /* string2.png in Resources */,
+				A7FE3EA21AB562F4007165B9 /* CButton_GuitarPotential.png in Resources */,
 				A7D2F9BC1AA3279100529626 /* string3.png in Resources */,
 				A70164DF1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png in Resources */,
+				A7FE3EA31AB562F4007165B9 /* DButton_GuitarPotential.png in Resources */,
 				A79DB0C21AB2ADE000BD0B54 /* sound66.wav in Resources */,
 				A74F46C71AA307CB00ACE730 /* TSUNAMI.txt in Resources */,
+				A7FE3E981AB55A93007165B9 /* GuitarCodePracticeButton_GuitarPotential.png in Resources */,
 				A7D2F9A71AA3255200529626 /* pressedstring1.png in Resources */,
 				A70164D71AB4726800C137E2 /* TutorialButton_GuitarPotential.png in Resources */,
 				A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */,
+				A7FE3EB51AB59094007165B9 /* Tutorial6_GuitarPotential.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
