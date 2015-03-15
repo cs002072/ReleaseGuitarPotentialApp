@@ -16,7 +16,8 @@
     NSInteger *_songHistoryArrayNum;
     NSMutableArray *_codeArray, *_wordArray;
     NSMutableArray *_newCodeArray, *_oldCodeArray;
-    NSString *_previousKey, *_strKey, *_strCapo;
+    NSString *_previousKey, *_strKey, *_strCapo, *_newSongWordStr;
+;
     NSString *_previousCapo;
     NSArray *_array;
     int _codeNum;
@@ -51,6 +52,7 @@
     _previousCapo = @"0";
     _strKey = @"0";
     _strCapo = @"0";
+    _newSongWordStr = @"";
     _codeNum = -1;
     /***********************************************/
     /**********テキストファイル読み込みフェーズ***********/
@@ -84,7 +86,6 @@
             }
         }
     }
-    NSLog(@"sfsdf");
     /***********************************************/
     /**********テキスト分解フェーズ***********/
     /***********************************************/
@@ -125,11 +126,6 @@
 {
     _strCapo = str;
 }
-/**************************/
-/************nowKeyに新たな数字を入れる前に，nowKeyの値をpreviousKeyに入れる．その後，nowKeyに新たな値を入れる**************/
-/**************************/
-/**************************/
-/**************************/
 
 
 // PickerViewController上にある透明ボタンがタップされたときに呼び出されるPickerViewControllerDelegateプロトコルのデリゲートメソッド
@@ -143,6 +139,8 @@
     }
     // PickerViewをアニメーションを使ってゆっくり非表示にする
     UIView *pickerView = controller.view;
+    _newSongWordStr = @"";
+
     
     // アニメーション完了時のPickerViewの位置を計算
     CGSize offSize = [UIScreen mainScreen].bounds.size;
@@ -172,7 +170,7 @@
     /***************************************************/
     for (NSString *codeStr in _codeArray) {
 
-        NSLog(@"codeStr = %@", codeStr);
+//        NSLog(@"codeStr = %@", codeStr);
         NSString *textRange_0, *textRange_1;
         NSArray *codeSeparate;
         int previousKey, nowKey, numUpDowKey, trueUpDown;
@@ -200,7 +198,6 @@
             }
             [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
-            
         }
         else if ([textRange_1 isEqualToString:@"D"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"D"];
@@ -243,6 +240,7 @@
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
                 [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
+            NSLog(@"sdf");
         }
         else if ([textRange_1 isEqualToString:@"G"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"G"];
@@ -291,21 +289,56 @@
     /***************************************************/
     /******************ギターコードの抽出******************/
     /***************************************************/
-    NSString *strArray2;
-    NSRange range;
-    self.SongWordStr.text = @"";strArray2 = @"";
+//    NSRange range;
+    NSArray *strArray2;
+    _newSongWordStr = self.SongWordStr.text;
+    self.SongWordStr.text = @"";
+    _array = [_newSongWordStr componentsSeparatedByString:@"\n"];
+    _newSongWordStr = @"";
+    
     for (NSString *strArray in _array) {
-        for (int i = 0; i < _oldCodeArray.count; i++) {
-            range = [strArray rangeOfString:[_oldCodeArray objectAtIndex:i]];
-            if (range.location != NSNotFound){
-                strArray2 = [strArray stringByReplacingOccurrencesOfString:[_oldCodeArray objectAtIndex:i] withString:[_newCodeArray objectAtIndex:i]];
+        strArray2 = [[NSArray alloc] init];
+        strArray2 = [strArray componentsSeparatedByString:@" "];
+        
+        if ([strArray isEqualToString:@"\r"]){
+            _newSongWordStr = [_newSongWordStr stringByAppendingString:@"\r"];
+            continue;
+        }
+//        for (NSString *strArray3 in strArray2) {
+        for (int i = 0; i < strArray2.count; i++) {
+            if ([[strArray2 objectAtIndex:i] isEqualToString:@""]){
+                _newSongWordStr = [_newSongWordStr stringByAppendingString:@" "];
             } else {
-                strArray2 = strArray;
+                NSUInteger index = [_oldCodeArray indexOfObject:[strArray2 objectAtIndex:i]];
+                if (index == NSNotFound){
+                    _newSongWordStr = [_newSongWordStr stringByAppendingString:[[strArray2 objectAtIndex:i] stringByAppendingString:@" "]];
+                } else {
+                    _newSongWordStr = [_newSongWordStr stringByAppendingString:[[_newCodeArray objectAtIndex:index] stringByAppendingString:@" "]];
+                }
             }
         }
-        self.SongWordStr.text = [self.SongWordStr.text stringByAppendingString:strArray2];
-        NSLog(@"%@", self.SongWordStr.text);
     }
+    self.SongWordStr.text = _newSongWordStr;
+    NSLog(@"%@", _newSongWordStr);
+    
+    
+        
+        
+        
+//        for (int i = 0; i < _oldCodeArray.count; i++) {
+//            range = [strArray rangeOfString:[_oldCodeArray objectAtIndex:i]];
+//            if (range.location != NSNotFound){
+//                [strArray stringByReplacingOccurrencesOfString:[_oldCodeArray objectAtIndex:i] withString:[_newCodeArray objectAtIndex:i]];
+//            }
+//            else {
+//                //strArray2 = strArray;
+//            }
+//        }
+//        self.SongWordStr.text = [self.SongWordStr.text stringByAppendingString:strArray];
+//        NSLog(@"%@", self.SongWordStr.text);
+
+    
+
     
 //    NSLog(@"%@", self.SongWordStr.text);
     

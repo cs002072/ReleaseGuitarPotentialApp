@@ -53,8 +53,9 @@
         //        label.textAlignment = NSTextAlignmentCenter;
         //        [self.scrollView addSubview:label];
         //        NSLog(@"imagenum:%d",i);
-        
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"tutorialImage%d", i]];
+        //head_close.png
+//        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"tutorialImage%d", i]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"head_close.png"]];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.frame = CGRectMake(i * width, 0, width, height);
         [self.scrollView addSubview:imageView];

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70164D31AB4690A00C137E2 /* CanselButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164D01AB4690A00C137E2 /* CanselButton_GuitarPotential.png */; };
+		A70164D41AB4690A00C137E2 /* KeyChangeButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164D11AB4690A00C137E2 /* KeyChangeButton_GuitarPotential.png */; };
+		A70164D51AB4690A00C137E2 /* SaveButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164D21AB4690A00C137E2 /* SaveButton_GuitarPotential.png */; };
+		A70164D71AB4726800C137E2 /* TutorialButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164D61AB4726800C137E2 /* TutorialButton_GuitarPotential.png */; };
+		A70164DA1AB477F700C137E2 /* Home-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164D81AB477F700C137E2 /* Home-50.png */; };
+		A70164DB1AB477F700C137E2 /* Info-50.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164D91AB477F700C137E2 /* Info-50.png */; };
+		A70164DE1AB479BF00C137E2 /* HomeButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164DC1AB479BF00C137E2 /* HomeButton_GuitarPotential.png */; };
+		A70164DF1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A70164DD1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png */; };
 		A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */ = {isa = PBXBuildFile; fileRef = A71918801A9B131000C5377E /* 涙のキッス.txt */; };
 		A73648911AB208C9002DC97C /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73648901AB208C9002DC97C /* TutorialViewController.m */; };
 		A74F46C71AA307CB00ACE730 /* TSUNAMI.txt in Resources */ = {isa = PBXBuildFile; fileRef = A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */; };
@@ -88,7 +96,6 @@
 		A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EA74771A9B0291009B46AB /* LaunchScreen.xib */; };
 		A7EA74851A9B0291009B46AB /* GuitarPotentialAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */; };
 		A7EB6F071AA5A9AC0069DF0B /* GuitarModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */; };
-		A7FA53DB1AAD79AC00F257D8 /* yen_5.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FA53DA1AAD79AC00F257D8 /* yen_5.png */; };
 		A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +110,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70164D01AB4690A00C137E2 /* CanselButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CanselButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A70164D11AB4690A00C137E2 /* KeyChangeButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KeyChangeButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A70164D21AB4690A00C137E2 /* SaveButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SaveButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A70164D61AB4726800C137E2 /* TutorialButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TutorialButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A70164D81AB477F700C137E2 /* Home-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-50.png"; sourceTree = "<group>"; };
+		A70164D91AB477F700C137E2 /* Info-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info-50.png"; sourceTree = "<group>"; };
+		A70164DC1AB479BF00C137E2 /* HomeButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeButton_GuitarPotential.png; sourceTree = "<group>"; };
+		A70164DD1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InfomationButton_GuitarPotential.png; sourceTree = "<group>"; };
 		A71918801A9B131000C5377E /* 涙のキッス.txt */ = {isa = PBXFileReference; fileEncoding = 2147486209; lastKnownFileType = text; path = "涙のキッス.txt"; sourceTree = "<group>"; usesTabs = 0; };
 		A736488F1AB208C9002DC97C /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		A73648901AB208C9002DC97C /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
@@ -199,7 +214,6 @@
 		A7EA74841A9B0291009B46AB /* GuitarPotentialAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuitarPotentialAppTests.m; sourceTree = "<group>"; };
 		A7EB6F051AA5A9AC0069DF0B /* GuitarModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarModeViewController.h; sourceTree = "<group>"; };
 		A7EB6F061AA5A9AC0069DF0B /* GuitarModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarModeViewController.m; sourceTree = "<group>"; };
-		A7FA53DA1AAD79AC00F257D8 /* yen_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yen_5.png; path = "../../../画像/OtsuriApp-images/yen_5.png"; sourceTree = "<group>"; };
 		A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AllSongsList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +237,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A70164CF1AB4690A00C137E2 /* GuitarPotentialボタン */ = {
+			isa = PBXGroup;
+			children = (
+				A70164DC1AB479BF00C137E2 /* HomeButton_GuitarPotential.png */,
+				A70164DD1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png */,
+				A70164D81AB477F700C137E2 /* Home-50.png */,
+				A70164D91AB477F700C137E2 /* Info-50.png */,
+				A70164D61AB4726800C137E2 /* TutorialButton_GuitarPotential.png */,
+				A70164D01AB4690A00C137E2 /* CanselButton_GuitarPotential.png */,
+				A70164D11AB4690A00C137E2 /* KeyChangeButton_GuitarPotential.png */,
+				A70164D21AB4690A00C137E2 /* SaveButton_GuitarPotential.png */,
+			);
+			path = "GuitarPotentialボタン";
+			sourceTree = "<group>";
+		};
 		A79DB06E1AB2ADE000BD0B54 /* raw */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +361,7 @@
 				A7FACBDC1A9F0BAB00210638 /* AllSongsList.plist */,
 				A78537231A9B0BB2008DF74F /* detailViewController.h */,
 				A78537241A9B0BB2008DF74F /* detailViewController.m */,
+				A70164CF1AB4690A00C137E2 /* GuitarPotentialボタン */,
 				A7BEAD411AAC75AB00E2657B /* PickerViewController.h */,
 				A7BEAD421AAC75AB00E2657B /* PickerViewController.m */,
 				A7D2F98C1AA3240300529626 /* GuitarViewController.h */,
@@ -355,7 +385,6 @@
 		A7EA74681A9B0291009B46AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7FA53DA1AAD79AC00F257D8 /* yen_5.png */,
 				A7D2F98F1AA3255200529626 /* GuitarCodeTrainer画像 */,
 				A74F46C61AA307CB00ACE730 /* TSUNAMI.txt */,
 				A7952C311A9F77140084DCE7 /* いとしのエリー.txt */,
@@ -472,10 +501,13 @@
 				A7D2F9BE1AA3279100529626 /* string5.png in Resources */,
 				A79DB0BA1AB2ADE000BD0B54 /* sound54.wav in Resources */,
 				A79DB0A01AB2ADE000BD0B54 /* sound12.wav in Resources */,
+				A70164DE1AB479BF00C137E2 /* HomeButton_GuitarPotential.png in Resources */,
+				A70164DA1AB477F700C137E2 /* Home-50.png in Resources */,
 				A79DB0AD1AB2ADE000BD0B54 /* sound33.wav in Resources */,
 				A79DB0C11AB2ADE000BD0B54 /* sound65.wav in Resources */,
 				A7D2F9A51AA3255200529626 /* lighting_head_open.png in Resources */,
 				A79DB0B71AB2ADE000BD0B54 /* sound51.wav in Resources */,
+				A70164D41AB4690A00C137E2 /* KeyChangeButton_GuitarPotential.png in Resources */,
 				A7D2F9A21AA3255200529626 /* head_close.png in Resources */,
 				A7D2F9AC1AA3255200529626 /* pressedstring6.png in Resources */,
 				A79DB09A1AB2ADE000BD0B54 /* sound02.wav in Resources */,
@@ -487,6 +519,7 @@
 				A7D2F9BA1AA3279100529626 /* string1.png in Resources */,
 				A79DB0B51AB2ADE000BD0B54 /* sound45.wav in Resources */,
 				A79DB0991AB2ADE000BD0B54 /* sound01.wav in Resources */,
+				A70164D51AB4690A00C137E2 /* SaveButton_GuitarPotential.png in Resources */,
 				A79DB0B91AB2ADE000BD0B54 /* sound53.wav in Resources */,
 				A79DB0A41AB2ADE000BD0B54 /* sound16.wav in Resources */,
 				A79DB0BE1AB2ADE000BD0B54 /* sound62.wav in Resources */,
@@ -507,6 +540,7 @@
 				A7EA74791A9B0291009B46AB /* LaunchScreen.xib in Resources */,
 				A79DB0AC1AB2ADE000BD0B54 /* sound32.wav in Resources */,
 				A71918811A9B131000C5377E /* 涙のキッス.txt in Resources */,
+				A70164DB1AB477F700C137E2 /* Info-50.png in Resources */,
 				A79DB09B1AB2ADE000BD0B54 /* sound03.wav in Resources */,
 				A79DB09C1AB2ADE000BD0B54 /* sound04.wav in Resources */,
 				A79DB09E1AB2ADE000BD0B54 /* sound06.wav in Resources */,
@@ -519,17 +553,19 @@
 				A79DB0BC1AB2ADE000BD0B54 /* sound56.wav in Resources */,
 				A7EA74761A9B0291009B46AB /* Images.xcassets in Resources */,
 				A7FACBDD1A9F0BAB00210638 /* AllSongsList.plist in Resources */,
+				A70164D31AB4690A00C137E2 /* CanselButton_GuitarPotential.png in Resources */,
 				A7D2F9AD1AA3255200529626 /* pushed_guitarstring.png in Resources */,
 				A79DB09F1AB2ADE000BD0B54 /* sound11.wav in Resources */,
 				A79DB0A21AB2ADE000BD0B54 /* sound14.wav in Resources */,
-				A7FA53DB1AAD79AC00F257D8 /* yen_5.png in Resources */,
 				A79DB0B61AB2ADE000BD0B54 /* sound46.wav in Resources */,
 				A79DB0BF1AB2ADE000BD0B54 /* sound63.wav in Resources */,
 				A7D2F9BB1AA3279100529626 /* string2.png in Resources */,
 				A7D2F9BC1AA3279100529626 /* string3.png in Resources */,
+				A70164DF1AB479BF00C137E2 /* InfomationButton_GuitarPotential.png in Resources */,
 				A79DB0C21AB2ADE000BD0B54 /* sound66.wav in Resources */,
 				A74F46C71AA307CB00ACE730 /* TSUNAMI.txt in Resources */,
 				A7D2F9A71AA3255200529626 /* pressedstring1.png in Resources */,
+				A70164D71AB4726800C137E2 /* TutorialButton_GuitarPotential.png in Resources */,
 				A7952C321A9F77140084DCE7 /* いとしのエリー.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

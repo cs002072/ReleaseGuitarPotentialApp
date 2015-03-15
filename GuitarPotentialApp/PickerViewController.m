@@ -44,7 +44,7 @@
 
 //-- Pickerの列数を指定するメソッド
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 2;
+    return 1/*2*/;
 }
 
 //-- PickerViewに表示する行数を指定するメソッド

@@ -13,6 +13,7 @@
     NSArray *_songList;//-- 練習する曲のリスト
 }
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+- (IBAction)pushTutorialButton:(id)sender;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "detailViewController.h"
+#import "TutorialViewController.h"
 
 @interface ViewController () {
     NSArray *_AllSongsArrayAtView;
@@ -65,8 +66,9 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //-- 遷移画面のカプセル化（インスタンス化）
-    detailViewController *dvc = [segue destinationViewController];
-    dvc.number = [_AllSongsArrayAtView[/*(int)*/self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+//    detailViewController *dvc = [segue destinationViewController];
+//    TutorialViewController *tvc = [segue destinationViewController];
+//    dvc.number = [_AllSongsArrayAtView[/*(int)*/self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,4 +76,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pushTutorialButton:(id)sender {
+//    TutorialViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"TutorialViewController"];
+    [self performSegueWithIdentifier:@"showTutorialSegue" sender:nil];
+}
 @end
