@@ -88,7 +88,7 @@
     
     //    //キャンセルボタン
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame = CGRectMake(10, height-150, 90, 60);
+    cancelButton.frame = CGRectMake(5, height-70, 70, 60);
     //    [canselButton.titleLabel setFont:[UIFont systemFontOfSize:22]];
     //    [canselButton setTitle:@"Cansel" forState:UIControlStateNormal];
     //    [canselButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
