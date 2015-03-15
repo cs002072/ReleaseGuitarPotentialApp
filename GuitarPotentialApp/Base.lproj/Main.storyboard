@@ -358,36 +358,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dn7-Nf-yO9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="左手のギターコード練習モード">
+                                <state key="normal" title="ギターコード練習モード">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="95" y="161" width="210" height="30"/>
+                                    <rect key="frame" x="95" y="161" width="165" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="GuitarCodePracticeButton:" destination="C8T-eu-pWE" eventType="touchUpInside" id="Kq7-qT-MEq"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqY-fz-gUl">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="右手のストローク練習モード">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="95" y="232" width="195" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="StrokePracticeButton:" destination="C8T-eu-pWE" eventType="touchUpInside" id="Mkc-oz-rt6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-Rj-2Ox">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="169" y="326" width="46" height="30"/>
-                                </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="練習モードを選ぶ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVL-lp-0hQ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -403,16 +382,12 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="dn7-Nf-yO9"/>
-                                <exclude reference="NqY-fz-gUl"/>
-                                <exclude reference="oAu-Rj-2Ox"/>
                                 <exclude reference="gVL-lp-0hQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="dn7-Nf-yO9"/>
-                                <include reference="NqY-fz-gUl"/>
-                                <include reference="oAu-Rj-2Ox"/>
                                 <include reference="gVL-lp-0hQ"/>
                             </mask>
                         </variation>
@@ -972,6 +947,18 @@
                                     <action selector="BandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="BHG-xO-FhN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUn-WF-Mx6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="361"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pushedCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="lCC-r7-THN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
@@ -983,6 +970,7 @@
                                 <exclude reference="iei-Yj-h9i"/>
                                 <exclude reference="q3k-86-XtY"/>
                                 <exclude reference="DOn-B8-h9M"/>
+                                <exclude reference="HUn-WF-Mx6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -995,6 +983,7 @@
                                 <include reference="iei-Yj-h9i"/>
                                 <include reference="q3k-86-XtY"/>
                                 <include reference="DOn-B8-h9M"/>
+                                <include reference="HUn-WF-Mx6"/>
                             </mask>
                         </variation>
                     </view>

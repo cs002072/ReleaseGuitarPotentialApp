@@ -157,8 +157,24 @@
     
 }
 
+- (void) initializer {
+    for (int i = 0; i < [_codeId count]; i++) {
+        for (int j = 0; j < [[_codeId objectAtIndex:i] count]; j++) {
+            UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:i] objectAtIndex:j];
+            ImageViewAtGuitar.image = [UIImage imageNamed:@"normal_guitarstring.png"];
+
+            _isflag = NO;
+            [[_pushedFlag objectAtIndex:i] replaceObjectAtIndex:j withObject:@(_isflag)];
+
+            
+        }
+    }
+}
+
 - (void)CandCloseGuitarContent:(GuitarContentViewController *)controller{
     [self closeGuitarContent:controller];
+    
+    [self initializer];
     
     UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:4] objectAtIndex:2];
     ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
@@ -175,9 +191,15 @@
     _isflag = NO;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
     _isflag = YES;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:1 withObject:@(_isflag)];
     _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    //truePosition[1] = 1; truePosition[3] = 2; truePosition[4] = 3;
+    [_truePosition replaceObjectAtIndex:1 withObject:@(1)];
+    [_truePosition replaceObjectAtIndex:3 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:4 withObject:@(3)];
 }
 - (void)DandCloseGuitarContent:(GuitarContentViewController *)controller{
     [self closeGuitarContent:controller];
+
+    [self initializer];
     
     UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:2] objectAtIndex:1];
     ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
@@ -193,9 +215,171 @@
     _isflag = YES;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:3 withObject:@(_isflag)];
     _isflag = NO;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
     _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:2  withObject:@(_isflag)];
+
+    [_truePosition replaceObjectAtIndex:0 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:1 withObject:@(3)];
+    [_truePosition replaceObjectAtIndex:2 withObject:@(2)];
+
 }
 
+- (void)EandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    [self initializer];
 
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:4] objectAtIndex:1];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:3] objectAtIndex:1];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:2] objectAtIndex:0];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    
+    _isflag = YES;  [[_pushedFlag objectAtIndex:5] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = NO;   [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:1  withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0  withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0  withObject:@(_isflag)];
+
+    [_truePosition replaceObjectAtIndex:2 withObject:@(1)];
+    [_truePosition replaceObjectAtIndex:3 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:4 withObject:@(2)];
+
+}
+
+- (void)FandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    [self initializer];
+    
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:5] objectAtIndex:0];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:4] objectAtIndex:2];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:3] objectAtIndex:2];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar4 = [[_codeImageView objectAtIndex:2] objectAtIndex:1];
+    ImageViewAtGuitar4.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar5 = [[_codeImageView objectAtIndex:1] objectAtIndex:0];
+    ImageViewAtGuitar5.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar6 = [[_codeImageView objectAtIndex:0] objectAtIndex:0];
+    ImageViewAtGuitar6.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    
+    _isflag = NO;  [[_pushedFlag objectAtIndex:5] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    
+    _isflag = YES;   [[_pushedFlag objectAtIndex:5] replaceObjectAtIndex:1 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:3 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:3 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:1 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:1  withObject:@(_isflag)];
+ 
+    [_truePosition replaceObjectAtIndex:0 withObject:@(1)];
+    [_truePosition replaceObjectAtIndex:1 withObject:@(1)];
+    [_truePosition replaceObjectAtIndex:2 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:3 withObject:@(3)];
+    [_truePosition replaceObjectAtIndex:4 withObject:@(3)];
+    [_truePosition replaceObjectAtIndex:5 withObject:@(1)];
+
+}
+
+- (void)GandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    [self initializer];
+    
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:5] objectAtIndex:2];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:4] objectAtIndex:1];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:0] objectAtIndex:2];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    
+    _isflag = NO;  [[_pushedFlag objectAtIndex:5] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:5] replaceObjectAtIndex:3 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0  withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:3  withObject:@(_isflag)];
+
+    [_truePosition replaceObjectAtIndex:0 withObject:@(3)];
+    [_truePosition replaceObjectAtIndex:4 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:5 withObject:@(3)];
+
+}
+- (void)AandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    [self initializer];
+    
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:3] objectAtIndex:1];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:2] objectAtIndex:1];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:1] objectAtIndex:1];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    
+    _isflag = NO;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+
+    _isflag = YES;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:2  withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0 withObject:@(_isflag)];
+
+    [_truePosition replaceObjectAtIndex:1 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:2 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:3 withObject:@(2)];
+
+}
+- (void)BandCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+    [self initializer];
+    
+    UIImageView *ImageViewAtGuitar = [[_codeImageView objectAtIndex:4] objectAtIndex:1];
+    ImageViewAtGuitar.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar2 = [[_codeImageView objectAtIndex:3] objectAtIndex:3];
+    ImageViewAtGuitar2.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar3 = [[_codeImageView objectAtIndex:2] objectAtIndex:3];
+    ImageViewAtGuitar3.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar4 = [[_codeImageView objectAtIndex:1] objectAtIndex:3];
+    ImageViewAtGuitar4.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    UIImageView *ImageViewAtGuitar5 = [[_codeImageView objectAtIndex:0] objectAtIndex:1];
+    ImageViewAtGuitar5.image = [UIImage imageNamed:@"pushed_guitarstring.png"];
+    
+    _isflag = NO;  [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    _isflag = NO;  [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:0 withObject:@(_isflag)];
+    
+    _isflag = YES;   [[_pushedFlag objectAtIndex:4] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:3] replaceObjectAtIndex:4 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:2] replaceObjectAtIndex:4 withObject:@(_isflag)];
+    _isflag = YES;  [[_pushedFlag objectAtIndex:1] replaceObjectAtIndex:4 withObject:@(_isflag)];
+    _isflag = YES;   [[_pushedFlag objectAtIndex:0] replaceObjectAtIndex:2 withObject:@(_isflag)];
+    
+    [_truePosition replaceObjectAtIndex:0 withObject:@(2)];
+    [_truePosition replaceObjectAtIndex:1 withObject:@(4)];
+    [_truePosition replaceObjectAtIndex:2 withObject:@(4)];
+    [_truePosition replaceObjectAtIndex:3 withObject:@(4)];
+    [_truePosition replaceObjectAtIndex:4 withObject:@(2)];
+
+}
+
+- (void) pushedCloseGuitarContent:(GuitarContentViewController *)controller{
+    [self closeGuitarContent:controller];
+
+}
 
 
 

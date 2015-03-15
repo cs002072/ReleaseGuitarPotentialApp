@@ -56,6 +56,10 @@
     [self.delegate BandCloseGuitarContent:self];
 }
 
+- (IBAction)pushedCloseGuitarContent:(id)sender {
+    [self.delegate pushedCloseGuitarContent:self];
+}
+
 /*
 #pragma mark - Navigation
 

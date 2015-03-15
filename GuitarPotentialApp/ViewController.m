@@ -66,9 +66,9 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     //-- 遷移画面のカプセル化（インスタンス化）
-//    detailViewController *dvc = [segue destinationViewController];
+    detailViewController *dvc = [segue destinationViewController];
 //    TutorialViewController *tvc = [segue destinationViewController];
-//    dvc.number = [_AllSongsArrayAtView[/*(int)*/self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    dvc.number = [_AllSongsArrayAtView[/*(int)*/self.myTableView.indexPathForSelectedRow.row][@"NO"] intValue];
 }
 
 - (void)didReceiveMemoryWarning {

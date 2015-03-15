@@ -23,6 +23,7 @@
 - (IBAction)GandCloseGuitarContent:(id)sender;
 - (IBAction)AandCloseGuitarContent:(id)sender;
 - (IBAction)BandCloseGuitarContent:(id)sender;
+- (IBAction)pushedCloseGuitarContent:(id)sender;
 
 @end
 
@@ -35,5 +36,6 @@
 -(void)GandCloseGuitarContent:(GuitarContentViewController *)controller;
 -(void)AandCloseGuitarContent:(GuitarContentViewController *)controller;
 -(void)BandCloseGuitarContent:(GuitarContentViewController *)controller;
+-(void)pushedCloseGuitarContent:(GuitarContentViewController *)controller;
 
 @end
