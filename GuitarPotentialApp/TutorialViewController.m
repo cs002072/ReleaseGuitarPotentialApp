@@ -24,7 +24,8 @@
     
     // UIScrollViewのインスタンス化
     self.scrollView = [[UIScrollView alloc]init];
-    self.scrollView.backgroundColor = [UIColor whiteColor];
+//    self.scrollView.backgroundColor = [UIColor whiteColor];
+    self.scrollView.backgroundColor = [UIColor brownColor];
     self.scrollView.frame = self.view.bounds;
     
     // 横スクロールのインジケータを非表示にする
@@ -37,6 +38,7 @@
     
     // スクロールの範囲を設定
     [self.scrollView setContentSize:CGSizeMake((pageSize * width), height)];
+    
     
     // スクロールビューを貼付ける
     [self.view addSubview:self.scrollView];
@@ -57,7 +59,7 @@
 //        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"tutorialImage%d", i]];
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"Tutorial%d_GuitarPotential.png", i+1]];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.frame = CGRectMake(i * width, 0, width, height);
+        imageView.frame = CGRectMake(20+i * width, 0+20, width-40, height);
         [self.scrollView addSubview:imageView];
     }
     
