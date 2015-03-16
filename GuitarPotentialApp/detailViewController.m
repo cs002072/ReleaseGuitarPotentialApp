@@ -315,6 +315,7 @@
                 if (index == NSNotFound){
                     _newSongWordStr = [_newSongWordStr stringByAppendingString:[[strArray2 objectAtIndex:i] stringByAppendingString:@" "]];
                 } else {
+                    _newSongWordStr = [_newSongWordStr stringByAppendingString:@" "];
                     _newSongWordStr = [_newSongWordStr stringByAppendingString:[[_newCodeArray objectAtIndex:index] stringByAppendingString:@" "]];
                 }
             }
