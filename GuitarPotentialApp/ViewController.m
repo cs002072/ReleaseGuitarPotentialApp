@@ -12,6 +12,7 @@
 
 @interface ViewController () {
     NSArray *_AllSongsArrayAtView;
+    NSArray *_AllSongList;
 }
 
 @end
@@ -21,8 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _AllSongList = [[NSArray alloc] init];
+    _AllSongList = @[@"涙のキッス", @"いとしのエリー", @"TSUNAMI", @"真夏の果実", @"波乗りジョニー", @"DIAMONDS", @"M", @"TOMORROW", @"君こそスターだ", @"月とあたしと冷蔵庫"];
 
-    //プロジェクト内のファイルにアクセスできるオ ブジェクトを作成
+    //プロジェクト内のファイルにアクセスできるオブジェクトを作成
     NSBundle *bundle = [NSBundle mainBundle];
     //読み込むプロパティリストのファイルパス（場所）を指定
     NSString *path = [bundle pathForResource:@"AllSongsList" ofType:@"plist"];
@@ -37,8 +40,6 @@
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-
-
 }
 
 //-- 行数を返す
@@ -54,7 +55,8 @@
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArrayAtView[indexPath.row][@"TITLE"], _AllSongsArrayAtView[indexPath.row][@"ARTIST"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongList[indexPath.row], _AllSongsArrayAtView[indexPath.row][@"ARTIST"]];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", _AllSongsArrayAtView[indexPath.row][@"TITLE"], _AllSongsArrayAtView[indexPath.row][@"ARTIST"]];
     return cell;
 }
 

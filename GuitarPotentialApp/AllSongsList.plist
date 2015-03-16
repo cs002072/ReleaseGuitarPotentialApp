@@ -8,7 +8,7 @@
 			<key>NO</key>
 			<integer>0</integer>
 			<key>TITLE</key>
-			<string>涙のキッス</string>
+			<string>namidanokissu</string>
 			<key>ARTIST</key>
 			<string>サザンオールスターズ</string>
 			<key>KEY</key>
@@ -18,7 +18,7 @@
 			<key>NO</key>
 			<integer>1</integer>
 			<key>TITLE</key>
-			<string>いとしのエリー</string>
+			<string>itoshinoeri-</string>
 			<key>ARTIST</key>
 			<string>サザンオールスターズ</string>
 			<key>KEY</key>
@@ -31,6 +31,76 @@
 			<string>TSUNAMI</string>
 			<key>ARTIST</key>
 			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>3</string>
+			<key>TITLE</key>
+			<string>manatsunokajitsu</string>
+			<key>ARTIST</key>
+			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>4</string>
+			<key>TITLE</key>
+			<string>naminorijony</string>
+			<key>ARTIST</key>
+			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>5</string>
+			<key>TITLE</key>
+			<string>DIAMONDS</string>
+			<key>ARTIST</key>
+			<string>プリンセス・プリンセス</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>6</string>
+			<key>TITLE</key>
+			<string>M</string>
+			<key>ARTIST</key>
+			<string>プリンセス・プリンセス</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>7</string>
+			<key>TITLE</key>
+			<string>TOMORROW</string>
+			<key>ARTIST</key>
+			<string>岡本真夜</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>8</string>
+			<key>TITLE</key>
+			<string>kimikosostarda</string>
+			<key>ARTIST</key>
+			<string>サザンオールスターズ</string>
+			<key>KEY</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>NO</key>
+			<string>9</string>
+			<key>TITLE</key>
+			<string>tsukitoatashitoreizoko</string>
+			<key>ARTIST</key>
+			<string>いきものがかり</string>
 			<key>KEY</key>
 			<string>0</string>
 		</dict>

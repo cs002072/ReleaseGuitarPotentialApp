@@ -143,7 +143,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="121" width="400" height="1380"/>
+                                            <rect key="frame" x="0.0" y="121" width="400" height="2380"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-4S-ePF">
@@ -354,7 +354,7 @@
                         </variation>
                     </scrollView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="400" height="1500"/>
+                    <size key="freeformSize" width="400" height="2500"/>
                     <connections>
                         <outlet property="SongWordStr" destination="btt-5Z-3gl" id="Usf-hf-RoV"/>
                         <outlet property="selectButton" destination="HgK-4S-ePF" id="ReQ-J5-OMm"/>
@@ -363,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBp-vW-Vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2416.5" y="305"/>
+            <point key="canvasLocation" x="2451" y="474"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="wfg-Km-ZPg">
@@ -1107,7 +1107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDK-sr-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2416.5" y="-798"/>
+            <point key="canvasLocation" x="2451" y="-1134"/>
         </scene>
         <!--履歴-->
         <scene sceneID="Tap-MB-qXE">

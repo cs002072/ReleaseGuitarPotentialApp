@@ -11,6 +11,7 @@
 
 @interface historyViewController () {
     NSMutableArray *_AllSongsArrayAtHistory;
+    NSArray *_AllSongList;
 }
 
 @end
@@ -20,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _AllSongList = [[NSArray alloc] init];
+    _AllSongList = @[@"涙のキッス", @"いとしのエリー", @"TSUNAMI", @"真夏の果実", @"波乗りジョニー", @"DIAMONDS", @"M", @"TOMORROW", @"君こそスターだ", @"月とあたしと冷蔵庫"];
+
+    
     self.historyTableView.delegate = self;
     self.historyTableView.dataSource = self;
     
@@ -107,7 +113,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], /*_AllSongsArrayAtHistory[indexPath.row][@"KEY"],*/ _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongList[indexPath.row], /*_AllSongsArrayAtHistory[indexPath.row][@"KEY"],*/ _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], /*_AllSongsArrayAtHistory[indexPath.row][@"KEY"],*/ _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
     
     return cell;
 }

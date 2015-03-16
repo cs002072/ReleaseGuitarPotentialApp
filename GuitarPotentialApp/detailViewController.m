@@ -18,6 +18,7 @@
     NSMutableArray *_newCodeArray, *_oldCodeArray;
     NSString *_previousKey, *_strKey, *_strCapo, *_newSongWordStr;
 ;
+
     NSString *_previousCapo;
     NSArray *_array;
     int _codeNum;
@@ -375,7 +376,9 @@
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"NO"] forKey:@"NO"];
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"TITLE"] forKey:@"TITLE"];
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"ARTIST"] forKey:@"ARTIST"];
-
+    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"KEY"] forKey:@"KEY"];
+    
+    
     //-- NSMutableArrayにディクショナリを追加
     [_songHistoryArray addObject:dictionary];
     //-- ユーザデフォルトにNSMutableArrayを追加r
@@ -408,7 +411,7 @@
                           initWithTitle:@"履歴に追加しました！"
                           message:@""
                           delegate:self
-                          cancelButtonTitle:@"キャンセル！"
+                          cancelButtonTitle:nil
                           otherButtonTitles:@"OK！", nil];
     // アラートビューを表示
     [alert show];
