@@ -28,6 +28,10 @@
     
     _keyArray = @[@"-7", @"-6", @"-5", @"-4", @"-3", @"-2", @"-1", @"0", @"+1", @"+2", @"+3", @"+4", @"+5", @"+6", @"+7"];
     _capoArray = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7"];
+
+    self.keyCapoPicker.showsSelectionIndicator = YES;
+    [self.keyCapoPicker selectRow:7 inComponent:0 animated:NO];
+
 }
 
 //-- PickerViewで要素が選択されたときに呼び出されるメソッド
