@@ -541,254 +541,254 @@
                             <imageView tag="61" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gpl-d1-ID9">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="58" width="48" height="68"/>
+                                    <rect key="frame" x="21" y="45" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="51" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pa8-lF-Lxa">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="58" width="48" height="68"/>
+                                    <rect key="frame" x="68" y="45" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="41" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RVu-fN-DdM">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="58" width="48" height="68"/>
+                                    <rect key="frame" x="115" y="45" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="31" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RtP-Ow-xdS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="58" width="48" height="68"/>
+                                    <rect key="frame" x="162" y="45" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="21" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="QRR-sr-d1S">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="58" width="48" height="68"/>
+                                    <rect key="frame" x="209" y="45" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="KN8-Fe-0Ey">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="58" width="48" height="68"/>
+                                    <rect key="frame" x="256" y="45" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="62" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Smd-bh-dtH">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="125" width="48" height="68"/>
+                                    <rect key="frame" x="21" y="93" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="52" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-af-KjJ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="125" width="48" height="68"/>
+                                    <rect key="frame" x="68" y="93" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="42" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="aFA-0p-cTe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="125" width="48" height="68"/>
+                                    <rect key="frame" x="115" y="93" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="32" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="O19-kc-jEj">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="125" width="48" height="68"/>
+                                    <rect key="frame" x="162" y="93" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="22" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-sA-eQK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="125" width="48" height="68"/>
+                                    <rect key="frame" x="209" y="93" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="jt1-rq-0a4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="125" width="48" height="68"/>
+                                    <rect key="frame" x="256" y="93" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="63" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="B0P-3P-Gsd">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="192" width="48" height="68"/>
+                                    <rect key="frame" x="21" y="141" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="53" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-EX-4ua">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="192" width="48" height="68"/>
+                                    <rect key="frame" x="68" y="141" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="43" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="UIE-DE-ycy">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="192" width="48" height="68"/>
+                                    <rect key="frame" x="115" y="141" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="33" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZ5-Oo-sd5">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="192" width="48" height="68"/>
+                                    <rect key="frame" x="162" y="141" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="23" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="PPn-Ck-fKY">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="192" width="48" height="68"/>
+                                    <rect key="frame" x="209" y="141" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-mI-rC8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="192" width="48" height="68"/>
+                                    <rect key="frame" x="256" y="141" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="64" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="1xa-jU-aMc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="259" width="48" height="68"/>
+                                    <rect key="frame" x="21" y="189" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="54" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="gh6-Fd-gaR">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="259" width="48" height="68"/>
+                                    <rect key="frame" x="68" y="189" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="44" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="2vm-uw-b0F">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="259" width="48" height="68"/>
+                                    <rect key="frame" x="115" y="189" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="34" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="QzI-bU-FHq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="259" width="48" height="68"/>
+                                    <rect key="frame" x="162" y="189" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="24" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-Hy-vU9">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="259" width="48" height="68"/>
+                                    <rect key="frame" x="209" y="189" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="cCZ-Rb-uUi">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="259" width="48" height="68"/>
+                                    <rect key="frame" x="256" y="189" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="65" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="49d-9A-LLb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="326" width="48" height="68"/>
+                                    <rect key="frame" x="21" y="237" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="55" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-1G-bEA">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="326" width="48" height="68"/>
+                                    <rect key="frame" x="68" y="237" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="45" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="aNQ-5I-5Z8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="326" width="48" height="68"/>
+                                    <rect key="frame" x="115" y="237" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="35" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RvB-d5-21X">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="326" width="48" height="68"/>
+                                    <rect key="frame" x="162" y="237" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-Hi-SgO">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="326" width="48" height="68"/>
+                                    <rect key="frame" x="209" y="237" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-0y-hyK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="326" width="48" height="68"/>
+                                    <rect key="frame" x="256" y="237" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="66" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-Pk-Zpl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="393" width="48" height="68"/>
+                                    <rect key="frame" x="21" y="285" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="56" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="RpU-WV-96m">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="393" width="48" height="68"/>
+                                    <rect key="frame" x="68" y="285" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="46" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="yxE-J0-P2T">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="393" width="48" height="68"/>
+                                    <rect key="frame" x="115" y="285" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="36" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-cb-dvb">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="393" width="48" height="68"/>
+                                    <rect key="frame" x="162" y="285" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="26" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ggg-zY-rdc">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="393" width="48" height="68"/>
+                                    <rect key="frame" x="209" y="285" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normal_guitarstring.png" translatesAutoresizingMaskIntoConstraints="NO" id="IiM-yJ-S5S">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="393" width="48" height="68"/>
+                                    <rect key="frame" x="256" y="285" width="48" height="48"/>
                                 </variation>
                             </imageView>
                             <imageView tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string6.png" translatesAutoresizingMaskIntoConstraints="NO" id="fNu-nq-khL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="460" width="48" height="113"/>
+                                    <rect key="frame" x="21" y="333" width="48" height="74"/>
                                 </variation>
                             </imageView>
                             <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string5.png" translatesAutoresizingMaskIntoConstraints="NO" id="brg-nB-CYq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="460" width="48" height="113"/>
+                                    <rect key="frame" x="68" y="333" width="48" height="74"/>
                                 </variation>
                             </imageView>
                             <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string4.png" translatesAutoresizingMaskIntoConstraints="NO" id="ysf-RD-FZC">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="460" width="48" height="113"/>
+                                    <rect key="frame" x="115" y="333" width="48" height="74"/>
                                 </variation>
                             </imageView>
                             <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string3.png" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-XK-5pm">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="460" width="48" height="113"/>
+                                    <rect key="frame" x="162" y="333" width="48" height="74"/>
                                 </variation>
                             </imageView>
                             <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Fq-2Ia">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="209" y="460" width="48" height="113"/>
+                                    <rect key="frame" x="209" y="333" width="48" height="74"/>
                                 </variation>
                             </imageView>
                             <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="string1.png" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-cB-zoe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="460" width="48" height="113"/>
+                                    <rect key="frame" x="256" y="333" width="48" height="74"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -925,6 +925,12 @@
                         <outlet property="string64" destination="1xa-jU-aMc" id="tdU-mX-HN0"/>
                         <outlet property="string65" destination="49d-9A-LLb" id="NZa-bM-n2R"/>
                         <outlet property="string66" destination="Bga-Pk-Zpl" id="VxO-bT-S5s"/>
+                        <outlet property="stroke1" destination="O5a-cB-zoe" id="4ux-e9-Ry2"/>
+                        <outlet property="stroke2" destination="Fd0-Fq-2Ia" id="E7u-ql-tkd"/>
+                        <outlet property="stroke3" destination="K2V-XK-5pm" id="G5Y-lf-gOA"/>
+                        <outlet property="stroke4" destination="ysf-RD-FZC" id="mbc-TE-T1Z"/>
+                        <outlet property="stroke5" destination="brg-nB-CYq" id="8Fd-o8-fym"/>
+                        <outlet property="stroke6" destination="fNu-nq-khL" id="S0M-2G-GGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK8-l0-phy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -949,7 +955,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="355" width="400" height="245"/>
+                                    <rect key="frame" x="0.0" y="289" width="400" height="245"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9t-sA-BXJ">
@@ -958,7 +964,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="27" y="397" width="56" height="56"/>
+                                    <rect key="frame" x="27" y="331" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="CandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="2gQ-UI-9Nf"/>
@@ -970,7 +976,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="91" y="397" width="54" height="56"/>
+                                    <rect key="frame" x="91" y="331" width="54" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="DandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="g8w-aT-3cL"/>
@@ -982,7 +988,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="396" width="56" height="57"/>
+                                    <rect key="frame" x="152" y="330" width="56" height="57"/>
                                 </variation>
                                 <connections>
                                     <action selector="EandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="LHN-aY-lEj"/>
@@ -994,7 +1000,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="216" y="396" width="54" height="55"/>
+                                    <rect key="frame" x="216" y="330" width="54" height="55"/>
                                 </variation>
                                 <connections>
                                     <action selector="FandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="USm-jP-t2j"/>
@@ -1006,7 +1012,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="466" width="53" height="55"/>
+                                    <rect key="frame" x="29" y="400" width="53" height="55"/>
                                 </variation>
                                 <connections>
                                     <action selector="GandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="E3R-Bk-hSe"/>
@@ -1018,7 +1024,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="155" y="466" width="53" height="55"/>
+                                    <rect key="frame" x="155" y="400" width="53" height="55"/>
                                 </variation>
                                 <connections>
                                     <action selector="BandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="BHG-xO-FhN"/>
@@ -1042,7 +1048,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="91" y="466" width="56" height="57"/>
+                                    <rect key="frame" x="91" y="400" width="56" height="57"/>
                                 </variation>
                                 <connections>
                                     <action selector="AandCloseGuitarContent:" destination="0ta-53-lTZ" eventType="touchUpInside" id="ley-kt-rgL"/>
@@ -1203,6 +1209,6 @@
         <image name="string6.png" width="48" height="272"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5HZ-09-VXH"/>
+        <segue reference="AVo-wB-6M2"/>
     </inferredMetricsTieBreakers>
 </document>

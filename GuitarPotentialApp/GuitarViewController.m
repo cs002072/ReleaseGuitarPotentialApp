@@ -113,6 +113,14 @@
 //    self.navigationItem.leftBarButtonItem = [self editButtonItem];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 
+    NSString *model = [UIDevice currentDevice].model;
+    if (![model isEqualToString:@"iPad"]) {
+//        self.stroke1.translatesAutoresizingMaskIntoConstraints = YES;
+//        CGRect frame1 = self.stroke1.frame;
+        self.stroke1.transform = CGAffineTransformMakeScale(1.0, 2.5);
+        self.stroke1.transform = CGAffineTransformMakeTranslation(0, 100);
+//        self.stroke1.transform.ty = CGAffineTransformMakeScale(0, 2.5);
+    }
 }
 
 - (void) pushedGuitarContent {

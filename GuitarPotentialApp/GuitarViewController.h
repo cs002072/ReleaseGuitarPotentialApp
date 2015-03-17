@@ -56,5 +56,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *string56;
 @property (weak, nonatomic) IBOutlet UIImageView *string66;
 
+@property (weak, nonatomic) IBOutlet UIImageView *stroke1;
+@property (weak, nonatomic) IBOutlet UIImageView *stroke2;
+@property (weak, nonatomic) IBOutlet UIImageView *stroke3;
+@property (weak, nonatomic) IBOutlet UIImageView *stroke4;
+@property (weak, nonatomic) IBOutlet UIImageView *stroke5;
+@property (weak, nonatomic) IBOutlet UIImageView *stroke6;
 
 @end

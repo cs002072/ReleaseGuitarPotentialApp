@@ -59,7 +59,7 @@
 //        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"tutorialImage%d", i]];
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"Tutorial%d_GuitarPotential.png", i+1]];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.frame = CGRectMake(20+i * width, 0+20, width-40, height);
+        imageView.frame = CGRectMake(20+i * width, 0+20, width-40, height-80);
         [self.scrollView addSubview:imageView];
     }
     
