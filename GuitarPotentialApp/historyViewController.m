@@ -113,7 +113,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIndentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongList[indexPath.row], /*_AllSongsArrayAtHistory[indexPath.row][@"KEY"],*/ _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@, %@", _AllSongList[[_AllSongsArrayAtHistory[indexPath.row][@"NO"] intValue]], _AllSongsArrayAtHistory[indexPath.row][@"KEY"], _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
 //    cell.textLabel.text = [NSString stringWithFormat:@"%@, %@", _AllSongsArrayAtHistory[indexPath.row][@"TITLE"], /*_AllSongsArrayAtHistory[indexPath.row][@"KEY"],*/ _AllSongsArrayAtHistory[indexPath.row][@"ARTIST"]];
     
     return cell;
@@ -130,6 +130,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     //-- 遷移画面のカプセル化（インスタンス化）
     detailViewController *dvc = [segue destinationViewController];
     dvc.number = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"NO"] intValue];
+    dvc.KeyCorrect = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"KEY"] intValue];
+    dvc.historyTableNum = (int)self.historyTableView.indexPathForSelectedRow.row;
+    NSLog(@"historyTableNum = %d", dvc.historyTableNum);
+    NSLog(@"sdf");
 }
 - (IBAction)DeleteHistoryButton:(id)sender {
     [self setEditing:YES animated:NO];

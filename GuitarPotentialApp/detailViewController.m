@@ -16,6 +16,7 @@
     NSInteger *_songHistoryArrayNum;
     NSMutableArray *_codeArray, *_wordArray;
     NSMutableArray *_newCodeArray, *_oldCodeArray;
+    NSMutableArray *_AllSongsArrayAtHistory;
     NSString *_previousKey, *_strKey, *_strCapo, *_newSongWordStr;
 ;
 
@@ -39,6 +40,7 @@
     _newCodeArray = [[NSMutableArray alloc] init];
     _oldCodeArray = [[NSMutableArray alloc] init];
     _wordArray = [[NSMutableArray alloc] init];
+    _AllSongsArrayAtHistory = [[NSMutableArray alloc] init];
     
     _codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
     //プロジェクト内のファイルにアクセスできるオブジェクトを作成
@@ -59,7 +61,7 @@
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
     NSError *error = nil;
-    NSLog(@"%d", self.number);
+    NSLog(@"self.number = %d", self.number);
     NSString *filePath = [[NSBundle mainBundle] pathForResource:_AllSongsArrayAtDetail[self.number][@"TITLE"] ofType:@"txt"];
     self.SongWordStr.text = [NSString stringWithContentsOfFile:filePath encoding:NSShiftJISStringEncoding error:&error];
     /***********************************************/
@@ -67,10 +69,17 @@
     /***********************************************/
 
 
+//    if (![_AllSongsArrayAtDetail[self.number][@"KEY"] isEqualToString:@"0"]){
+    if (self.KeyCorrect != 0){
+        NSLog(@"_AllSongsArrayAtDetail = %d", self.KeyCorrect);
+        [self separateText];
+        [self UpDownKey];
+    } else {
+        [self separateText];
+    }
+}
 
-    /***********************************************/
-    /**********テキスト分解フェーズ***********/
-    /***********************************************/
+- (void) separateText {
     _array = [self.SongWordStr.text componentsSeparatedByString:@"\n"];
     for (NSString *component in _array) {
         NSArray *array2 = [component componentsSeparatedByString:@" "];
@@ -88,9 +97,6 @@
             }
         }
     }
-    /***********************************************/
-    /**********テキスト分解フェーズ***********/
-    /***********************************************/
 }
 
 - (IBAction)openPickerView:(id)sender {
@@ -155,14 +161,32 @@
     [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
     pickerView.center = offScreenCenter;
     [UIView commitAnimations];
+    
+    [self UpDownKey];
+}
+
+- (void) UpDownKey {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+   _songHistoryArray = [[defaults arrayForKey:@"HistorySONGS"] mutableCopy];
 
     /***************************************************/
     /******************キーとカポの再描画******************/
     /***************************************************/
-    _previousKey = self.selectedKey.text;
-    self.selectedKey.text = _strKey;
-    _previousCapo = self.selectedCapo.text;
-    self.selectedCapo.text = _strCapo;
+    if (self.KeyCorrect != 0){
+        _previousKey = self.selectedKey.text;
+//        self.selectedKey.text = _songHistoryArray[self.number-1][@"KEY"]/*_strKey*/;
+        self.selectedKey.text = _songHistoryArray[self.historyTableNum][@"KEY"]/*_strKey*/;
+        _previousCapo = self.selectedCapo.text;
+        self.selectedCapo.text = _strCapo;
+        NSLog(@"self.selectedCapo.tet = %@", self.selectedKey.text);
+        //   self.selectedCapo.text = _AllSongsArrayAtDetail[self.historyTableView.indexPathForSelectedRow.row][@"KEY"];
+    } else {
+        _previousKey = self.selectedKey.text;
+        self.selectedKey.text = _strKey;
+        _previousCapo = self.selectedCapo.text;
+        self.selectedCapo.text = _strCapo;
+    }
+    
     /***************************************************/
     /******************キーとカポの再描画******************/
     /***************************************************/
@@ -171,8 +195,8 @@
     /******************ギターコードの抽出******************/
     /***************************************************/
     for (NSString *codeStr in _codeArray) {
-
-//        NSLog(@"codeStr = %@", codeStr);
+        
+        //        NSLog(@"codeStr = %@", codeStr);
         NSString *textRange_0, *textRange_1;
         NSArray *codeSeparate;
         int previousKey, nowKey, numUpDowKey, trueUpDown;
@@ -190,7 +214,7 @@
         nowKey = [self.selectedKey.text intValue];
         numUpDowKey = nowKey - previousKey;
         
-//_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
+        //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
         if ([textRange_1 isEqualToString:@"C"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"C"];
             if (numUpDowKey < 0){
@@ -218,7 +242,7 @@
             if (_codeNum + numUpDowKey < 0){
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeCircleArray.count + _codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
                 [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
-
+                
             } else {
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
                 [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
@@ -226,7 +250,7 @@
         }
         else if ([textRange_1 isEqualToString:@"F"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"F"];
-//_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
+            //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
             _codeNum = 5;
             trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
             if (_codeNum + numUpDowKey < 0){
@@ -242,11 +266,11 @@
                 [_newCodeArray addObject:[[_codeCircleArray objectAtIndex:_codeNum + numUpDowKey] stringByAppendingString:[codeSeparate objectAtIndex:1]]];
                 [_oldCodeArray addObject:[textRange_1 stringByAppendingString:[codeSeparate objectAtIndex:1]]];
             }
-            NSLog(@"sdf");
+//            NSLog(@"sdf");
         }
         else if ([textRange_1 isEqualToString:@"G"]){
             codeSeparate = [codeStr componentsSeparatedByString:@"G"];
-//_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
+            //_codeCircleArray = @[@"C", @"C#", @"D", @"E♭", @"E", @"F", @"F#", @"G", @"G#", @"A", @"B♭", @"B"];
             _codeNum = 7;
             trueUpDown = (int)_codeCircleArray.count - (int)_codeNum - 1;
             if (_codeNum + numUpDowKey >= _codeCircleArray.count){
@@ -291,7 +315,7 @@
     /***************************************************/
     /******************ギターコードの抽出******************/
     /***************************************************/
-//    NSRange range;
+    //    NSRange range;
     NSArray *strArray2;
     _newSongWordStr = self.SongWordStr.text;
     self.SongWordStr.text = @"";
@@ -306,7 +330,7 @@
             _newSongWordStr = [_newSongWordStr stringByAppendingString:@"\r"];
             continue;
         }
-//        for (NSString *strArray3 in strArray2) {
+        //        for (NSString *strArray3 in strArray2) {
         for (int i = 0; i < strArray2.count; i++) {
             if ([[strArray2 objectAtIndex:i] isEqualToString:@""]){
                 _newSongWordStr = [_newSongWordStr stringByAppendingString:@" "];
@@ -323,28 +347,7 @@
     }
     self.SongWordStr.text = _newSongWordStr;
     NSLog(@"%@", _newSongWordStr);
-    
-    
-        
-        
-        
-//        for (int i = 0; i < _oldCodeArray.count; i++) {
-//            range = [strArray rangeOfString:[_oldCodeArray objectAtIndex:i]];
-//            if (range.location != NSNotFound){
-//                [strArray stringByReplacingOccurrencesOfString:[_oldCodeArray objectAtIndex:i] withString:[_newCodeArray objectAtIndex:i]];
-//            }
-//            else {
-//                //strArray2 = strArray;
-//            }
-//        }
-//        self.SongWordStr.text = [self.SongWordStr.text stringByAppendingString:strArray];
-//        NSLog(@"%@", self.SongWordStr.text);
 
-    
-
-    
-//    NSLog(@"%@", self.SongWordStr.text);
-    
 }
 
 // 単位のPickerViewを閉じるアニメーションが終了したときに呼び出されるメソッド
@@ -377,7 +380,7 @@
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"NO"] forKey:@"NO"];
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"TITLE"] forKey:@"TITLE"];
     [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"ARTIST"] forKey:@"ARTIST"];
-    [dictionary setObject:_AllSongsArrayAtDetail[self.number][@"KEY"] forKey:@"KEY"];
+    [dictionary setObject:self.selectedKey.text/*_AllSongsArrayAtDetail[self.number][@"KEY"]*/ forKey:@"KEY"];
     
     
     //-- NSMutableArrayにディクショナリを追加

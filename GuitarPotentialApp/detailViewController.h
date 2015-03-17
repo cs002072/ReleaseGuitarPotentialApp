@@ -17,6 +17,8 @@
 @property (nonatomic, assign) int selectNum;
 @property (weak, nonatomic) IBOutlet UILabel *SongWordStr;
 @property (nonatomic, assign) int number;
+@property (nonatomic, assign) int KeyCorrect;
+@property (nonatomic, assign) int historyTableNum;
 @property (weak, nonatomic) IBOutlet UIButton *selectButton;
 @property (weak, nonatomic) IBOutlet UILabel *selectedKey;
 @property (weak, nonatomic) IBOutlet UILabel *selectedCapo;
