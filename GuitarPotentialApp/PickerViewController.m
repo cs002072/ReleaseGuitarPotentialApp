@@ -31,7 +31,7 @@
 
     self.keyCapoPicker.showsSelectionIndicator = YES;
     [self.keyCapoPicker selectRow:7 inComponent:0 animated:NO];
-
+    [self.delegate applySelectedKey:[NSString stringWithFormat:@"0"]];
 }
 
 //-- PickerViewで要素が選択されたときに呼び出されるメソッド
