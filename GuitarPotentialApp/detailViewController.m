@@ -61,7 +61,7 @@
     /**********テキストファイル読み込みフェーズ***********/
     /***********************************************/
     NSError *error = nil;
-    NSLog(@"self.number = %d", self.number);
+//    NSLog(@"self.number = %d", self.number);
     NSString *filePath = [[NSBundle mainBundle] pathForResource:_AllSongsArrayAtDetail[self.number][@"TITLE"] ofType:@"txt"];
     self.SongWordStr.text = [NSString stringWithContentsOfFile:filePath encoding:NSShiftJISStringEncoding error:&error];
     /***********************************************/
@@ -71,7 +71,7 @@
 
 //    if (![_AllSongsArrayAtDetail[self.number][@"KEY"] isEqualToString:@"0"]){
     if (self.KeyCorrect != 0){
-        NSLog(@"_AllSongsArrayAtDetail = %d", self.KeyCorrect);
+//        NSLog(@"_AllSongsArrayAtDetail = %d", self.KeyCorrect);
         [self separateText];
         [self UpDownKey];
     } else {
@@ -178,7 +178,7 @@
         self.selectedKey.text = _songHistoryArray[self.historyTableNum][@"KEY"]/*_strKey*/;
         _previousCapo = self.selectedCapo.text;
         self.selectedCapo.text = _strCapo;
-        NSLog(@"self.selectedCapo.tet = %@", self.selectedKey.text);
+//        NSLog(@"self.selectedCapo.tet = %@", self.selectedKey.text);
         //   self.selectedCapo.text = _AllSongsArrayAtDetail[self.historyTableView.indexPathForSelectedRow.row][@"KEY"];
     } else {
         _previousKey = self.selectedKey.text;
@@ -346,7 +346,7 @@
         }
     }
     self.SongWordStr.text = _newSongWordStr;
-    NSLog(@"%@", _newSongWordStr);
+//    NSLog(@"%@", _newSongWordStr);
 
 }
 

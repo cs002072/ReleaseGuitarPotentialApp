@@ -124,7 +124,7 @@
 
 
 -(void)backtoHome:(UIButton*)cancelButton{
-    NSLog(@"%@",cancelButton);
+//    NSLog(@"%@",cancelButton);
     //modalを閉じる
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

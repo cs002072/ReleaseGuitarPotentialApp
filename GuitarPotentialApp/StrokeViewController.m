@@ -32,10 +32,10 @@
         _motionManager.accelerometerUpdateInterval = 0.02;//-- 10Hz
         //-- ハンドラを指定
         CMAccelerometerHandler handler = ^(CMAccelerometerData *data, NSError *error){
-            NSLog(@"XLabel == %f", data.acceleration.x);
-            NSLog(@"YLabel == %f", data.acceleration.y);
-            NSLog(@"ZLabel == %f", data.acceleration.z);
-            NSLog(@"\n\n\n\n\n\n");
+//            NSLog(@"XLabel == %f", data.acceleration.x);
+//            NSLog(@"YLabel == %f", data.acceleration.y);
+//            NSLog(@"ZLabel == %f", data.acceleration.z);
+//            NSLog(@"\n\n\n\n\n\n");
 
             float wx = self.ballmg.center.x + data.acceleration.x * 20;
             float wy = self.ballmg.center.y + data.acceleration.y * 20;

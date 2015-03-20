@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "447745054.042605"
+            timestampString = "448348721.594486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -474,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "447745054.042605"
+            timestampString = "448348721.594486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "447745054.042605"
+            timestampString = "448348721.594486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -506,11 +506,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "499"
-            endingLineNumber = "499"
+            startingLineNumber = "523"
+            endingLineNumber = "523"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "526"
-            endingLineNumber = "526"
+            startingLineNumber = "550"
+            endingLineNumber = "550"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "504"
-            endingLineNumber = "504"
+            startingLineNumber = "528"
+            endingLineNumber = "528"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "503"
-            endingLineNumber = "503"
+            startingLineNumber = "527"
+            endingLineNumber = "527"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
+            startingLineNumber = "530"
+            endingLineNumber = "530"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "498"
-            endingLineNumber = "498"
+            startingLineNumber = "522"
+            endingLineNumber = "522"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -602,27 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "462"
-            endingLineNumber = "462"
-            landmarkName = "@implementation GuitarViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
+            startingLineNumber = "486"
+            endingLineNumber = "486"
             landmarkName = "-soundPlayer:::"
             landmarkType = "5">
          </BreakpointContent>
@@ -634,11 +618,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "464"
-            endingLineNumber = "464"
+            startingLineNumber = "489"
+            endingLineNumber = "489"
             landmarkName = "-soundPlayer:::"
             landmarkType = "5">
          </BreakpointContent>
@@ -650,12 +634,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
-            landmarkName = "-motionBegan:withEvent:"
+            startingLineNumber = "488"
+            endingLineNumber = "488"
+            landmarkName = "-soundPlayer:::"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -666,11 +650,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "447745054.042605"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "468"
+            endingLineNumber = "468"
+            landmarkName = "-touchesBegan:withEvent:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuitarPotentialApp/GuitarViewController.m"
+            timestampString = "448348721.594486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -831,22 +831,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
             endingLineNumber = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuitarPotentialApp/StrokeViewController.m"
-            timestampString = "447577281.556009"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1192,11 +1176,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "447753453.649641"
+            timestampString = "448348721.594486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1208,11 +1192,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "447753498.452559"
+            timestampString = "448348721.594486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -1416,11 +1400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "509"
-            endingLineNumber = "509"
+            startingLineNumber = "533"
+            endingLineNumber = "533"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1432,11 +1416,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "480"
-            endingLineNumber = "480"
+            startingLineNumber = "504"
+            endingLineNumber = "504"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1448,11 +1432,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "512"
-            endingLineNumber = "512"
+            startingLineNumber = "536"
+            endingLineNumber = "536"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1464,11 +1448,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "520"
-            endingLineNumber = "520"
+            startingLineNumber = "544"
+            endingLineNumber = "544"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1480,11 +1464,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "523"
-            endingLineNumber = "523"
+            startingLineNumber = "547"
+            endingLineNumber = "547"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1496,11 +1480,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "529"
-            endingLineNumber = "529"
+            startingLineNumber = "553"
+            endingLineNumber = "553"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1512,11 +1496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "524"
-            endingLineNumber = "524"
+            startingLineNumber = "548"
+            endingLineNumber = "548"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1528,11 +1512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "525"
-            endingLineNumber = "525"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1544,11 +1528,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "531"
-            endingLineNumber = "531"
+            startingLineNumber = "555"
+            endingLineNumber = "555"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1560,11 +1544,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448273623.780411"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "530"
-            endingLineNumber = "530"
+            startingLineNumber = "554"
+            endingLineNumber = "554"
             landmarkName = "-pushedString:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1831,22 +1815,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GuitarPotentialApp/historyViewController.m"
-            timestampString = "448219184.442766"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/detailViewController.m"
             timestampString = "448220535.332005"
             startingColumnNumber = "9223372036854775807"
@@ -2020,15 +1988,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarPotentialApp/GuitarViewController.m"
-            timestampString = "448272920.919785"
+            timestampString = "448353471.688663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "-CandCloseGuitarContent:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuitarPotentialApp/GuitarViewController.m"
+            timestampString = "448353254.710907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuitarPotentialApp/GuitarViewController.m"
+            timestampString = "448353571.32867"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>

@@ -19,6 +19,8 @@
     NSMutableArray *_truePosition;
     NSArray *_codeImageView;
     NSArray *_soundArray;
+    NSArray *_stringArray;
+    NSMutableArray *_stringImageView;
     AVAudioPlayer *_audio;
 
     BOOL _isflag, _touchesMovedFlag;
@@ -40,6 +42,8 @@
     _codeImageView = [[NSArray alloc] init];
     _truePosition = [[NSMutableArray alloc] init];
     _soundArray = [[NSArray alloc] init];
+    _stringArray = [[NSArray alloc] init];
+    _stringImageView = [[NSMutableArray alloc] init];
     _touchesMovedFlag = NO;
     
     //-- 左スワイプ
@@ -55,6 +59,8 @@
                 @[@"14", @"24", @"34", @"44", @"54", @"64"],
                 @[@"15", @"25", @"35", @"45", @"55", @"65"],
                 @[@"16", @"26", @"36", @"46", @"56", @"66"]];
+    _stringArray = @[@"string6.png", @"string5.png", @"string4.png", @"string3.png", @"string2.png", @"string1.png"];
+    
     for (int i = 0; i < 6; i++) {
         _DummyPushedFlag = [[NSMutableArray alloc] init];
         for (int j = 0; j < 7; j++) {
@@ -102,25 +108,76 @@
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"コード一覧" style:UIBarButtonItemStylePlain target:self action:@selector(pushedGuitarContent)];
     self.navigationItem.rightBarButtonItem = rightItem;
-
-
-    //-- ナビゲーションバー追加？
-//    [self.navigationController setNavigationBarHidden:NO animated:NO];
-//    UIBarButtonItem *btn = [[[UIBarButtonItem alloc]
-//                             initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
-//                             target:self action:@selector(hoge:)]; autorelease];
-//    self.navigationItem.rightBarButtonItem = btn;
-//    self.navigationItem.leftBarButtonItem = [self editButtonItem];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 
-    NSString *model = [UIDevice currentDevice].model;
-    if (![model isEqualToString:@"iPad"]) {
-//        self.stroke1.translatesAutoresizingMaskIntoConstraints = YES;
-//        CGRect frame1 = self.stroke1.frame;
-        self.stroke1.transform = CGAffineTransformMakeScale(1.0, 2.5);
-        self.stroke1.transform = CGAffineTransformMakeTranslation(0, 100);
-//        self.stroke1.transform.ty = CGAffineTransformMakeScale(0, 2.5);
+    // 画像の幅
+    CGFloat width = self.stroke1.frame.size.width;
+    // 画像の高さ
+    CGFloat height = self.view.bounds.size.height;
+    // 拡大・縮小率
+    CGFloat scale = 1.5f;
+    //iPad Simulator
+
+
+    if (self.view.bounds.size.height == 480){
+        /*iPhone 4のとき*/
+        for (int i = 0; i < _stringArray.count; i++) {
+            //UIImageView作成
+            UIImageView *imageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:[_stringArray objectAtIndex:i]]];
+            imageView.userInteractionEnabled = YES;
+            imageView.tag = _stringArray.count-i;
+            [_stringImageView addObject:imageView];
+            CGRect rect = CGRectMake(21+i*imageView.frame.size.width-2, 330, imageView.frame.size.width, imageView.frame.size.height-120);
+            imageView.frame = rect;
+            [self.view addSubview:imageView];
+        }
     }
+    else if (self.view.bounds.size.height == 568){
+        /*iPhone 5のとき*/
+        for (int i = 0; i < _stringArray.count; i++) {
+            //UIImageView作成
+            UIImageView *imageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:[_stringArray objectAtIndex:i]]];
+            imageView.userInteractionEnabled = YES;
+            imageView.tag = _stringArray.count-i;
+            [_stringImageView addObject:imageView];
+            CGRect rect = CGRectMake(21+i*imageView.frame.size.width-2, 330, imageView.frame.size.width, imageView.frame.size.height-30);
+            imageView.frame = rect;
+            [self.view addSubview:imageView];
+        }
+    }
+    else if (self.view.bounds.size.height == 667){
+        /*iPhone 6のとき*/
+        for (int i = 0; i < _stringArray.count; i++) {
+            //UIImageView作成
+            UIImageView *imageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:[_stringArray objectAtIndex:i]]];
+            imageView.userInteractionEnabled = YES;
+            imageView.tag = _stringArray.count-i;
+            [_stringImageView addObject:imageView];
+            CGRect rect = CGRectMake(21+i*imageView.frame.size.width-2, 330, imageView.frame.size.width, imageView.frame.size.height+70);
+            imageView.frame = rect;
+            [self.view addSubview:imageView];
+        }
+    }
+    else if (self.view.bounds.size.height == 736){
+        /*iPhone 6 Plusのとき*/
+        for (int i = 0; i < _stringArray.count; i++) {
+            //UIImageView作成
+            UIImageView *imageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:[_stringArray objectAtIndex:i]]];
+            imageView.userInteractionEnabled = YES;
+            imageView.tag = _stringArray.count-i;
+            [_stringImageView addObject:imageView];
+            CGRect rect = CGRectMake(21+i*imageView.frame.size.width-2, 330, imageView.frame.size.width, imageView.frame.size.height+100);
+            imageView.frame = rect;
+            [self.view addSubview:imageView];
+        }
+    }
+    
+    
+    
+//    NSString *model = [UIDevice currentDevice].model;
+//    if (!([model isEqualToString:@"iPad Simulator"] || [model isEqualToString:@"iPad"])) {
+//    } else {
+//    }
 }
 
 - (void) pushedGuitarContent {
@@ -397,7 +454,7 @@
 
 
 -(void)hoge:(UIBarButtonItem*)b{
-    NSLog(@"ボタンを押されましたね");
+//    NSLog(@"ボタンを押されましたね");
 }
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -422,42 +479,9 @@
 }
 
 - (void) view_SwipeLeft:(UISwipeGestureRecognizer *)sender {
-//    NSLog(@"dgsgsdg");
-    
-//    switch (sender.) {
-//        case 1:
-//            NSLog(@"dsfsdfgsd");
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    sender.
 }
 
 
-//- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-////    for (UITouch *touch in touches) {
-////        CGPoint location = [touch locationInView:@"GuitarViewController"];
-//    UITouch *touch = [touches anyObject];
-//    if (_touchesMovedFlag == YES){
-//        if (_touchesMovedMemory != touch.view.tag){
-//            _touchesMovedFlag = NO;
-//        }
-//        return;
-//    }
-//    _touchesMovedMemory = (int)touch.view.tag;
-//    switch (touch.view.tag) {
-//        case 1: _stringNum = 0; [self soundPlayer:_pushedFlag :0 :0];   break;
-//        case 2: _stringNum = 1; [self soundPlayer:_pushedFlag :1 :0];   break;
-//        case 3: _stringNum = 2; [self soundPlayer:_pushedFlag :2 :0];   break;
-//        case 4: _stringNum = 3; [self soundPlayer:_pushedFlag :3 :0];   break;
-//        case 5: _stringNum = 4; [self soundPlayer:_pushedFlag :4 :0];   break;
-//        case 6: _stringNum = 5; [self soundPlayer:_pushedFlag :5 :0];   break;
-//    }
-//    _touchesMovedFlag = YES;
-//    NSLog(@"touch.view.tag === %ld", (long)touch.view.tag);
-//}
 
 
 - (void) soundPlayer:(NSMutableArray *)pushedFlag :(NSInteger)String :(NSInteger)soundFlag {

@@ -89,6 +89,11 @@
 		A79DB0C11AB2ADE000BD0B54 /* sound65.wav in Resources */ = {isa = PBXBuildFile; fileRef = A79DB0971AB2ADE000BD0B54 /* sound65.wav */; };
 		A79DB0C21AB2ADE000BD0B54 /* sound66.wav in Resources */ = {isa = PBXBuildFile; fileRef = A79DB0981AB2ADE000BD0B54 /* sound66.wav */; };
 		A7A466C31AAEE45400FB050D /* GuitarContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A466C21AAEE45400FB050D /* GuitarContentViewController.m */; };
+		A7A71B9F1ABAE9200061F91E /* GuitarPushedPlate_GuitarPotential.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A71B9A1ABAE9200061F91E /* GuitarPushedPlate_GuitarPotential.png */; };
+		A7A71BA01ABAE9200061F91E /* pushedString1fret.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A71B9B1ABAE9200061F91E /* pushedString1fret.png */; };
+		A7A71BA11ABAE9200061F91E /* pushedString2fret.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A71B9C1ABAE9200061F91E /* pushedString2fret.png */; };
+		A7A71BA21ABAE9200061F91E /* pushedString3fret.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A71B9D1ABAE9200061F91E /* pushedString3fret.png */; };
+		A7A71BA31ABAE9200061F91E /* strokeStrings.png in Resources */ = {isa = PBXBuildFile; fileRef = A7A71B9E1ABAE9200061F91E /* strokeStrings.png */; };
 		A7BEAD431AAC75AB00E2657B /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BEAD421AAC75AB00E2657B /* PickerViewController.m */; };
 		A7D2F98E1AA3240300529626 /* GuitarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D2F98D1AA3240300529626 /* GuitarViewController.m */; };
 		A7D47C321AB6B1E500AE0641 /* itoshinoeri-.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D47C2D1AB6B1E500AE0641 /* itoshinoeri-.txt */; };
@@ -225,6 +230,11 @@
 		A79DB0981AB2ADE000BD0B54 /* sound66.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound66.wav; sourceTree = "<group>"; };
 		A7A466C11AAEE45400FB050D /* GuitarContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarContentViewController.h; sourceTree = "<group>"; };
 		A7A466C21AAEE45400FB050D /* GuitarContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarContentViewController.m; sourceTree = "<group>"; };
+		A7A71B9A1ABAE9200061F91E /* GuitarPushedPlate_GuitarPotential.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuitarPushedPlate_GuitarPotential.png; sourceTree = "<group>"; };
+		A7A71B9B1ABAE9200061F91E /* pushedString1fret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushedString1fret.png; sourceTree = "<group>"; };
+		A7A71B9C1ABAE9200061F91E /* pushedString2fret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushedString2fret.png; sourceTree = "<group>"; };
+		A7A71B9D1ABAE9200061F91E /* pushedString3fret.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushedString3fret.png; sourceTree = "<group>"; };
+		A7A71B9E1ABAE9200061F91E /* strokeStrings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strokeStrings.png; sourceTree = "<group>"; };
 		A7BEAD411AAC75AB00E2657B /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
 		A7BEAD421AAC75AB00E2657B /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		A7D2F98C1AA3240300529626 /* GuitarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarViewController.h; sourceTree = "<group>"; };
@@ -323,6 +333,11 @@
 		A71C7B5C1AB5ADF5007B4A31 /* GuitarCodeTrainerPictures */ = {
 			isa = PBXGroup;
 			children = (
+				A7A71B9A1ABAE9200061F91E /* GuitarPushedPlate_GuitarPotential.png */,
+				A7A71B9B1ABAE9200061F91E /* pushedString1fret.png */,
+				A7A71B9C1ABAE9200061F91E /* pushedString2fret.png */,
+				A7A71B9D1ABAE9200061F91E /* pushedString3fret.png */,
+				A7A71B9E1ABAE9200061F91E /* strokeStrings.png */,
 				A71C7B5D1AB5ADF5007B4A31 /* head_close.png */,
 				A71C7B5E1AB5ADF5007B4A31 /* head_open.png */,
 				A71C7B5F1AB5ADF5007B4A31 /* lighting_head_close.png */,
@@ -601,6 +616,7 @@
 				A79DB0B31AB2ADE000BD0B54 /* sound43.wav in Resources */,
 				A7D47C341AB6B1E500AE0641 /* namidanokissu.txt in Resources */,
 				A79DB0BB1AB2ADE000BD0B54 /* sound55.wav in Resources */,
+				A7A71BA11ABAE9200061F91E /* pushedString2fret.png in Resources */,
 				A79DB0BA1AB2ADE000BD0B54 /* sound54.wav in Resources */,
 				A71C7B731AB5ADF5007B4A31 /* normal_guitarstring.png in Resources */,
 				A7FE3EE21AB5A40D007165B9 /* Tutorial4_GuitarPotential.png in Resources */,
@@ -634,6 +650,7 @@
 				A79DB0B51AB2ADE000BD0B54 /* sound45.wav in Resources */,
 				A71C7B551AB5ADCC007B4A31 /* Home-50.png in Resources */,
 				A71C7B721AB5ADF5007B4A31 /* lighting_head_open.png in Resources */,
+				A7A71BA21ABAE9200061F91E /* pushedString3fret.png in Resources */,
 				A79DB0991AB2ADE000BD0B54 /* sound01.wav in Resources */,
 				A71C7B711AB5ADF5007B4A31 /* lighting_head_close.png in Resources */,
 				A79DB0B91AB2ADE000BD0B54 /* sound53.wav in Resources */,
@@ -645,6 +662,7 @@
 				A71C7B801AB5ADF5007B4A31 /* string6.png in Resources */,
 				A71C7B591AB5ADCC007B4A31 /* KeyChangeButton_GuitarPotential.png in Resources */,
 				A79DB0AB1AB2ADE000BD0B54 /* sound31.wav in Resources */,
+				A7A71B9F1ABAE9200061F91E /* GuitarPushedPlate_GuitarPotential.png in Resources */,
 				A71C7B751AB5ADF5007B4A31 /* pressedstring2.png in Resources */,
 				A7FE3EE11AB5A40D007165B9 /* Tutorial3_GuitarPotential.png in Resources */,
 				A71C7B571AB5ADCC007B4A31 /* Info-50.png in Resources */,
@@ -678,6 +696,7 @@
 				A79DB0A61AB2ADE000BD0B54 /* sound22.wav in Resources */,
 				A79DB0A91AB2ADE000BD0B54 /* sound25.wav in Resources */,
 				A71C7B4E1AB5ADCC007B4A31 /* CButton_GuitarPotential.png in Resources */,
+				A7A71BA01ABAE9200061F91E /* pushedString1fret.png in Resources */,
 				A71C7B7F1AB5ADF5007B4A31 /* string5.png in Resources */,
 				A7D47C361AB6B1E500AE0641 /* TSUNAMI.txt in Resources */,
 				A79DB0BC1AB2ADE000BD0B54 /* sound56.wav in Resources */,
@@ -692,6 +711,7 @@
 				A79DB0B61AB2ADE000BD0B54 /* sound46.wav in Resources */,
 				A71C7B4A1AB5ADCC007B4A31 /* AButton_GuitarPotential.png in Resources */,
 				A79DB0BF1AB2ADE000BD0B54 /* sound63.wav in Resources */,
+				A7A71BA31ABAE9200061F91E /* strokeStrings.png in Resources */,
 				A71C7B5A1AB5ADCC007B4A31 /* SaveButton_GuitarPotential.png in Resources */,
 				A7FE3EE71AB5A40D007165B9 /* Tutorial9_GuitarPotential.png in Resources */,
 				A79DB0C21AB2ADE000BD0B54 /* sound66.wav in Resources */,
@@ -806,6 +826,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c9c0a0e6-6bc4-4832-97aa-fd8139ab9e01";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -827,7 +848,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shinichiro Oka (239MPWK6A2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -840,6 +862,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c9c0a0e6-6bc4-4832-97aa-fd8139ab9e01";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

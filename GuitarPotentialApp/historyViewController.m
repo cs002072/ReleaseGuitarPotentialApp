@@ -90,14 +90,14 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 // 編集モードになった時に呼ばれるメソッド
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    NSLog(@"%s", __func__);
+//    NSLog(@"%s", __func__);
     [super setEditing:editing animated:animated];
     if (editing) {
         // 編集モードの処理
-        NSLog(@"編集モードに入りました。");
+//        NSLog(@"編集モードに入りました。");
     }else{
         // 編集モードから戻った時の処理
-        NSLog(@"編集モードから出ました。");
+//        NSLog(@"編集モードから出ました。");
     }
 }
 
@@ -132,8 +132,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     dvc.number = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"NO"] intValue];
     dvc.KeyCorrect = [_AllSongsArrayAtHistory[/*(int)*/self.historyTableView.indexPathForSelectedRow.row][@"KEY"] intValue];
     dvc.historyTableNum = (int)self.historyTableView.indexPathForSelectedRow.row;
-    NSLog(@"historyTableNum = %d", dvc.historyTableNum);
-    NSLog(@"sdf");
+//    NSLog(@"historyTableNum = %d", dvc.historyTableNum);
+//    NSLog(@"sdf");
 }
 - (IBAction)DeleteHistoryButton:(id)sender {
     [self setEditing:YES animated:NO];
@@ -164,7 +164,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
             break;
             
         default: // キャンセルが押されたとき
-            NSLog(@"Cancel");
+//            NSLog(@"Cancel");
             break;
     }
 }
